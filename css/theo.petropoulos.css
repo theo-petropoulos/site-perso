@@ -1,0 +1,37 @@
+@import url("index.css");
+@font-face {
+  font-family: "Pixel";
+  src: url("/assets/VCR_OSD_MONO_1.001.ttf") format("truetype");
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.invisible {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.str {
+  font-weight: 800;
+}
+
+.distorted {
+  -webkit-animation: textglitch 9s 4s infinite alternate;
+          animation: textglitch 9s 4s infinite alternate;
+}
+/*# sourceMappingURL=theo.petropoulos.css.map */
