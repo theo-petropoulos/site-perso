@@ -224,6 +224,7 @@ $color:rgb(173, 255, 47);
             display:flex;
             flex-flow:column;
             z-index:3;
+            border:1px solid black;
             .window_menu{
                 display:flex;
                 flex-flow:row;
@@ -284,7 +285,6 @@ $color:rgb(173, 255, 47);
             .window_content{
                 display:flex;
                 flex-grow:1;
-                width:100%;
                 flex-flow:row;
                 padding:1% 2%;
                 .window_min{
@@ -313,10 +313,12 @@ $color:rgb(173, 255, 47);
             z-index:5;
             #menu{
                 position:relative;
+                width:max-content;
                 #start_btn{
                     background:transparent;
                     height:100%;
                     width: max-content;
+                    min-width:80px;
                     border:1px solid $color;
                     &:hover{
                         background:rgb(56, 56, 56);
@@ -341,6 +343,28 @@ $color:rgb(173, 255, 47);
                     max-height:45vh;
                     transform:translateY(-100%);
                     z-index:5;
+                }
+            }
+            #task_windows{
+                display:flex;
+                flex-flow:row;
+                flex-grow:1;
+                position:relative;
+                ul{
+                    margin:0;
+                    padding:0;
+                    display:flex;
+                    flex-flow:row;
+                    width:100%;
+                    li{
+                        list-style-type: none;
+                        background:grey;
+                        border:1px solid $color;
+                        width:5%;
+                        display:flex;
+                        justify-content: center;
+                        align-items:center;
+                    }
                 }
             }
             #task_corner{

@@ -35,8 +35,9 @@ function switchClass(e, fclass, target){
                 e.preventDefault();
                 switch($(this).attr('id')){
                     case 'open':
-                        let id=$(this).parents(".folder").attr("id").replace('folder','');
-                        if($("#window" + id).hasClass("invisible")) $("#window" + id).toggleClass("invisible visible");
+                        let id=$(this).parents(".folder").attr("id").replace('folder_','');
+                        if($("#window_" + id).hasClass("invisible")) $("#window_" + id).toggleClass("invisible visible");
+                        $("#task_windows ul").append("<li id='tb_"+id+"'>" + id + "</li>");
                         break;
                     case 'copy':
                         break;

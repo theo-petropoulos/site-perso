@@ -44,7 +44,7 @@
                         <img src="<?=$addr;?>assets/images/folder.png" title="folder_min">
                         <p class="distorted">Musiques</p>
                     </div>
-                    <div class="folder drag rclick" id="folder_projets" style="left:300px">
+                    <div class="folder drag rclick" id="folder_projects" style="left:300px">
                         <img src="<?=$addr;?>assets/images/folder.png" title="folder_min">
                         <p class="distorted">Projets</p>
                     </div>
@@ -95,6 +95,20 @@
                         </div>
                     </section>
                     <section class="window drag invisible" id="window_projects">
+                        <div class="window_menu">
+                            <ul>
+                                <div class="window_menu_left">
+                                    <li><button class="window_file">Fichier</button></li>
+                                    <li><button class="window_edit">Edition</button></li>
+                                    <li><button class="window_view">Affichage</button></li>
+                                </div>
+                                <div class="window_menu_right">
+                                    <li><button class="window_minimize"><i class="far fa-window-minimize"></i></button></li>
+                                    <li><button class="window_expand"><i class="far fa-window-maximize"></i></button></li>
+                                    <li><button class="window_close"><i class="fas fa-times"></i></button></li>
+                                </div>
+                            </ul>
+                        </div>
                     </section>
                     <section class="window drag invisible" id="window_musics">
                     </section>
