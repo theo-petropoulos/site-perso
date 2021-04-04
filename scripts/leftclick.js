@@ -1,4 +1,5 @@
 $(function(){
+    //Standards for click
     $(document).click(function(e){
         e.preventDefault();
         if($("#contextmenu").length>0) $("#contextmenu").remove();
@@ -48,6 +49,19 @@ $(function(){
                 $(".drag").off("mouseenter mouseleave");
             });
         }
+    });
+
+    $(".folder").dblclick(function(e){
+        let img_src=$(this).children("img").attr("src");
+        let id=$(this).attr("id").replace('folder_','');
+        if($("#window_" + id).hasClass("invisible")) $("#window_" + id).toggleClass("invisible visible");
+        if($("#tb_window_" + id).length<1) $("#task_windows ul").append("<li class='tb_window' id='tb_window_"+id+"'></li>");
+        $("#tb_window_" + id).css({
+            "background-image":"url('" + img_src + "')",
+            "background-size":"contain",
+            "background-position":"center",
+            "background-repeat":"no-repeat"
+        });
     });
 
     $("button#open").click(function(e){

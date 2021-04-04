@@ -24,6 +24,10 @@ $(function(){
         mus.volume = e.currentTarget.value / 100;
     });
 
+    mus.addEventListener("ended", function(){
+        $("#music_next").trigger("click");
+    });
+
     //Init the title
     $("#music_title").html('<p class="distorted" style="pointer-events:none">' + title + '</p>' 
     + '<p class="distorted" style="pointer-events:none">' + title + '</p>');

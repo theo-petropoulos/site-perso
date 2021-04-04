@@ -9,6 +9,8 @@ $(function(){
     var prevent = false;
     var timer = 0;
 
+    clock();
+    
     $("#switch_power").click(function(e){
         e.preventDefault();
         audiobuzz.play();
@@ -43,13 +45,15 @@ $(function(){
     });
     
     //Play sound on left click
-    $(document).click(function(){
-        audioclick.currentTime=0;
-        timer=setTimeout(() => {
-            if(prevent==false){
-                audioclick.play();
-            } prevent=false;
-        }, 200);
+    $(document).click(function(e){
+        if(typeof(e.originalEvent!=='undefined')){
+            audioclick.currentTime=0;
+            timer=setTimeout(() => {
+                if(prevent==false){
+                    audioclick.play();
+                } prevent=false;
+            }, 200);
+        }
     });
 
     //Play sound on right click

@@ -1,8 +1,3 @@
-$(function(){
-    //Display time and date
-    clock();
-});
-
 //Display time and date
 function clock(){
     var date=new Date();
@@ -18,4 +13,85 @@ function clock(){
 
     $("#task_corner").html("<p>" + h + ":" + t + "</p><p>" + d + "/" + "/" + m + "/" + y + "</p>");
     setTimeout(clock, 30000);
+}
+
+function closeWindow(target, tclass){
+    let window_id="#" + $(target).parents("." + tclass).attr('id');
+    let id=window_id.replace("#" + tclass + "_", "");
+    $("#tb_window_" + id).remove();
+    $("#window_" + id ).toggleClass("visible invisible");
+}
+
+function switchClass(e, fclass, target){
+    let string;
+    let left;
+    let top;
+    let bottom;
+    let right;
+    let id;
+    const box = target.getBoundingClientRect();
+    switch(fclass){
+        case 'folder':
+            string="<div id='contextmenu'>\
+                <ul>\
+                    <li><button id='open'><p lang='fr'>Ouvrir</p></button></li>\
+                    <li><button id='copy'><p lang='fr'>Copier</p></button></li>\
+                    <li><button id='cut'><p lang='fr'>Coller</p></button></li>\
+                    <li><button id='rename'><p lang='fr'>Renommer</p></button></li>\
+                    <li><button id='delete'><p lang='fr'>Supprimer</p></button></li>\
+                </ul>\
+                </div>";
+            $(target).append(string);
+            left = e.clientX - box.left + "px";
+            top = e.clientY - box.top + "px";
+            $("#contextmenu").css({"top": top, "left": left});
+            $("button").click(function(e){
+                e.preventDefault();
+                switch($(this).attr('id')){
+                    case 'open':
+                        let img_src=$(this).parents(".folder").children("img").attr("src");
+                        id=$(this).parents(".folder").attr("id").replace('folder_','');
+                        if($("#window_" + id).hasClass("invisible")) $("#window_" + id).toggleClass("invisible visible");
+                        if($("#tb_window_" + id).length<1) $("#task_windows ul").append("<li class='tb_window' id='tb_window_"+id+"'></li>");
+                        $("#tb_window_" + id).css({
+                            "background-image":"url('" + img_src + "')",
+                            "background-size":"contain",
+                            "background-position":"center",
+                            "background-repeat":"no-repeat"
+                        });
+                        break;
+                    case 'copy':
+                        break;
+                    case 'cut':
+                        break;
+                    case 'rename':
+                        break;
+                    case 'delete':
+                        break;
+                }
+            });
+            break;
+        case 'tb_window':
+            string="<div id='contextmenu'>\
+                <ul>\
+                    <li><button id='pin'><p lang='fr'>Epingler</p></button></li>\
+                    <li><button id='close'><p lang='fr'>Fermer</p></button></li>\
+                </ul>\
+                </div>";
+            $(target).append(string);
+            left= e.clientX - box.left + "px";
+            bottom= box.bottom - e.clientY + "px";
+            $("#contextmenu").css({"bottom": bottom, "left": left});
+            $("button").click(function(e){
+                e.preventDefault();
+                switch($(this).attr('id')){
+                    case 'close':
+                        closeWindow(e.target, 'tb_window');
+                        break;
+                    default:break;
+                }
+            });
+            break;
+        default:break;
+    }
 }

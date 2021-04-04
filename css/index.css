@@ -154,7 +154,7 @@
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  z-index: 3;
+  z-index: 6;
 }
 
 #screen #screen_on #folder_section .folder #contextmenu ul {
@@ -455,6 +455,8 @@
       -ms-flex-flow: row;
           flex-flow: row;
   padding: 1% 2%;
+  background: #131a0d;
+  color: greenyellow;
 }
 
 #screen #screen_on .window .window_content .window_min {
@@ -580,7 +582,6 @@
 
 #screen #screen_on footer#task_bar #task_windows ul li {
   list-style-type: none;
-  background: grey;
   border: 1px solid greenyellow;
   width: 5%;
   display: -webkit-box;
@@ -592,6 +593,54 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#screen #screen_on footer#task_bar #task_windows ul li:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+#screen #screen_on footer#task_bar #task_windows ul li #contextmenu {
+  position: absolute;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  z-index: 6;
+}
+
+#screen #screen_on footer#task_bar #task_windows ul li #contextmenu ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+#screen #screen_on footer#task_bar #task_windows ul li #contextmenu ul li {
+  list-style-type: none;
+  width: 100%;
+}
+
+#screen #screen_on footer#task_bar #task_windows ul li #contextmenu ul li button {
+  background: none;
+  width: 100%;
+  background: black;
+}
+
+#screen #screen_on footer#task_bar #task_windows ul li #contextmenu ul li button:hover {
+  background: #4e4e4e;
+}
+
+#screen #screen_on footer#task_bar #task_windows ul li #contextmenu ul li button p {
+  margin: 0;
+  color: greenyellow;
+  width: 100%;
+  pointer-events: none;
 }
 
 #screen #screen_on footer#task_bar #task_corner {
@@ -624,6 +673,10 @@
   text-align: center;
   margin: 0 0 0.3% 0;
   letter-spacing: 1px;
+}
+
+#my_mute_button {
+  z-index: 5;
 }
 
 @-webkit-keyframes textglitch {
@@ -699,6 +752,62 @@
   100% {
     -webkit-transform: translateX(-125%);
             transform: translateX(-125%);
+  }
+}
+
+@-webkit-keyframes minimize {
+  0% {
+    -webkit-transform: translate(0, 0) scale(100%, 100%);
+            transform: translate(0, 0) scale(100%, 100%);
+  }
+  99% {
+    -webkit-transform: translate(-50%, 400%) scale(0%, 0%);
+            transform: translate(-50%, 400%) scale(0%, 0%);
+  }
+  100% {
+    -webkit-transform: translate(-50%, 400%) scale(0%, 0%);
+            transform: translate(-50%, 400%) scale(0%, 0%);
+    visibility: hidden;
+  }
+}
+
+@keyframes minimize {
+  0% {
+    -webkit-transform: translate(0, 0) scale(100%, 100%);
+            transform: translate(0, 0) scale(100%, 100%);
+  }
+  99% {
+    -webkit-transform: translate(-50%, 400%) scale(0%, 0%);
+            transform: translate(-50%, 400%) scale(0%, 0%);
+  }
+  100% {
+    -webkit-transform: translate(-50%, 400%) scale(0%, 0%);
+            transform: translate(-50%, 400%) scale(0%, 0%);
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes minimize_out {
+  0% {
+    visibility: visible;
+    -webkit-transform: translate(-50%, 400%) scale(0%, 0%);
+            transform: translate(-50%, 400%) scale(0%, 0%);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) scale(100%, 100%);
+            transform: translate(0, 0) scale(100%, 100%);
+  }
+}
+
+@keyframes minimize_out {
+  0% {
+    visibility: visible;
+    -webkit-transform: translate(-50%, 400%) scale(0%, 0%);
+            transform: translate(-50%, 400%) scale(0%, 0%);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) scale(100%, 100%);
+            transform: translate(0, 0) scale(100%, 100%);
   }
 }
 /*# sourceMappingURL=index.css.map */
