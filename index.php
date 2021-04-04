@@ -49,7 +49,7 @@
                         <p class="distorted">Projets</p>
                     </div>
                 </section>
-
+                
                 <section id="user" class="invisible">
                     <p class="distorted" lang="fr">Utilisateur : <span class="str user1 invisible">Petropoulos Théo</span></p>
                     <p class="distorted" lang="fr">Statut : <span class="str user2 invisible">Développeur web</span></p>
@@ -86,15 +86,15 @@
                         <div class="window_content">
                             <div class="window_min img rclick" id="img_lake">
                                 <img src="<?=$addr;?>assets/images/lake.jpg">
-                                <p>Lac</p>
+                                <p class="distorted" lang="fr">Lac.jpeg</p>
                             </div>
                             <div class="window_min img rclick" id="img_nsa">
                                 <img src="<?=$addr;?>assets/images/nsa.jpg">
-                                <p>NSA</p>
+                                <p class="distorted" lang="fr">NSA.jpeg</p>
                             </div>
                             <div class="window_min img rclick" id="img_neon"">
                                 <img src="<?=$addr;?>assets/images/neon.jpg">
-                                <p>Neon City</p>
+                                <p class="distorted" lang="fr">Neon City.jpeg</p>
                             </div>
                         </div>
                     </section>

@@ -40,12 +40,14 @@ $(function(){
         let id= $(this).attr('id').replace('tb_window_', '');
         let window_id="#window_" + id;
         if($(window_id).css("visibility")=='hidden'){
+            console.log("else if");
+            $(window_id).toggleClass("invisible");
             $(window_id).css("animation", "minimize_out 0.4s 0s forwards");
-            $(window_id).toggleClass("visible");
         }
         else{
+            console.log("else");
             $(window_id).css("animation", "minimize 0.4s 0s forwards");
-            $(window_id).toggleClass("visible");
+            setTimeout(() => $(window_id).toggleClass("invisible"), 400);
         }
     });
 
