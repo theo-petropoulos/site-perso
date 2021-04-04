@@ -15,8 +15,8 @@ $(function(){
 
     //Drag a file
     $(".drag").not($(this).has('input')).mousedown(function(e){
-        if( $(e.target).attr('id')=='music_volume' || 
-            $(e.target).is("button") || $(e.target).is('.window_content') ) 
+        if( $(e.target).attr('id')=='music_volume'  || $(e.target).parents('.window').hasClass('fullscreen') ||  
+            $(e.target).is("button") || $(e.target).is('.window_content')) 
             e.stopPropagation();
         else{
             const thisdrag= document.getElementById($(this).attr('id'));
@@ -28,7 +28,7 @@ $(function(){
                 $(thisdrag).css("z-index", "10");
                 $(".drag").hover(function(e){
                     if($(this)!==$(e.target).parent() && $(e.target).hasClass("folder")){
-                        //ON HOVERING A FOLDER
+                        //ON HOVERING A FOLDER WHILE HOLDING DRAG ITEM
                         //$(e.target).css("background", "red");
                     }
                 }, function(){});

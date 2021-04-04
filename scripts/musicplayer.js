@@ -65,6 +65,9 @@ $(function(){
         mus=musList[k];
         title=$(mus).attr('src').replace('/theo.petropoulos/assets/sounds/', '');
         $("#music_title p").html(title);
+        mus.addEventListener("ended", function(){
+            $("#music_next").trigger("click");
+        });
     });
 
     //On next button' click
@@ -84,5 +87,8 @@ $(function(){
         $("#music_title p").html(title);
         $("#music_play").html('<i class="fas fa-pause"></i>');
         mus.play();
+        mus.addEventListener("ended", function(){
+            $("#music_next").trigger("click");
+        });
     });
 });

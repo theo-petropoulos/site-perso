@@ -13,12 +13,38 @@ $(function(){
         $(window_id).css("animation", "minimize 0.8s 0s forwards");
     });
 
-    //On window minimize'out
+    //On window maximize
+    $(".window_maximize").click(function(e){
+        e.preventDefault();
+        let window_id="#" + $(e.target).parents(".window").attr('id');
+        if(!$(window_id).hasClass('fullscreen')){
+            $(window_id).css({"top":0, "left":0});
+            $(window_id).toggleClass("fullscreen");
+            $(".window_maximize").html('<i class="far fa-window-restore"></i>');
+        }
+        else{
+            $(window_id).css({"top": "20%", "left": "20%"});
+            $(window_id).toggleClass("fullscreen");
+            $(".window_maximize").html('<i class="far fa-window-maximize"></i>');
+        }
+    });
+
+    //Expand window on menu double click
+    $(".window_menu").dblclick(function(e){
+        e.preventDefault();
+        if(!$(e.target).is('button')) $(".window_maximize").trigger("click");
+    });
+
+    //On window minimized left click
     $(document).on('click', '.tb_window' , function() {
         let id= $(this).attr('id').replace('tb_window_', '');
         let window_id="#window_" + id;
         if($(window_id).css("visibility")=='hidden'){
             $(window_id).css("animation", "minimize_out 0.4s 0s forwards");
+            $(window_id).toggleClass("visible");
+        }
+        else{
+            $(window_id).css("animation", "minimize 0.4s 0s forwards");
             $(window_id).toggleClass("visible");
         }
     });

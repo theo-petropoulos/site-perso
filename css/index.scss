@@ -215,16 +215,26 @@ $color:rgb(173, 255, 47);
         }
 
         .window{
-            position:absolute;
-            top:10%;
-            left:10%;
-            width:70vw;
-            height:70vh;
-            background:white;
             display:flex;
             flex-flow:column;
             z-index:3;
             border:1px solid black;
+            &:not(.fullscreen){
+                position:absolute;
+                top:10%;
+                left:10%;
+                width:70vw;
+                height:70vh;
+            }
+            &.fullscreen{
+                position:fixed;
+                top:0;
+                left:0;
+                right:0;
+                bottom:0;
+                height:100%;
+                width:100%;
+            }
             .window_menu{
                 display:flex;
                 flex-flow:row;
@@ -283,6 +293,7 @@ $color:rgb(173, 255, 47);
                 }
             }
             .window_content{
+                position:relative;
                 display:flex;
                 flex-grow:1;
                 flex-flow:row;
@@ -290,6 +301,7 @@ $color:rgb(173, 255, 47);
                 background:#131a0d;
                 color:$color;
                 .window_min{
+                    position:relative;
                     display:flex;
                     flex-flow:column;
                     width:10%;
@@ -297,7 +309,38 @@ $color:rgb(173, 255, 47);
                     justify-content: center;
                     align-items:center;
                     img{
-                        width:calc(30px + 2%);
+                        width:75px;
+                    }
+                    #contextmenu{
+                        position:absolute;
+                        width:max-content;
+                        z-index:6;
+                        ul{
+                            margin:0;
+                            padding:0;
+                            width:100%;
+                            position:relative;
+                            display:flex;
+                            flex-flow:column;
+                            li{
+                                list-style-type: none;
+                                width:100%;
+                                display:flex;
+                                button{
+                                    flex-grow:1;
+                                    background:black;
+                                    &:hover{
+                                        background:rgb(78, 78, 78);
+                                    }
+                                    p{
+                                        margin:0;
+                                        color:$color;
+                                        width:100%;
+                                        pointer-events: none;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -424,10 +467,6 @@ $color:rgb(173, 255, 47);
             }
         }
     }
-}
-
-#my_mute_button{
-    z-index:5;
 }
 
 @keyframes textglitch{

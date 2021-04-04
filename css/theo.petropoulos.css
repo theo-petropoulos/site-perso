@@ -34,4 +34,12 @@ body {
   -webkit-animation: textglitch 9s 4s infinite alternate;
           animation: textglitch 9s 4s infinite alternate;
 }
+
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
 /*# sourceMappingURL=theo.petropoulos.css.map */

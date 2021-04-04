@@ -78,19 +78,23 @@
                                 </div>
                                 <div class="window_menu_right">
                                     <li><button class="window_minimize"><i class="far fa-window-minimize"></i></button></li>
-                                    <li><button class="window_expand"><i class="far fa-window-maximize"></i></button></li>
+                                    <li><button class="window_maximize"><i class="far fa-window-maximize"></i></button></li>
                                     <li><button class="window_close"><i class="fas fa-times"></i></button></li>
                                 </div>
                             </ul>
                         </div>
                         <div class="window_content">
-                            <div class="window_min">
+                            <div class="window_min img rclick" id="img_lake">
                                 <img src="<?=$addr;?>assets/images/lake.jpg">
                                 <p>Lac</p>
                             </div>
-                            <div class="window_min">
-                                <img src="<?=$addr;?>assets/images/lake.jpg">
-                                <p>Lac 2</p>
+                            <div class="window_min img rclick" id="img_nsa">
+                                <img src="<?=$addr;?>assets/images/nsa.jpg">
+                                <p>NSA</p>
+                            </div>
+                            <div class="window_min img rclick" id="img_neon"">
+                                <img src="<?=$addr;?>assets/images/neon.jpg">
+                                <p>Neon City</p>
                             </div>
                         </div>
                     </section>

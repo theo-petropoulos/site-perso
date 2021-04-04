@@ -15,6 +15,7 @@ function clock(){
     setTimeout(clock, 30000);
 }
 
+//Close a window depending on what has been clicked
 function closeWindow(target, tclass){
     let window_id="#" + $(target).parents("." + tclass).attr('id');
     let id=window_id.replace("#" + tclass + "_", "");
@@ -22,13 +23,9 @@ function closeWindow(target, tclass){
     $("#window_" + id ).toggleClass("visible invisible");
 }
 
+//Context menu depending on what has been clicked
 function switchClass(e, fclass, target){
-    let string;
-    let left;
-    let top;
-    let bottom;
-    let right;
-    let id;
+    let string, left, top, bottom, right, id;
     const box = target.getBoundingClientRect();
     switch(fclass){
         case 'folder':
@@ -87,6 +84,32 @@ function switchClass(e, fclass, target){
                 switch($(this).attr('id')){
                     case 'close':
                         closeWindow(e.target, 'tb_window');
+                        break;
+                    default:break;
+                }
+            });
+            break;
+        case 'window_min':
+            string="<div id='contextmenu'>\
+                <ul>\
+                    <li><button id='open'><p lang='fr'>Ouvrir</p></button></li>\
+                    <li><button id='setwp'><p lang='fr'>Fond d'écran</p></button></li>\
+                    <li><button id='delete'><p lang='fr'>Supprimer</p></button></li>\
+                </ul>\
+                </div>";
+            $(target).append(string);
+            left = e.clientX - box.left + "px";
+            top = e.clientY - box.top + "px";
+            $("#contextmenu").css({"top": top, "left": left});
+            $("button").click(function(e){
+                e.preventDefault();
+                switch($(this).attr('id')){
+                    case 'setwp':
+                        $("#screen_on").css(
+                            "background-image",
+                            "radial-gradient(circle, rgba(40,57,20,0.45) 0%,\
+                            rgba(20,29,9,0.8) 80%, rgba(0,0,0,0.99) 100%),\
+                            url('" + $(target).children('img').attr('src') + "')");
                         break;
                     default:break;
                 }
