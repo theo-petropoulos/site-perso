@@ -5,7 +5,7 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,23 +38,29 @@
                 <section id="folder_section" class="invisible">
                     <div class="folder drag rclick" id="folder_images" style="left:100px">
                         <img src="<?=$addr;?>assets/images/folder.png" title="folder_min">
-                        <p class="distorted">Images</p>
+                        <p class="distorted" lang="fr">Images</p>
+                        <p class="distorted" lang="en">Pictures</p>
                     </div>
                     <div class="folder drag rclick" id="folder_songs" style="left:200px">
                         <img src="<?=$addr;?>assets/images/folder.png" title="folder_min">
-                        <p class="distorted">Musiques</p>
+                        <p class="distorted" lang="fr">Musiques</p>
+                        <p class="distorted" lang="en">Musics</p>
                     </div>
                     <div class="folder drag rclick" id="folder_projects" style="left:300px">
                         <img src="<?=$addr;?>assets/images/folder.png" title="folder_min">
-                        <p class="distorted">Projets</p>
+                        <p class="distorted" lang="fr">Projets</p>
+                        <p class="distorted" lang="en">Projects</p>
                     </div>
                 </section>
                 
                 <section id="user" class="invisible">
-                    <p class="distorted" lang="fr">Utilisateur : <span class="str user1 invisible">Petropoulos Théo</span></p>
-                    <p class="distorted" lang="fr">Statut : <span class="str user2 invisible">Développeur web</span></p>
-                    <p class="distorted" lang="fr">Adresse : <span class="str user3 invisible">176.173.216.180</span></p>
-                    <p class="distorted" lang="fr"><span class="str user4 invisible"><i class="far fa-envelope"></i> Contact</span></p>
+                    <p class="distorted" lang="fr">Utilisateur : <span class="str user1 invisible" lang="fr">Petropoulos Théo</span></p>
+                    <p class="distorted" lang="en">User : <span class="str user1 invisible" lang="en">Petropoulos Theo</span></p>
+                    <p class="distorted" lang="fr">Statut : <span class="str user2 invisible" lang="fr">Développeur web</span></p>
+                    <p class="distorted" lang="en">Status : <span class="str user2 invisible" lang="en">Web developer</span></p>
+                    <p class="distorted" lang="fr">Adresse : <span class="str user3 invisible" lang="fr">176.173.216.180</span></p>
+                    <p class="distorted" lang="en">Adress : <span class="str user3 invisible" lang="en">176.173.216.180</span></p>
+                    <p class="distorted"><span class="str user4 invisible"><i class="far fa-envelope"></i> Contact</span></p>
                 </section>
 
                 <section id="music_player" class="invisible drag" style="left:70%;top:30%">
@@ -72,9 +78,24 @@
                         <div class="window_menu">
                             <ul>
                                 <div class="window_menu_left">
-                                    <li><button class="window_file">Fichier</button></li>
-                                    <li><button class="window_edit">Edition</button></li>
-                                    <li><button class="window_view">Affichage</button></li>
+                                    <li>
+                                        <button class="window_file">
+                                            <span lang="fr">Fichier</span>
+                                            <span lang="en">File</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="window_edit">
+                                            <span lang="fr">Édition</span>
+                                            <span lang="en">Edit</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="window_view">
+                                            <span lang="fr">Affichage</span>
+                                            <span lang="en">View</span>
+                                        </button>
+                                    </li>
                                 </div>
                                 <div class="window_menu_right">
                                     <li><button class="window_minimize"><i class="far fa-window-minimize"></i></button></li>
@@ -86,15 +107,15 @@
                         <div class="window_content">
                             <div class="window_min img rclick" id="img_lake">
                                 <img src="<?=$addr;?>assets/images/lake.jpg">
-                                <p class="distorted" lang="fr">Lac.jpeg</p>
+                                <p class="distorted">Lake.jpeg</p>
                             </div>
                             <div class="window_min img rclick" id="img_nsa">
                                 <img src="<?=$addr;?>assets/images/nsa.jpg">
-                                <p class="distorted" lang="fr">NSA.jpeg</p>
+                                <p class="distorted">NSA.jpeg</p>
                             </div>
                             <div class="window_min img rclick" id="img_neon"">
                                 <img src="<?=$addr;?>assets/images/neon.jpg">
-                                <p class="distorted" lang="fr">Neon City.jpeg</p>
+                                <p class="distorted">Neon City.jpeg</p>
                             </div>
                         </div>
                     </section>
@@ -102,9 +123,24 @@
                         <div class="window_menu">
                             <ul>
                                 <div class="window_menu_left">
-                                    <li><button class="window_file">Fichier</button></li>
-                                    <li><button class="window_edit">Edition</button></li>
-                                    <li><button class="window_view">Affichage</button></li>
+                                    <li>
+                                        <button class="window_file">
+                                            <span lang="fr">Fichier</span>
+                                            <span lang="en">File</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="window_edit">
+                                            <span lang="fr">Édition</span>
+                                            <span lang="en">Edit</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="window_view">
+                                            <span lang="fr">Affichage</span>
+                                            <span lang="en">View</span>
+                                        </button>
+                                    </li>
                                 </div>
                                 <div class="window_menu_right">
                                     <li><button class="window_minimize"><i class="far fa-window-minimize"></i></button></li>
@@ -122,6 +158,7 @@
                     <div id="menu">
                         <button id="start_btn">
                             <p lang="fr">Démarrer</p>
+                            <p lang="en">Start</p>
                         </button>
                         <div id="start_menu" class="invisible">
                             <ul>
@@ -138,7 +175,16 @@
                     <div id="task_windows">
                         <ul></ul>
                     </div>
-                    <div id="task_corner"></div>
+                    <div id="task_corner">
+                        <div id="task_lang">
+                            <button id="switch_lang">
+                                <img id="en_lang" lang="fr" src="<?=$addr;?>assets/images/eng.jpeg">
+                                <img id="fr_lang" lang="en" src="<?=$addr;?>assets/images/france.jpeg">
+                            </button>
+                        </div>
+                        <span lang="fr"></span>
+                        <span lang="en"></span>
+                    </div>
                 </footer>
             </div>
         </main>

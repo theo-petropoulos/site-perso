@@ -1,17 +1,33 @@
 //Display time and date
 function clock(){
     var date=new Date();
-    var h=date.getHours();
-    if(h<10) h= '0' + h;
-    var t=date.getMinutes();
-    if(t<10) t= '0' + t;
+    var h=h_en=date.getHours();
+    if(h<12){
+        if(h<10) h=h_en='0' + h;
+        else h_en=h_en;
+    }
+    else{
+        if(h_en<22) h_en= '0' + h_en - 12;
+        else h_en = h_en - 12;
+    }
+    var t=t_en=date.getMinutes();
+    if(t<10) t=t_en= '0' + t;
+    if(h<12) t_en+= ' am';
+    else t_en += ' pm';
     var d=date.getDate();
     if(d<10) d= '0' + d;
     var m=date.getMonth() + 1;
     if(m<10) m = '0' + m;
     var y=date.getFullYear();
 
-    $("#task_corner").html("<p>" + h + ":" + t + "</p><p>" + d + "/" + "/" + m + "/" + y + "</p>");
+    $("#task_corner span:lang(fr)").html(
+        "<p lang='fr'>" + h + ":" + t + "</p>\
+        <p lang='fr'>" + d + "/" + m + "/" + y + "</p>"
+    );
+    $("#task_corner span:lang(en)").html(
+        "<p lang='en'>" + h_en + ":" + t_en + "</p>\
+        <p lang='en'>" + m + "/" + d + "/" + y + "</p>"
+    );
     setTimeout(clock, 30000);
 }
 
@@ -53,6 +69,12 @@ function getWindow(item){
     return 0;
 }
 
+//Keep current language
+function keepLang(){
+    if($('[lang="fr"]').hasClass("out")) $('#contextmenu [lang="fr"]').toggleClass("out");
+    else $('#contextmenu [lang="en"]').toggleClass("out");
+}
+
 //Context menu depending on what has been clicked
 function switchClass(e, fclass, target){
     let string, left, top, bottom, right, id, img_src;
@@ -62,11 +84,21 @@ function switchClass(e, fclass, target){
         case 'folder':
             string="<div id='contextmenu'>\
                 <ul>\
-                    <li><button id='open'><p lang='fr'>Ouvrir</p></button></li>\
-                    <li><button id='copy'><p lang='fr'>Copier</p></button></li>\
-                    <li><button id='cut'><p lang='fr'>Coller</p></button></li>\
-                    <li><button id='rename'><p lang='fr'>Renommer</p></button></li>\
-                    <li><button id='delete'><p lang='fr'>Supprimer</p></button></li>\
+                    <li><button id='open'>\
+                        <p lang='fr'>Ouvrir</p><p lang='en'>Open</p>\
+                    </button></li>\
+                    <li><button id='copy'>\
+                        <p lang='fr'>Copier</p><p lang='en'>Copy</p>\
+                        </button></li>\
+                    <li><button id='cut'>\
+                        <p lang='fr'>Coller</p><p lang='en'>Paste</p>\
+                    </button></li>\
+                    <li><button id='rename'>\
+                        <p lang='fr'>Renommer</p><p lang='en'>Rename</p>\
+                    </button></li>\
+                    <li><button id='delete'>\
+                        <p lang='fr'>Supprimer</p><p lang='en'>Delete</p>\
+                    </button></li>\
                 </ul>\
                 </div>";
             $(target).append(string);
@@ -101,10 +133,22 @@ function switchClass(e, fclass, target){
             break;
         case 'tb_window':
             string="<div id='contextmenu'><ul>";
-            if(!$(target).hasClass('noremoval')) string+="<li><button id='pin'><p lang='fr'>Epingler</p></button></li>";
-            else string+="<li><button id='unpin'><p lang='fr'>Détacher</p></button></li>";
-            if($(twindow).hasClass('invisible')) string+="<li><button id='open'><p lang='fr'>Ouvrir</p></button></li>"
-            else string+="<li><button id='close'><p lang='fr'>Fermer</p></button></li>"
+            if(!$(target).hasClass('noremoval')) string+=
+            "<li><button id='pin'>\
+                <p lang='fr'>Epingler</p><p lang='en'>Pin</p>\
+            </button></li>";
+            else string+=
+            "<li><button id='unpin'>\
+                <p lang='fr'>Détacher</p><p lang='en'>Unpin</p>\
+            </button></li>";
+            if($(twindow).hasClass('invisible')) string+=
+            "<li><button id='open'>\
+                <p lang='fr'>Ouvrir</p><p lang='en'>Open</p>\
+            </button></li>"
+            else string+=
+            "<li><button id='close'>\
+                <p lang='fr'>Fermer</p><p lang='en'>Close</p>\
+            </button></li>"
             string+="</ul></div>";
 
             $(target).append(string);
@@ -135,9 +179,15 @@ function switchClass(e, fclass, target){
             img_src=$(target).children('img').attr('src');
             string="<div id='contextmenu'>\
                 <ul>\
-                    <li><button id='open'><p lang='fr'>Ouvrir</p></button></li>\
-                    <li><button id='setwp'><p lang='fr'>Fond d'écran</p></button></li>\
-                    <li><button id='delete'><p lang='fr'>Supprimer</p></button></li>\
+                    <li><button id='open'>\
+                        <p lang='fr'>Ouvrir</p><p lang='en'>Open</p>\
+                    </button></li>\
+                    <li><button id='setwp'>\
+                        <p lang='fr'>Fond d'écran</p><p lang='en'>Wallpaper</p>\
+                    </button></li>\
+                    <li><button id='delete'>\
+                        <p lang='fr'>Supprimer</p><p lang='en'>Delete</p>\
+                    </button></li>\
                 </ul>\
                 </div>";
             $(target).append(string);
@@ -163,4 +213,5 @@ function switchClass(e, fclass, target){
             break;
         default:break;
     }
+    keepLang();
 }

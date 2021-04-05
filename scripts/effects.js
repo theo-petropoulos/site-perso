@@ -1,14 +1,14 @@
 $(function(){
-    const audiobuzz= new Audio('/theo.petropoulos/assets/sounds/buzz.mp3');
-    const audiobip= new Audio('/theo.petropoulos/assets/sounds/bip.mp3');
-    const audioclick= new Audio('/theo.petropoulos/assets/sounds/click.mp3');
-    const audiodbclick= new Audio('/theo.petropoulos/assets/sounds/dbclick.mp3');
+    const audiobuzz= new Audio('/theo.petropoulos/assets/audio/sounds/buzz.mp3');
+    const audiobip= new Audio('/theo.petropoulos/assets/audio/sounds/bip.mp3');
+    const audioclick= new Audio('/theo.petropoulos/assets/audio/sounds/click.mp3');
+    const audiodbclick= new Audio('/theo.petropoulos/assets/audio/sounds/dbclick.mp3');
     $("title").append("No signal");
-
+    $('[lang="en"]').toggleClass("out");
     //Used to trigger dblclick event vs simple click
     var prevent = false;
     var timer = 0;
-
+    
     clock();
     
     $("#switch_power").click(function(e){
@@ -36,6 +36,13 @@ $(function(){
         $(this).css("background", "initial");
     });
 
+    //Change language
+    $("#switch_lang").click(function(e){
+        $('[lang="fr"]').toggleClass("out");
+        $('[lang="en"]').toggleClass("out");
+        clock();
+    });
+
     //Play sound on double click
     $(document).dblclick(function(){
         clearTimeout(timer);
@@ -46,7 +53,7 @@ $(function(){
     
     //Play sound on left click
     $(document).click(function(e){
-        if(typeof(e.originalEvent!=='undefined')){
+        if(!e.isTrigger){
             audioclick.currentTime=0;
             timer=setTimeout(() => {
                 if(prevent==false){
@@ -70,8 +77,8 @@ $(function(){
 
 function screen_flick(){
     var flick=Math.floor(Math.random()*8)+1;
-    var audioflick= new Audio('/theo.petropoulos/assets/sounds/flick.mp3');
-    var audiobuzz= new Audio('/theo.petropoulos/assets/sounds/buzz.mp3');
+    var audioflick= new Audio('/theo.petropoulos/assets/audio/sounds/flick.mp3');
+    var audiobuzz= new Audio('/theo.petropoulos/assets/audio/sounds/buzz.mp3');
     switch(flick){
         case 1:
             audioflick.play();
@@ -113,6 +120,6 @@ function screen_flick(){
 
 function randomKeyboardSound(){
     let i=Math.floor(Math.random()*5)+1;
-    let audiokeyboard=new Audio('/theo.petropoulos/assets/sounds/keyb' + i + '.mp3');
+    let audiokeyboard=new Audio('/theo.petropoulos/assets/audio/sounds/keyb' + i + '.mp3');
     audiokeyboard.play();
 }

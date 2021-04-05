@@ -11,6 +11,10 @@ html, body {
   overflow: hidden;
 }
 
+html:lang(en), body:lang(en) {
+  display: none;
+}
+
 body {
   width: 100vw;
   height: 100vh;
@@ -24,6 +28,14 @@ body {
 .invisible {
   opacity: 0;
   visibility: hidden;
+}
+
+.out {
+  display: none;
+}
+
+.in {
+  display: initial;
 }
 
 .str {

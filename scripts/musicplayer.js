@@ -1,9 +1,10 @@
 $(function(){
     //Fetch musics, should be done dynamically via node.js file explorer
     var musList=[];
-    musList[1]= new Audio('/theo.petropoulos/assets/sounds/Blue Stahli - Command Line Kill.mp3');
-    musList[2]= new Audio('/theo.petropoulos/assets/sounds/Carpenter Brut - Turbo Killer.mp3');
-    musList[3]= new Audio('/theo.petropoulos/assets/sounds/Scandroid - Neo-Tokyo.mp3');
+    musList[1]= new Audio('/theo.petropoulos/assets/audio/musics/John Carpenter - Escape From New York.mp3');
+    musList[2]= new Audio('/theo.petropoulos/assets/audio/musics/Carpenter Brut - Turbo Killer.mp3');
+    musList[3]= new Audio('/theo.petropoulos/assets/audio/musics/Scandroid - Neo-Tokyo.mp3');
+    musList[4]= new Audio('/theo.petropoulos/assets/audio/musics/Blue Stahli - Command Line Kill.mp3');
     let k;
     let mus;
     var title;
@@ -15,7 +16,7 @@ $(function(){
     if(typeof(k)=='undefined'){
         k=1;
         mus=musList[k];
-        title=$(mus).attr('src').replace('/theo.petropoulos/assets/sounds/', '');
+        title=$(mus).attr('src').replace('/theo.petropoulos/assets/audio/musics/', '');
         mus.volume=volume.value/100;
     }
 
@@ -63,7 +64,7 @@ $(function(){
         }
         musList[k].volume=mus.volume;
         mus=musList[k];
-        title=$(mus).attr('src').replace('/theo.petropoulos/assets/sounds/', '');
+        title=$(mus).attr('src').replace('/theo.petropoulos/assets/audio/musics/', '');
         $("#music_title p").html(title);
         mus.addEventListener("ended", function(){
             $("#music_next").trigger("click");
@@ -83,7 +84,7 @@ $(function(){
         }
         musList[k].volume=mus.volume;
         mus=musList[k];
-        title=$(mus).attr('src').replace('/theo.petropoulos/assets/sounds/', '');
+        title=$(mus).attr('src').replace('/theo.petropoulos/assets/audio/musics/', '');
         $("#music_title p").html(title);
         $("#music_play").html('<i class="fas fa-pause"></i>');
         mus.play();
