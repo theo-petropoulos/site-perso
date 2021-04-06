@@ -1,11 +1,13 @@
 X folder my projects
 X folder images
 X screen flicker
-projects in iframe ?
-change background
+X change background
 change color
 change font
 calculator ?
 game ?
+fake cmd ?
+projects in iframe ?
 
-neo tokyo dance with the dead 
+easter egg ? 
+konami code ?

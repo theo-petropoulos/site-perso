@@ -152,7 +152,7 @@
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  z-index: 6;
+  z-index: 7;
 }
 
 #screen #screen_on #folder_section .folder #contextmenu ul {
@@ -583,7 +583,7 @@
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  z-index: 6;
+  z-index: 7;
 }
 
 #screen #screen_on .window .window_content .window_min #contextmenu ul {
@@ -750,7 +750,7 @@
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  z-index: 6;
+  z-index: 7;
 }
 
 #screen #screen_on footer#task_bar #task_windows ul li #contextmenu ul {

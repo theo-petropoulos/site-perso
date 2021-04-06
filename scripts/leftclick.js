@@ -20,12 +20,12 @@ $(function(){
             e.stopPropagation();
         else{
             const thisdrag= document.getElementById($(this).attr('id'));
-            $(thisdrag).css("z-index", "10");
+            $(".drag").not($(this)).css("z-index","initial")
+            $(thisdrag).css("z-index", "6");
             e.preventDefault();
             let prevX= e.clientX;
             let prevY= e.clientY;
             $(document).mousemove(function(e){
-                $(thisdrag).css("z-index", "10");
                 $(".drag").hover(function(e){
                     if($(this)!==$(e.target).parent() && $(e.target).hasClass("folder")){
                         //ON HOVERING A FOLDER WHILE HOLDING DRAG ITEM
@@ -44,8 +44,8 @@ $(function(){
             });
             $(document).mouseup(function(){
                 $(thisdrag).not("#music_player, .window").css({"background":"transparent"});
-                $(thisdrag).css({"z-index":"initial"});
                 $(document).off("mousemove");
+                $(".drag").not('.window').css("z-index", "initial");
                 $(".drag").off("mouseenter mouseleave");
             });
         }

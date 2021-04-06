@@ -32,7 +32,8 @@ $(function(){
     //Expand window on menu double click
     $(".window_menu").dblclick(function(e){
         e.preventDefault();
-        if(!$(e.target).is('button')) $(".window_maximize").trigger("click");
+        let maximize_window="#" + $(e.target).parents(".window").attr('id') + " .window_maximize";
+        if(!$(e.target).is('button')) $(maximize_window).trigger("click");
     });
 
     //On window minimized left click
