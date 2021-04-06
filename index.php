@@ -178,8 +178,8 @@
                     <div id="task_corner">
                         <div id="task_lang">
                             <button id="switch_lang">
-                                <img id="en_lang" lang="fr" src="<?=$addr;?>assets/images/eng.jpeg">
-                                <img id="fr_lang" lang="en" src="<?=$addr;?>assets/images/france.jpeg">
+                                <p class="distorted" lang="fr">en</p>
+                                <p class="distorted" lang="en">fr</p>
                             </button>
                         </div>
                         <span lang="fr"></span>

@@ -764,16 +764,15 @@
   padding: 0;
 }
 
-#screen #screen_on footer#task_bar #task_corner #task_lang button img {
-  width: 100%;
+#screen #screen_on footer#task_bar #task_corner #task_lang button p {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  -o-object-fit: cover;
-     object-fit: cover;
+  color: greenyellow;
+  margin: 0;
 }
 
-#screen #screen_on footer#task_bar #task_corner #task_lang button img:hover {
+#screen #screen_on footer#task_bar #task_corner #task_lang button p:hover {
   cursor: pointer;
 }
 

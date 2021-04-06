@@ -481,10 +481,10 @@ $color:rgb(173, 255, 47);
                         display:flex;
                         width:100%;
                         padding:0;
-                        img{
-                            width:100%;
+                        p{
                             flex-grow:1;
-                            object-fit: cover;
+                            color:$color;
+                            margin:0;
                             &:hover{
                                 cursor:pointer;
                             }
