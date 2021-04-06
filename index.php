@@ -51,6 +51,11 @@
                         <p class="distorted" lang="fr">Projets</p>
                         <p class="distorted" lang="en">Projects</p>
                     </div>
+                    <div class="folder drag rclick" id="folder_bin" style="left:0px">
+                        <img src="<?=$addr;?>assets/images/bin.png" title="folder_min">
+                        <p class="distorted" lang="fr">Corbeille</p>
+                        <p class="distorted" lang="en">Recycle bin</p>
+                    </div>
                 </section>
                 
                 <section id="user" class="invisible">
@@ -74,7 +79,20 @@
                 </section>
 
                 <section id="windows">
-                    <section class="window drag invisible" id="window_images">
+                    <section class="window drag invisible" id="window_openimg">
+                        <div class="window_menu">
+                            <ul>
+                                <div class="window_menu_right">
+                                    <li><button class="window_minimize"><i class="far fa-window-minimize"></i></button></li>
+                                    <li><button class="window_maximize"><i class="far fa-window-maximize"></i></button></li>
+                                    <li><button class="window_close"><i class="fas fa-times"></i></button></li>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="window_content">
+                        </div>
+                    </section>
+                    <section class="window drag invisible" id="window_bin">
                         <div class="window_menu">
                             <ul>
                                 <div class="window_menu_left">
@@ -105,15 +123,60 @@
                             </ul>
                         </div>
                         <div class="window_content">
-                            <div class="window_min img rclick" id="img_lake">
+                        </div>
+                    </section>
+                    <section class="window drag invisible" id="window_images">
+                        <div class="window_menu">
+                            <ul>
+                                <div class="window_menu_left">
+                                    <li>
+                                        <button class="window_file">
+                                            <span lang="fr">Fichier</span>
+                                            <span lang="en">File</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="window_edit">
+                                            <span lang="fr">Édition</span>
+                                            <span lang="en">Edit</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="window_view">
+                                            <span lang="fr">Affichage</span>
+                                            <span lang="en">View</span>
+                                        </button>
+                                        <div id="window_view_menu">
+                                            <ul>
+                                                <li>
+                                                    <span lang="fr">Liste</span>
+                                                    <span lang="en">List</span>
+                                                </li>
+                                                <li>
+                                                    <span lang="fr">Icones</span>
+                                                    <span lang="fr">Icons</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </div>
+                                <div class="window_menu_right">
+                                    <li><button class="window_minimize"><i class="far fa-window-minimize"></i></button></li>
+                                    <li><button class="window_maximize"><i class="far fa-window-maximize"></i></button></li>
+                                    <li><button class="window_close"><i class="fas fa-times"></i></button></li>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="window_content">
+                            <div class="window_min img rclick file" id="img_lake">
                                 <img src="<?=$addr;?>assets/images/lake.jpg">
                                 <p class="distorted">Lake.jpeg</p>
                             </div>
-                            <div class="window_min img rclick" id="img_nsa">
+                            <div class="window_min img rclick file" id="img_nsa">
                                 <img src="<?=$addr;?>assets/images/nsa.jpg">
                                 <p class="distorted">NSA.jpeg</p>
                             </div>
-                            <div class="window_min img rclick" id="img_neon"">
+                            <div class="window_min img rclick file" id="img_neon"">
                                 <img src="<?=$addr;?>assets/images/neon.jpg">
                                 <p class="distorted">Neon City.jpeg</p>
                             </div>

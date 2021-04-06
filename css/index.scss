@@ -225,6 +225,26 @@ $color:rgb(173, 255, 47);
                 left:10%;
                 width:70vw;
                 height:70vh;
+                &#window_openimg{
+                    .window_menu{
+                        display:flex;
+                        flex-flow:row;
+                        ul{
+                            display:flex;
+                            flex-flow:row;
+                            align-items: flex-end;
+                            justify-content: flex-end;
+                        }
+                    }
+                    .window_content{
+                        display:flex;
+                        img{
+                            flex-grow:1;
+                            object-fit: contain;
+                            width:100%;
+                        }
+                    }
+                }
             }
             &.fullscreen{
                 position:fixed;
@@ -234,6 +254,26 @@ $color:rgb(173, 255, 47);
                 bottom:0;
                 height:100%;
                 width:100%;
+                &#window_openimg{
+                    .window_menu{
+                        display:flex;
+                        flex-flow:row;
+                        ul{
+                            display:flex;
+                            flex-flow:row;
+                            align-items: flex-end;
+                            justify-content: flex-end;
+                        }
+                    }
+                    .window_content{
+                        display:flex;
+                        img{
+                            flex-grow:1;
+                            object-fit: contain;
+                            width:100%;
+                        }
+                    }
+                }
             }
             .window_menu{
                 display:flex;

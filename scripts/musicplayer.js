@@ -1,10 +1,10 @@
 $(function(){
     //Fetch musics, should be done dynamically via node.js file explorer
     var musList=[];
-    musList[1]= new Audio('assets/audio/musics/John Carpenter - Escape From New York.mp3');
-    musList[2]= new Audio('assets/audio/musics/Carpenter Brut - Turbo Killer.mp3');
-    musList[3]= new Audio('assets/audio/musics/Scandroid - Neo-Tokyo.mp3');
-    musList[4]= new Audio('assets/audio/musics/Blue Stahli - Command Line Kill.mp3');
+    musList[0]= new Audio('assets/audio/musics/John Carpenter - Escape From New York.mp3');
+    musList[1]= new Audio('assets/audio/musics/Carpenter Brut - Turbo Killer.mp3');
+    musList[2]= new Audio('assets/audio/musics/Scandroid - Neo-Tokyo.mp3');
+    musList[3]= new Audio('assets/audio/musics/Blue Stahli - Command Line Kill.mp3');
     let k;
     let mus;
     var title;
@@ -25,6 +25,7 @@ $(function(){
         mus.volume = e.currentTarget.value / 100;
     });
 
+    //Play next music when the previous one ended
     mus.addEventListener("ended", function(){
         $("#music_next").trigger("click");
     });
@@ -55,12 +56,12 @@ $(function(){
             mus.currentTime=0;
         } else{
             mus.currentTime=0;
-            for(let i=1;i<5;i++){
-                if(mus==musList[i]){
-                    if(i!==1) k=i-1;
-                    else k=3;
+            $(musList).each(function(index, data){
+                if(mus==data){
+                    if(index==0) k=musList.length-1;
+                    else k=index - 1;
                 }
-            }
+            });
         }
         musList[k].volume=mus.volume;
         mus=musList[k];
@@ -76,12 +77,12 @@ $(function(){
         e.preventDefault();
         mus.pause();
         mus.currentTime=0;
-        for(let i=1;i<5;i++){
-            if(mus==musList[i]){
-                if(i!==3) k=i+1;
-                else k=1;
+        $(musList).each(function(index, data){
+            if(mus==data){
+                if(index==musList.length-1) k=0;
+                else k=index + 1;
             }
-        }
+        });
         musList[k].volume=mus.volume;
         mus=musList[k];
         title=$(mus).attr('src').replace('assets/audio/musics/', '');

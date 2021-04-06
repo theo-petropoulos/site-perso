@@ -2,7 +2,7 @@ $(function(){
     //On window close
     $(".window_close").click(function(e){
         e.preventDefault();
-        closeWindow(e.target, 'window');
+        closeWindow($(e.target).parents('.window').attr('id'));
     });
 
     //On window minimize
@@ -40,12 +40,10 @@ $(function(){
         let id= $(this).attr('id').replace('tb_window_', '');
         let window_id="#window_" + id;
         if($(window_id).css("visibility")=='hidden'){
-            console.log("else if");
             $(window_id).toggleClass("invisible");
             $(window_id).css("animation", "minimize_out 0.4s 0s forwards");
         }
         else{
-            console.log("else");
             $(window_id).css("animation", "minimize 0.4s 0s forwards");
             setTimeout(() => $(window_id).toggleClass("invisible"), 400);
         }

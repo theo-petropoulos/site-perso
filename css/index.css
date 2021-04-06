@@ -353,6 +353,47 @@
   height: 70vh;
 }
 
+#screen #screen_on .window:not(.fullscreen)#window_openimg .window_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+}
+
+#screen #screen_on .window:not(.fullscreen)#window_openimg .window_menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#screen #screen_on .window:not(.fullscreen)#window_openimg .window_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#screen #screen_on .window:not(.fullscreen)#window_openimg .window_content img {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+}
+
 #screen #screen_on .window.fullscreen {
   position: fixed;
   top: 0;
@@ -360,6 +401,47 @@
   right: 0;
   bottom: 0;
   height: 100%;
+  width: 100%;
+}
+
+#screen #screen_on .window.fullscreen#window_openimg .window_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+}
+
+#screen #screen_on .window.fullscreen#window_openimg .window_menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#screen #screen_on .window.fullscreen#window_openimg .window_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#screen #screen_on .window.fullscreen#window_openimg .window_content img {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 100%;
 }
 

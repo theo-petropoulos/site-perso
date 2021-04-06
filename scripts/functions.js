@@ -32,11 +32,10 @@ function clock(){
 }
 
 //Close a window depending on what has been clicked
-function closeWindow(target, tclass){
-    let window_id="#" + $(target).parents("." + tclass).attr('id');
-    let id=window_id.replace("#" + tclass + "_", "");
-    if(!$("#tb_window_" + id ).hasClass('noremoval')) $("#tb_window_" + id).remove();
-    $("#window_" + id ).toggleClass("visible invisible");
+function closeWindow(targetid){
+    let window_id="#tb_" + targetid;
+    if(!$(window_id).hasClass('noremoval')) $(window_id).remove();
+    $('#' + targetid).toggleClass("visible invisible");
 }
 
 //Get the related file associated to $this
@@ -165,7 +164,8 @@ function switchClass(e, fclass, target){
                         $(this).parents('.tb_window').toggleClass('noremoval');
                         break;
                     case 'close':
-                        closeWindow(e.target, 'tb_window');
+                        let closeid=$(e.target).parents('.tb_window').attr('id').replace('tb_', '');
+                        closeWindow(closeid);
                         break;
                     case 'open':
                         $(this).parents('.tb_window').trigger("click");
@@ -198,7 +198,16 @@ function switchClass(e, fclass, target){
                 e.preventDefault();
                 switch($(this).attr('id')){
                     case 'open':
-
+                        $("#window_openimg .window_content").html('<img src="' + img_src + '">');
+                        $("#window_openimg").toggleClass('invisible');
+                        id=$(this).attr("id").replace('img_','');
+                        if($("#tb_window_openimg").length<1) $("#task_windows ul").append("<li class='tb_window' id='tb_window_openimg'></li>");
+                        $("#tb_window_openimg").css({
+                            "background-image":"url('assets/images/file.png')",
+                            "background-size":"contain",
+                            "background-position":"center",
+                            "background-repeat":"no-repeat"
+                        });
                         break;
                     case 'setwp':
                         $("#screen_on").css(
@@ -207,7 +216,59 @@ function switchClass(e, fclass, target){
                             rgba(20,29,9,0.8) 80%, rgba(0,0,0,0.99) 100%),\
                             url('" + img_src + "')");
                         break;
+                    case 'delete':
+                        let origin= $(target).parents('.window').attr('id');
+                        let classes=$(target).attr("class").split(/\s+/);
+                        classes= classes.toString().replace(/,/g, ' ');
+                        let filename= $(target).children('p').html();
+                            $("#window_bin .window_content").append('\
+                                <div origin="' + origin + '" class="deleted ' + classes + '" id="' + $(target).attr('id') +'">\
+                                    <img src="' + img_src + '">\
+                                    <p class="distorted">' + filename + '</p>\
+                                </div>\
+                                ');
+                            $(target).remove();
+                            break;
                     default:break;
+                }
+            });
+            break;
+        case 'deleted':
+            img_src=$(target).children('img').attr('src');
+            string="<div id='contextmenu'>\
+                <ul>\
+                    <li><button id='restore'>\
+                        <p lang='fr'>Réstaurer</p><p lang='en'>Restore</p>\
+                    </button></li>\
+                    <li><button id='cdelete'>\
+                        <p lang='fr'>Supprimer</p><p lang='en'>Delete</p>\
+                    </button></li>\
+                </ul>\
+                </div>";
+            $(target).append(string);
+            left = e.clientX - box.left + "px";
+            top = e.clientY - box.top + "px";
+            $("#contextmenu").css({"top": top, "left": left});
+            $("button").click(function(e){
+                e.preventDefault();
+                switch($(this).attr('id')){
+                    case 'restore':
+                        let direction = '#' + $(target).attr('origin');
+                        let idrestored = $(target).attr('id');
+                        let classes=$(target).attr("class").split(/\s+/);
+                        let filename= $(target).children('p').html();
+                        classes= classes.toString().replace(/,/g, ' ').replace('deleted ', '');
+                        $(direction + ' .window_content').append('\
+                            <div class="' + classes + '" id="' + idrestored +'">\
+                                <img src="' + img_src + '">\
+                                <p class="distorted">' + filename + '</p>\
+                            </div>\
+                            ');
+                        $(target).remove();
+                        break;
+                    case 'cdelete':
+                        $(target).remove();
+                        break;
                 }
             });
             break;

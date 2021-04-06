@@ -51,7 +51,8 @@ $(function(){
         }
     });
 
-    $(".folder").dblclick(function(e){
+    //Open folder on double click
+    $(".folder").dblclick(function(){
         let img_src=$(this).children("img").attr("src");
         let id=$(this).attr("id").replace('folder_','');
         if($("#window_" + id).hasClass("invisible")) $("#window_" + id).toggleClass("invisible visible");
@@ -64,8 +65,14 @@ $(function(){
         });
     });
 
-    $("button#open").click(function(e){
+    //Open file on double click
+    $(".file").dblclick(function(){
+        $(this).trigger('contextmenu');
+        $("#contextmenu #open").trigger("click");
+    });
+
+    $(".window_view").click(function(e){
         e.preventDefault();
-        console.log("$this = " + $(this) + " - this = " + this + " - $thisparent = " + $(this).parent());
+        
     });
 });

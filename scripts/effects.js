@@ -1,7 +1,7 @@
 $(function(){
     const audiobuzz= new Audio('assets/audio/sounds/buzz.mp3');
     const audiobip= new Audio('assets/audio/sounds/bip.mp3');
-    const audioclick= new Audio('/theo.petropoulos/assets/audio/sounds/click.mp3');
+    const audioclick= new Audio('assets/audio/sounds/click.mp3');
     const audiodbclick= new Audio('assets/audio/sounds/dbclick.mp3');
     $("title").append("No signal");
     $('[lang="en"]').toggleClass("out");
