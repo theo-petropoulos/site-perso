@@ -124,6 +124,34 @@ function switchClass(e, fclass, target){
                     case 'cut':
                         break;
                     case 'rename':
+                        let temp_name=$(target).children('p').html();
+                        $(target).children('p').remove();
+                        $(target).append(
+                            '<form method="post" action="index.php" id="form_rename">\
+                                <textarea name="this_rename" id="this_rename" style="resize: none" maxlength=16 required autofocus></textarea>\
+                                <button class="form_submit" type="submit"></button>\
+                            </form>'
+                        );
+                        $("#this_rename").css({
+                            "background":"transparent", 
+                            "color":"rgb(173, 255, 47)", 
+                            "font-family":"DotGothic16, Courier",
+                            "border":"none",
+                            "outline":"none",
+                            "text-align":"center"  
+                        });
+                        $(".form_submit").css("display", "none");
+                        $("#this_rename").focus();
+                        $("#this_rename").keypress(function(e){
+                            if(e.keyCode==13){
+                                $("#this_rename").trigger("focusout");
+                            }
+                        });
+                        $("#this_rename").focusout(function(){
+                            if($("#this_rename").val().length>0) $(target).append('<p>'+ $("#this_rename").val() + '</p>')
+                            else $(target).append('<p>' + temp_name + '</p>');
+                            $("#form_rename").remove();
+                        });
                         break;
                     case 'delete':
                         break;

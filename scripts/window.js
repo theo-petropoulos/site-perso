@@ -20,12 +20,12 @@ $(function(){
         if(!$(window_id).hasClass('fullscreen')){
             $(window_id).css({"top":0, "left":0});
             $(window_id).toggleClass("fullscreen");
-            $(".window_maximize").html('<i class="far fa-window-restore"></i>');
+            $(window_id + " .window_maximize").html('<i class="far fa-window-restore"></i>');
         }
         else{
             $(window_id).css({"top": "20%", "left": "20%"});
             $(window_id).toggleClass("fullscreen");
-            $(".window_maximize").html('<i class="far fa-window-maximize"></i>');
+            $(window_id + " .window_maximize").html('<i class="far fa-window-maximize"></i>');
         }
     });
 

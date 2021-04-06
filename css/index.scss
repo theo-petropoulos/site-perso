@@ -89,8 +89,15 @@ $color:rgb(173, 255, 47);
                     font-family: $font;
                     text-align: center;
                     margin:1% 0 0 0;
+                    height:max-content;
                     &:hover{
                         cursor:default;
+                    }
+                }
+                form{
+                    textarea{
+                        width:calc(40px + 4vw);
+                        word-wrap: wrap;
                     }
                 }
                 #contextmenu{

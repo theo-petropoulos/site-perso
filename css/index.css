@@ -141,10 +141,18 @@
   font-family: "DotGothic16", Courier;
   text-align: center;
   margin: 1% 0 0 0;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 
 #screen #screen_on #folder_section .folder p:hover {
   cursor: default;
+}
+
+#screen #screen_on #folder_section .folder form textarea {
+  width: calc(40px + 4vw);
+  word-wrap: wrap;
 }
 
 #screen #screen_on #folder_section .folder #contextmenu {

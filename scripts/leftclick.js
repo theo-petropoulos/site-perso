@@ -1,7 +1,6 @@
 $(function(){
     //Standards for click
     $(document).click(function(e){
-        e.preventDefault();
         if($("#contextmenu").length>0) $("#contextmenu").remove();
         if(!$("#start_menu").hasClass('invisible') && !$(e.target).is('#start_menu')) $("#start_menu").toggleClass('invisible');
     });
@@ -14,7 +13,7 @@ $(function(){
     });
 
     //Drag a file
-    $(".drag").not($(this).has('input')).mousedown(function(e){
+    $(".drag").not('input').not($(this).has('input')).mousedown(function(e){
         if( $(e.target).attr('id')=='music_volume'  || $(e.target).parents('.window').hasClass('fullscreen') ||  
             $(e.target).is("button") || $(e.target).is('.window_content')) 
             e.stopPropagation();
