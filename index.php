@@ -1,6 +1,6 @@
 <?php
-    $addr='/theo.petropoulos/';
-    $root = $_SERVER['DOCUMENT_ROOT'] . "/theo.petropoulos/";
+    $addr='';
+    //$root = $_SERVER['DOCUMENT_ROOT'] . "/theo.petropoulos/";
 ?>
 
 <!DOCTYPE html>
