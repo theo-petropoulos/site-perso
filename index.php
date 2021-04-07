@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="<?=$addr;?>css/theo.petropoulos.css?v=<?php echo time(); ?>">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet"> 
+        <link id="linkicon" rel="icon" type="image/png" href="assets/images/icons/logo1.png">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="<?=$addr;?>scripts/functions.js"></script>
         <script src="<?=$addr;?>scripts/effects.js"></script>

@@ -18,7 +18,8 @@ $(function(){
         $("#screen_off").toggleClass("invisible visible");
         $("#screen_on").toggleClass("visible invisible");
         $("#screen_on").css("background-image", "radial-gradient(circle, rgba(40,57,20,0.95) 0%, rgba(20,29,9,0.97) 80%, rgba(0,0,0,0.99) 100%), url('assets/images/backgrounds/bg_stripes.jpg')");
-        setTimeout(() => {$("title").empty().append("Bonjour, Monde.")}, 1850);
+        setTimeout(() => {$("title").html("Bonjour, Monde.")}, 1850);
+        setTimeout(() => {$("#linkicon").html('<link id="linkicon" rel="icon" type="image/png" href="assets/images/icons/logo2.png">')}, 2250);
         setTimeout(() => {$("#task_bar").toggleClass("visible invisible");}, 2500);
         setTimeout(() => {$("#user").toggleClass("invisible");screen_flick();}, 3000);
         setTimeout(() => {$("#music_player").toggleClass("invisible");}, 3300);
