@@ -5,13 +5,16 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html prefix="og: https://ogp.me/ns#" xmlns="http://www.w3.org/1999/xhtml">
 
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <meta name="author" content="Petropoulos Théo">
         <meta name="robots" content="index">
+        <meta property="og:title" content="Petropoulos Théo - Développeur Web">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://theo-petropoulos.students-laplateforme.io/">
         <meta http-equiv="expires" content="86400">
         <meta name="description" content="Petropoulos Théo, développeur web & web mobile à Marseille. En recherche d'alternance.">
         <meta name="keywords" content="Petropoulos, Théo, Développeur, Web, Developer, Marseille, Alternance, Javascript, Jquery, JS, PHP, HTML, CSS">
