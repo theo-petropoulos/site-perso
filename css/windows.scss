@@ -1,0 +1,174 @@
+$font:'DotGothic16', Courier;
+$color:rgb(173, 255, 47);
+
+.window{
+    display:flex;
+    flex-flow:column;
+    z-index:3;
+    border:1px solid black;
+    &:not(.fullscreen){
+        position:absolute;
+        top:10%;
+        left:10%;
+        width:70vw;
+        height:70vh;
+        &#window_openimg{
+            .window_menu{
+                display:flex;
+                flex-flow:row;
+                ul{
+                    display:flex;
+                    flex-flow:row;
+                    align-items: flex-end;
+                    justify-content: flex-end;
+                }
+            }
+            .window_content{
+                display:flex;
+                img{
+                    flex-grow:1;
+                    object-fit: contain;
+                    width:100%;
+                }
+            }
+        }
+    }
+    &.fullscreen{
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        height:100%;
+        width:100%;
+        &#window_openimg{
+            .window_menu{
+                display:flex;
+                flex-flow:row;
+                ul{
+                    display:flex;
+                    flex-flow:row;
+                    align-items: flex-end;
+                    justify-content: flex-end;
+                }
+            }
+            .window_content{
+                display:flex;
+                img{
+                    flex-grow:1;
+                    object-fit: contain;
+                    width:100%;
+                }
+            }
+        }
+    }
+    .window_menu{
+        display:flex;
+        flex-flow:row;
+        background:black;
+        ul{
+            padding:0;
+            margin:0;
+            display:flex;
+            flex-flow:row;
+            justify-content: space-between;
+            width:100%;
+            div{
+                width:max-content;
+                display:flex;
+                flex-flow:row;
+                &.window_menu_left{
+                    width:30%;
+                    li{
+                        margin:0 2%;
+                        padding:1% 0;
+                        button{
+                            background:transparent;
+                            color:$color;
+                            border:1px solid transparent;
+                            &:hover{
+                                border:1px solid $color;
+                            }
+                        }
+                    }
+                }
+                &.window_menu_right{
+                    width:15%;
+                    justify-content: flex-end;
+                    li{
+                        margin:0 2%;
+                        button{
+                            background:transparent;
+                            border:1px solid $color;
+                            i{
+                                color:$color;
+                                padding:1%;
+                            }
+                        }
+                    }
+                }
+                li{
+                    list-style-type: none;
+                    width:max-content;
+                    button{
+                        &:hover{
+                            background:rgba(255,255,255,0.2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .window_content{
+        position:relative;
+        display:flex;
+        flex-grow:1;
+        flex-flow:row;
+        padding:1% 2%;
+        background:#131a0d;
+        color:$color;
+        .window_min{
+            position:relative;
+            display:flex;
+            flex-flow:column;
+            width:12%;
+            height:max-content;
+            justify-content: center;
+            align-items:center;
+            img{
+                width:75px;
+            }
+            #contextmenu{
+                position:absolute;
+                width:max-content;
+                z-index:7;
+                ul{
+                    margin:0;
+                    padding:0;
+                    width:100%;
+                    position:relative;
+                    display:flex;
+                    flex-flow:column;
+                    li{
+                        list-style-type: none;
+                        width:100%;
+                        display:flex;
+                        button{
+                            flex-grow:1;
+                            background:black;
+                            &:hover{
+                                background:rgb(78, 78, 78);
+                            }
+                            p{
+                                margin:0;
+                                color:$color;
+                                width:100%;
+                                pointer-events: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

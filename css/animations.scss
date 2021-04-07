@@ -1,0 +1,29 @@
+$font:'DotGothic16', Courier;
+$color:rgb(173, 255, 47);
+
+@keyframes textglitch{
+    0%{text-shadow:1.5px 0.4px 0px $color;}
+    1%{text-shadow:-2.4px -0.8px 0px $color;}
+    2%{text-shadow:2.3px 0.2px 0px $color;}
+    5%{text-shadow:2.3px 0.2px 0px $color;}
+    6%{text-shadow:-1.7px 0.4px 0px $color;}
+    7%{text-shadow:-1.7px 0.4px 0px $color;}
+    8%{text-shadow:0.8px 0.2px 0px $color;}
+    10%{text-shadow:0px 0px 0px $color;}
+}
+
+@keyframes slidertoleft{
+    0%{transform:translateX(125%);}
+    100%{transform:translateX(-125%);}
+}
+
+@keyframes minimize{
+    0%{transform:translate(0,0) scale(100%,100%);}
+    99%{transform:translate(-50%, 400%) scale(0%,0%);}
+    100%{transform:translate(-50%, 400%) scale(0%,0%);visibility:hidden;}
+}
+
+@keyframes minimize_out{
+    0%{visibility:visible;transform:translate(-50%, 400%) scale(0%,0%);}
+    100%{transform:translate(0,0) scale(100%, 100%);}
+}

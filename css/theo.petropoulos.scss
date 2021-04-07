@@ -1,18 +1,19 @@
-@import url('index.css');
+@import url('screen_off.css');
+@import url('folder_section.css');
+@import url('user.css');
+@import url('music_player.css');
+@import url('windows.css');
+@import url('task_bar.css');
+@import url('animations.css');
 
-@font-face {
-    font-family: "Pixel";
-    src: url("/assets/VCR_OSD_MONO_1.001.ttf") format("truetype");
-}
+$font:'DotGothic16', Courier;
+$color:rgb(173, 255, 47);
 
 html,body{
     margin:0;
     padding:0;
     scroll-behavior: smooth;
     overflow: hidden;
-    &:lang(en){
-        display:none;
-    }
 }
 
 body{
@@ -52,4 +53,34 @@ body{
     left:0;
     height:100vh;
     width:100vw;
+}
+
+#screen{
+    font-family: $font;
+    position:relative;
+    height:100%;
+    width:100%;
+    background-image:radial-gradient(circle, rgba(40,57,20,1) 0%, rgba(20,29,9,1) 10%, rgba(0,0,0,1) 45%);
+    #screen_on{
+        width:100%;
+        height:100%;
+        position:absolute;
+        top:0;
+        left:0;
+        display:flex;
+        flex-flow:column;
+        transition:all 0.8s 1s;
+        background-size:100%;
+        background-position: center;
+        #screen_flicker{
+            height:100%;
+            width:100%;
+            position:absolute;
+            top:0;
+            left:0;
+            background:rgba(0,0,0,0.7);
+            pointer-events:none;
+            z-index:8;
+        }
+    }
 }

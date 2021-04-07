@@ -1,0 +1,24 @@
+$font:'DotGothic16', Courier;
+$color:rgb(173, 255, 47);
+
+#user{
+    position:absolute;
+    top:0;
+    right:0;
+    display:flex;
+    flex-flow:column;
+    width:max-content;
+    min-width:20%;
+    height:max-content;
+    margin-right:2%;
+    p{
+        color:$color;
+        font-family: $font;
+        margin:0 0 1% 0;
+        width:max-content;
+        user-select: none;
+        &:first-of-type{
+            margin-top:1%;
+        }
+    }
+}

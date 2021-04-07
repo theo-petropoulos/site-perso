@@ -1,18 +1,15 @@
-@import url("index.css");
-@font-face {
-  font-family: "Pixel";
-  src: url("/assets/VCR_OSD_MONO_1.001.ttf") format("truetype");
-}
-
+@import url("screen_off.css");
+@import url("folder_section.css");
+@import url("user.css");
+@import url("music_player.css");
+@import url("windows.css");
+@import url("task_bar.css");
+@import url("animations.css");
 html, body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
   overflow: hidden;
-}
-
-html:lang(en), body:lang(en) {
-  display: none;
 }
 
 body {
@@ -53,5 +50,43 @@ body {
   left: 0;
   height: 100vh;
   width: 100vw;
+}
+
+#screen {
+  font-family: "DotGothic16", Courier;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-image: radial-gradient(circle, #283914 0%, #141d09 10%, black 45%);
+}
+
+#screen #screen_on {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-transition: all 0.8s 1s;
+  transition: all 0.8s 1s;
+  background-size: 100%;
+  background-position: center;
+}
+
+#screen #screen_on #screen_flicker {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+  z-index: 8;
 }
 /*# sourceMappingURL=theo.petropoulos.css.map */
