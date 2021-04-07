@@ -15,6 +15,7 @@
         <meta http-equiv="expires" content="86400">
         <meta name="description" content="Petropoulos Théo, développeur web & web mobile à Marseille. En recherche d'alternance.">
         <meta name="keywords" content="Petropoulos, Théo, Développeur, Web, Developer, Marseille, Alternance, Javascript, Jquery, JS, PHP, HTML, CSS">
+        <meta property="og:image" content="assets/images/other/og.png">
         <link rel="stylesheet" href="<?=$addr;?>css/theo.petropoulos.css?v=<?php echo time(); ?>">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet"> 
