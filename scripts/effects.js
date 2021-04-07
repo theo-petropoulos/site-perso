@@ -3,7 +3,8 @@ $(function(){
     const audiobip= new Audio('assets/audio/sounds/bip.mp3');
     const audioclick= new Audio('assets/audio/sounds/click.mp3');
     const audiodbclick= new Audio('assets/audio/sounds/dbclick.mp3');
-    $("title").append("No signal");
+    //Init title and set default language to fr
+    $("title").html("No signal");
     $('[lang="en"]').toggleClass("out");
     //Used to trigger dblclick event vs simple click
     var prevent = false;
@@ -16,7 +17,7 @@ $(function(){
         audiobuzz.play();
         $("#screen_off").toggleClass("invisible visible");
         $("#screen_on").toggleClass("visible invisible");
-        $("#screen_on").css("background-image", "radial-gradient(circle, rgba(40,57,20,0.95) 0%, rgba(20,29,9,0.97) 80%, rgba(0,0,0,0.99) 100%), url('assets/images/bg_stripes.jpg')");
+        $("#screen_on").css("background-image", "radial-gradient(circle, rgba(40,57,20,0.95) 0%, rgba(20,29,9,0.97) 80%, rgba(0,0,0,0.99) 100%), url('assets/images/backgrounds/bg_stripes.jpg')");
         setTimeout(() => {$("title").empty().append("Bonjour, Monde.")}, 1850);
         setTimeout(() => {$("#task_bar").toggleClass("visible invisible");}, 2500);
         setTimeout(() => {$("#user").toggleClass("invisible");screen_flick();}, 3000);

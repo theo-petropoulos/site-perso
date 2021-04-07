@@ -106,6 +106,7 @@ function switchClass(e, fclass, target){
             $("#contextmenu").css({"top": top, "left": left});
             $("button").click(function(e){
                 e.preventDefault();
+                img_src=$(target).children('img').attr('src');
                 switch($(this).attr('id')){
                     case 'open':
                         let tbimg_src=$(this).parents(".folder").children("img").attr("src");
@@ -154,6 +155,17 @@ function switchClass(e, fclass, target){
                         });
                         break;
                     case 'delete':
+                        let origin= $(target).parent().attr('id');
+                        let classes=$(target).attr("class").split(/\s+/);
+                        classes= classes.toString().replace(/,/g, ' ');
+                        let filename= $(target).children('p').html();
+                            $("#window_bin .window_content").append('\
+                                <div origin="' + origin + '" class="deleted ' + classes + '" id="' + $(target).attr('id') +'">\
+                                    <img src="' + img_src + '">\
+                                    <p class="distorted">' + filename + '</p>\
+                                </div>\
+                                ');
+                        $(target).remove();
                         break;
                 }
             });
@@ -231,7 +243,7 @@ function switchClass(e, fclass, target){
                         id=$(this).attr("id").replace('img_','');
                         if($("#tb_window_openimg").length<1) $("#task_windows ul").append("<li class='tb_window' id='tb_window_openimg'></li>");
                         $("#tb_window_openimg").css({
-                            "background-image":"url('assets/images/file.png')",
+                            "background-image":"url('assets/images/icons/file.png')",
                             "background-size":"contain",
                             "background-position":"center",
                             "background-repeat":"no-repeat"
@@ -255,8 +267,8 @@ function switchClass(e, fclass, target){
                                     <p class="distorted">' + filename + '</p>\
                                 </div>\
                                 ');
-                            $(target).remove();
-                            break;
+                        $(target).remove();
+                        break;
                     default:break;
                 }
             });
@@ -286,7 +298,8 @@ function switchClass(e, fclass, target){
                         let classes=$(target).attr("class").split(/\s+/);
                         let filename= $(target).children('p').html();
                         classes= classes.toString().replace(/,/g, ' ').replace('deleted ', '');
-                        $(direction + ' .window_content').append('\
+                        if(classes.includes('window_min')) direction = direction + " .window_content";
+                        $(direction).append('\
                             <div class="' + classes + '" id="' + idrestored +'">\
                                 <img src="' + img_src + '">\
                                 <p class="distorted">' + filename + '</p>\

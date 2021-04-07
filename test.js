@@ -1,19 +1,12 @@
 $(function(){
-    // $.get('test.php', function(data){
-    //     console.log(data);
-    //     $.each(data, function(){
-    //         console.log(data);
-    //         console.log('test');
-    //     });
-    // }, 'json');
-    $.ajax({
-        type: "GET",
-        url: "test.php",
-        success : function(data){
-            console.log(data);
-        }
-      })
-        .done(function(e){
-          alert( "Done : " + e );
-        });
+  $('#clickme').click(function(e){
+    e.preventDefault();
+    $.get('testreq.php', function(data, status){
+      var test=JSON.parse(data);
+      $(test).each(function(index,value){
+        console.log(value);
+      });
+      }
+    );
+  })
 });

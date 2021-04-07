@@ -127,7 +127,7 @@ $color:rgb(173, 255, 47);
         padding:1% 2%;
         background:#131a0d;
         color:$color;
-        .window_min{
+        .window_min, .folder{
             position:relative;
             display:flex;
             flex-flow:column;
@@ -137,6 +137,8 @@ $color:rgb(173, 255, 47);
             align-items:center;
             img{
                 width:75px;
+                height:40px;
+                object-fit: contain;
             }
             #contextmenu{
                 position:absolute;

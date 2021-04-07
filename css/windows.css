@@ -218,7 +218,7 @@
   color: greenyellow;
 }
 
-.window .window_content .window_min {
+.window .window_content .window_min, .window .window_content .folder {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -239,11 +239,14 @@
           align-items: center;
 }
 
-.window .window_content .window_min img {
+.window .window_content .window_min img, .window .window_content .folder img {
   width: 75px;
+  height: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
-.window .window_content .window_min #contextmenu {
+.window .window_content .window_min #contextmenu, .window .window_content .folder #contextmenu {
   position: absolute;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -251,7 +254,7 @@
   z-index: 7;
 }
 
-.window .window_content .window_min #contextmenu ul {
+.window .window_content .window_min #contextmenu ul, .window .window_content .folder #contextmenu ul {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -265,7 +268,7 @@
           flex-flow: column;
 }
 
-.window .window_content .window_min #contextmenu ul li {
+.window .window_content .window_min #contextmenu ul li, .window .window_content .folder #contextmenu ul li {
   list-style-type: none;
   width: 100%;
   display: -webkit-box;
@@ -273,18 +276,18 @@
   display: flex;
 }
 
-.window .window_content .window_min #contextmenu ul li button {
+.window .window_content .window_min #contextmenu ul li button, .window .window_content .folder #contextmenu ul li button {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   background: black;
 }
 
-.window .window_content .window_min #contextmenu ul li button:hover {
+.window .window_content .window_min #contextmenu ul li button:hover, .window .window_content .folder #contextmenu ul li button:hover {
   background: #4e4e4e;
 }
 
-.window .window_content .window_min #contextmenu ul li button p {
+.window .window_content .window_min #contextmenu ul li button p, .window .window_content .folder #contextmenu ul li button p {
   margin: 0;
   color: greenyellow;
   width: 100%;

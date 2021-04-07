@@ -13,9 +13,10 @@ $(function(){
     });
 
     //Drag a file
-    $(".drag").not('input').not($(this).has('input')).mousedown(function(e){
+    $(document).on('mousedown', '.drag', function(e){
+    // $(".drag").not('input').not($(this).has('input')).mousedown(function(e){
         if( $(e.target).attr('id')=='music_volume'  || $(e.target).parents('.window').hasClass('fullscreen') ||  
-            $(e.target).is("button") || $(e.target).is('.window_content')) 
+            $(e.target).is("button") || $(e.target).is('.window_content') || $(e.target).parent().is('.window_min')) 
             e.stopPropagation();
         else{
             const thisdrag= document.getElementById($(this).attr('id'));

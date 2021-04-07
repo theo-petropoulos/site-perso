@@ -2,7 +2,9 @@ X folder my projects
 X folder images
 X screen flicker
 X change background
+meta référencement
 change color
+change start button color focus
 change font
 calculator ?
 game ?
