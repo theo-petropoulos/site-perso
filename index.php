@@ -103,7 +103,7 @@
                     <!-- OPEN IMAGE WINDOW -->
                     <section class="window drag invisible" id="window_openimg">
                         <div class="window_menu">
-                            <ul>
+                            <ul class="window_menu_bar">
                                 <div class="window_menu_right">
                                     <li><button class="window_minimize"><i class="far fa-window-minimize"></i></button></li>
                                     <li><button class="window_maximize"><i class="far fa-window-maximize"></i></button></li>
@@ -118,35 +118,7 @@
 
                     <!-- RECYCLE BIN WINDOW -->
                     <section class="window drag invisible" id="window_bin">
-                        <div class="window_menu">
-                            <ul>
-                                <div class="window_menu_left">
-                                    <li>
-                                        <button class="window_file">
-                                            <span lang="fr">Fichier</span>
-                                            <span lang="en">File</span>
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button class="window_edit">
-                                            <span lang="fr">Édition</span>
-                                            <span lang="en">Edit</span>
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button class="window_view">
-                                            <span lang="fr">Affichage</span>
-                                            <span lang="en">View</span>
-                                        </button>
-                                    </li>
-                                </div>
-                                <div class="window_menu_right">
-                                    <li><button class="window_minimize"><i class="far fa-window-minimize"></i></button></li>
-                                    <li><button class="window_maximize"><i class="far fa-window-maximize"></i></button></li>
-                                    <li><button class="window_close"><i class="fas fa-times"></i></button></li>
-                                </div>
-                            </ul>
-                        </div>
+                        <?php require 'requires/window_menu.php';?>
                         <div class="window_content">
                         </div>
                     </section>
@@ -154,47 +126,7 @@
 
                     <!-- IMAGES WINDOW -->
                     <section class="window drag invisible" id="window_images">
-                        <div class="window_menu">
-                            <ul>
-                                <div class="window_menu_left">
-                                    <li>
-                                        <button class="window_file">
-                                            <span lang="fr">Fichier</span>
-                                            <span lang="en">File</span>
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button class="window_edit">
-                                            <span lang="fr">Édition</span>
-                                            <span lang="en">Edit</span>
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button class="window_view">
-                                            <span lang="fr">Affichage</span>
-                                            <span lang="en">View</span>
-                                        </button>
-                                        <div id="window_view_menu">
-                                            <ul>
-                                                <li>
-                                                    <span lang="fr">Liste</span>
-                                                    <span lang="en">List</span>
-                                                </li>
-                                                <li>
-                                                    <span lang="fr">Icones</span>
-                                                    <span lang="fr">Icons</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </div>
-                                <div class="window_menu_right">
-                                    <li><button class="window_minimize"><i class="far fa-window-minimize"></i></button></li>
-                                    <li><button class="window_maximize"><i class="far fa-window-maximize"></i></button></li>
-                                    <li><button class="window_close"><i class="fas fa-times"></i></button></li>
-                                </div>
-                            </ul>
-                        </div>
+                        <?php require 'requires/window_menu.php';?>
                         <div class="window_content">
                             <?php 
                                 $files=scandir($addr. 'assets/images/backgrounds/', 1);
@@ -214,41 +146,12 @@
 
                     <!-- PROJECTS WINDOW -->
                     <section class="window drag invisible" id="window_projects">
-                        <div class="window_menu">
-                            <ul>
-                                <div class="window_menu_left">
-                                    <li>
-                                        <button class="window_file">
-                                            <span lang="fr">Fichier</span>
-                                            <span lang="en">File</span>
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button class="window_edit">
-                                            <span lang="fr">Édition</span>
-                                            <span lang="en">Edit</span>
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button class="window_view">
-                                            <span lang="fr">Affichage</span>
-                                            <span lang="en">View</span>
-                                        </button>
-                                    </li>
-                                </div>
-                                <div class="window_menu_right">
-                                    <li><button class="window_minimize"><i class="far fa-window-minimize"></i></button></li>
-                                    <li><button class="window_expand"><i class="far fa-window-maximize"></i></button></li>
-                                    <li><button class="window_close"><i class="fas fa-times"></i></button></li>
-                                </div>
-                            </ul>
-                        </div>
+                        <?php require 'requires/window_menu.php';?>
                     </section>
                     <!-- END PROJECTS WINDOW -->
 
                     <!-- WINDOW ??? -->
-                    <section class="window drag invisible" id="window_musics">
-                    </section>
+
                     <!-- END WINDOW ??? -->
 
                 </section>

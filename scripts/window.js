@@ -32,8 +32,10 @@ $(function(){
     //Expand window on menu double click
     $(".window_menu").dblclick(function(e){
         e.preventDefault();
-        let maximize_window="#" + $(e.target).parents(".window").attr('id') + " .window_maximize";
-        if(!$(e.target).is('button')) $(maximize_window).trigger("click");
+        if(!$(e.target).is('span, button')){
+            let maximize_window="#" + $(e.target).parents(".window").attr('id') + " .window_maximize";
+            if(!$(e.target).is('button')) $(maximize_window).trigger("click");
+        }
     });
 
     //On window minimized left click
@@ -56,5 +58,13 @@ $(function(){
         let classes=$(target).attr("class").split(/\s+/);
         if($("#contextmenu").length>0) $("#contextmenu").remove();
         switchClass(e, classes[0], target);
+    });
+
+    //Open submenu
+    $('.menu button').click(function(e){
+        e.preventDefault();
+        if($('.submenu.visible')) $('.submenu.visible').toggleClass('invisible visible');
+        let thisorigin=$(this).parents('.menu').children('.submenu');
+        thisorigin.toggleClass("invisible visible");
     });
 });

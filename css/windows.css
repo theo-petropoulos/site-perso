@@ -121,7 +121,7 @@
   background: black;
 }
 
-.window .window_menu ul {
+.window .window_menu .window_menu_bar {
   padding: 0;
   margin: 0;
   display: -webkit-box;
@@ -137,7 +137,7 @@
   width: 100%;
 }
 
-.window .window_menu ul div {
+.window .window_menu .window_menu_bar div {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -150,55 +150,113 @@
           flex-flow: row;
 }
 
-.window .window_menu ul div.window_menu_left {
+.window .window_menu .window_menu_bar div.window_menu_left {
   width: 30%;
 }
 
-.window .window_menu ul div.window_menu_left li {
+.window .window_menu .window_menu_bar div.window_menu_left li {
   margin: 0 2%;
   padding: 1% 0;
 }
 
-.window .window_menu ul div.window_menu_left li button {
+.window .window_menu .window_menu_bar div.window_menu_left li button {
   background: transparent;
   color: greenyellow;
   border: 1px solid transparent;
 }
 
-.window .window_menu ul div.window_menu_left li button:hover {
+.window .window_menu .window_menu_bar div.window_menu_left li button:hover {
   border: 1px solid greenyellow;
 }
 
-.window .window_menu ul div.window_menu_right {
+.window .window_menu .window_menu_bar div.window_menu_right {
   width: 15%;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
 
-.window .window_menu ul div.window_menu_right li {
+.window .window_menu .window_menu_bar div.window_menu_right li {
   margin: 0 2%;
 }
 
-.window .window_menu ul div.window_menu_right li button {
+.window .window_menu .window_menu_bar div.window_menu_right li button {
   background: transparent;
   border: 1px solid greenyellow;
 }
 
-.window .window_menu ul div.window_menu_right li button i {
+.window .window_menu .window_menu_bar div.window_menu_right li button i {
   color: greenyellow;
   padding: 1%;
 }
 
-.window .window_menu ul div li {
+.window .window_menu .window_menu_bar div .menu {
   list-style-type: none;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  position: relative;
 }
 
-.window .window_menu ul div li button:hover {
+.window .window_menu .window_menu_bar div .menu button:hover {
   background: rgba(255, 255, 255, 0.2);
+}
+
+.window .window_menu .window_menu_bar div .menu .submenu {
+  position: absolute;
+  min-width: 100%;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  top: 100%;
+  left: 0;
+  z-index: 6;
+}
+
+.window .window_menu .window_menu_bar div .menu .submenu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  width: 100%;
+}
+
+.window .window_menu .window_menu_bar div .menu .submenu ul li {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 100%;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.window .window_menu .window_menu_bar div .menu .submenu ul li button {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background: black;
+  border: 2px inset grey;
+}
+
+.window .window_menu .window_menu_bar div .menu .submenu ul li button:hover {
+  background: #4e4e4e;
+}
+
+.window .window_menu .window_menu_bar div .menu .submenu ul li button p {
+  margin: 0;
+  color: greenyellow;
+  width: 100%;
+  pointer-events: none;
 }
 
 .window .window_content {

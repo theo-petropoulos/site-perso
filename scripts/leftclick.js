@@ -3,6 +3,7 @@ $(function(){
     $(document).click(function(e){
         if($("#contextmenu").length>0) $("#contextmenu").remove();
         if(!$("#start_menu").hasClass('invisible') && !$(e.target).is('#start_menu')) $("#start_menu").toggleClass('invisible');
+        if(!$(e.target).parents('.menu').children('.submenu').hasClass('visible')) $('.submenu.visible').toggleClass('invisible visible');
     });
 
     //Open start menu
@@ -26,10 +27,13 @@ $(function(){
             let prevX= e.clientX;
             let prevY= e.clientY;
             $(document).mousemove(function(e){
-                $(".drag").hover(function(e){
+                $(document).on('hover', '.drag', function(e){
+                    e.preventDefault();
+                    //ON HOVERING A FOLDER WHILE HOLDING DRAG ITEM
                     if($(this)!==$(e.target).parent() && $(e.target).hasClass("folder")){
-                        //ON HOVERING A FOLDER WHILE HOLDING DRAG ITEM
-                        //$(e.target).css("background", "red");
+                        let test=e.target.getBoundingClientRect();
+                        
+                        $(e.target).css("background", "red");
                     }
                 }, function(){});
                 const box= thisdrag.getBoundingClientRect();
