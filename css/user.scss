@@ -11,7 +11,8 @@ $color:rgb(173, 255, 47);
     min-width:20%;
     height:max-content;
     margin-right:2%;
-    p{
+    div,p{
+        font-size:calc(11px + 0.4vw);
         color:$color;
         font-family: $font;
         margin:0 0 1% 0;
@@ -19,6 +20,11 @@ $color:rgb(173, 255, 47);
         user-select: none;
         &:first-of-type{
             margin-top:1%;
+        }
+        h1,h2{
+            width:max-content;
+            font-size:calc(11px + 0.4vw);
+            color:$color;
         }
     }
 }

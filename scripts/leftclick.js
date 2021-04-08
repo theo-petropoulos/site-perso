@@ -1,9 +1,15 @@
 $(function(){
+    window.temp=null;
     //Standards for click
     $(document).click(function(e){
         if($("#contextmenu").length>0) $("#contextmenu").remove();
         if(!$("#start_menu").hasClass('invisible') && !$(e.target).is('#start_menu')) $("#start_menu").toggleClass('invisible');
         if(!$(e.target).parents('.menu').children('.submenu').hasClass('visible')) $('.submenu.visible').toggleClass('invisible visible');
+        if( !($(e.target).parents('.folder, .file') || $(e.target).hasClass('.folder, .file'))
+            && $(temp).length>0 ) {
+                temp.css('background', 'initial');
+                temp=null;
+            }
     });
 
     //Open start menu
@@ -13,12 +19,27 @@ $(function(){
         $("#start_menu").toggleClass("invisible");
     });
 
+    //Highlight a clickable element + remember it
+    $(document).on('click', '.folder, .file', function(e){
+        if($(temp).length>0) temp.css('background', 'initial');
+        temp=$(this);
+        temp.css("background","rgba(0,50,100,0.6)");
+    });
+
     //Drag a file
     $(document).on('mousedown', '.drag', function(e){
-    // $(".drag").not('input').not($(this).has('input')).mousedown(function(e){
         if( $(e.target).attr('id')=='music_volume'  || $(e.target).parents('.window').hasClass('fullscreen') ||  
-            $(e.target).is("button") || $(e.target).is('.window_content') || $(e.target).parent().is('.window_min')) 
-            e.stopPropagation();
+            $(e.target).is("button") || $(e.target).is('.window_content') || $(e.target).parent().is('.window_min')){
+                if($(temp).length>0 && !$(e.target).is('button')){
+                    temp.css('background', 'initial');
+                    temp=null;
+                    $(e.target).parents('.window_group').children('.window_infos').css({
+                        "background":"initial",
+                        "width":"0%"
+                    });
+                }
+                e.stopPropagation();
+            }
         else{
             const thisdrag= document.getElementById($(this).attr('id'));
             $(".drag").not($(this)).css("z-index","initial")

@@ -9,6 +9,7 @@ titles h1 h2
 change color
 change start button color focus
 change font
+prevent bin delete
 calculator ?
 game ?
 fake cmd ?

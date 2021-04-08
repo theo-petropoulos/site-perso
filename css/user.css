@@ -19,7 +19,8 @@
   margin-right: 2%;
 }
 
-#user p {
+#user div, #user p {
+  font-size: calc(11px + 0.4vw);
   color: greenyellow;
   font-family: "DotGothic16", Courier;
   margin: 0 0 1% 0;
@@ -32,7 +33,15 @@
           user-select: none;
 }
 
-#user p:first-of-type {
+#user div:first-of-type, #user p:first-of-type {
   margin-top: 1%;
+}
+
+#user div h1, #user div h2, #user p h1, #user p h2 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: calc(11px + 0.4vw);
+  color: greenyellow;
 }
 /*# sourceMappingURL=user.css.map */

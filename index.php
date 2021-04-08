@@ -48,27 +48,27 @@
 
                 <section id="folder_section" class="invisible">
                     <div class="folder drag rclick" id="folder_images" style="left:100px">
-                        <img src="<?=$addr;?>assets/images/icons/folder.png" title="folder_min">
+                        <img src="<?=$addr;?>assets/images/icons/folder.png" alt="folder_image" title="folder_min">
                         <p class="distorted" lang="fr">Images</p>
                         <p class="distorted" lang="en">Pictures</p>
                     </div>
                     <div class="folder drag rclick" id="folder_songs" style="left:200px">
-                        <img src="<?=$addr;?>assets/images/icons/folder.png" title="folder_min">
+                        <img src="<?=$addr;?>assets/images/icons/folder.png" alt="folder_image" title="folder_min">
                         <p class="distorted" lang="fr">Musiques</p>
                         <p class="distorted" lang="en">Musics</p>
                     </div>
                     <div class="folder drag rclick" id="folder_projects" style="left:300px">
-                        <img src="<?=$addr;?>assets/images/icons/folder.png" title="folder_min">
+                        <img src="<?=$addr;?>assets/images/icons/folder.png" alt="folder_image" title="folder_min">
                         <p class="distorted" lang="fr">Projets</p>
                         <p class="distorted" lang="en">Projects</p>
                     </div>
                     <div class="folder drag rclick" id="folder_bin" style="left:0px">
-                        <img src="<?=$addr;?>assets/images/icons/bin.png" title="folder_min">
+                        <img src="<?=$addr;?>assets/images/icons/bin.png" alt="recycle_bin_image" title="folder_min">
                         <p class="distorted" lang="fr">Corbeille</p>
                         <p class="distorted" lang="en">Recycle bin</p>
                     </div>
                     <div class="folder drag rclick" id="file_infos" style="left:0px;top:100px">
-                        <img src="<?=$addr;?>assets/images/icons/infos.png" title="folder_min">
+                        <img src="<?=$addr;?>assets/images/icons/infos.png" alt="personal_informations_images" title="folder_min">
                         <p class="distorted" lang="fr">Informations personnelles</p>
                         <p class="distorted" lang="en">Personal informations</p>
                     </div>
@@ -76,10 +76,10 @@
                 
                 <!-- USER'S LOG -->
                 <section id="user" class="invisible">
-                    <p class="distorted" lang="fr">Utilisateur : <span class="str user1 invisible" lang="fr">Petropoulos Théo</span></p>
-                    <p class="distorted" lang="en">User : <span class="str user1 invisible" lang="en">Petropoulos Theo</span></p>
-                    <p class="distorted" lang="fr">Statut : <span class="str user2 invisible" lang="fr">Développeur web</span></p>
-                    <p class="distorted" lang="en">Status : <span class="str user2 invisible" lang="en">Web developer</span></p>
+                    <div class="distorted" lang="fr">Utilisateur : <h1 style="display:inline" class="str user1 invisible" lang="fr">Petropoulos Théo</h1></div>
+                    <div class="distorted" lang="en">User : <h1 style="display:inline" class="str user1 invisible" lang="en">Petropoulos Theo</h1></div>
+                    <div class="distorted" lang="fr">Statut : <h2 style="display:inline" class="str user2 invisible" lang="fr">Développeur web</h2></div>
+                    <div class="distorted" lang="en">Status : <h2 style="display:inline" class="str user2 invisible" lang="en">Web developer</h2></div>
                     <p class="distorted" lang="fr">Adresse : <span class="str user3 invisible" lang="fr">176.173.216.180</span></p>
                     <p class="distorted" lang="en">Adress : <span class="str user3 invisible" lang="en">176.173.216.180</span></p>
                     <p class="distorted"><span class="str user4 invisible"><i class="far fa-envelope"></i> Contact</span></p>
@@ -135,7 +135,7 @@
                                     if($value!=='bg_stripes.jpg'){
                                         $name=str_replace('.jpg', '', $value);?>
                                         <div class="window_min img rclick file" id="img_<?=$name;?>">
-                                            <img src="<?=$addr;?>assets/images/backgrounds/<?=$value;?>">
+                                            <img src="<?=$addr;?>assets/images/backgrounds/<?=$value;?>" alt="background_image">
                                             <p class="distorted"><?=ucfirst($value);?></p>
                                         </div>
                                     <?php }
@@ -147,13 +147,14 @@
                     <!-- PROJECTS WINDOW -->
                     <section class="window drag invisible" id="window_projects">
                         <?php require 'requires/window_menu.php';?>
-                        <div class="window_content">
-                            <div class="window_min img rclick file">
-                                <a href="../boutique/index.php">
-                                    <img src="<?=$addr;?>assets/images/icons/at.png">
+                        <div class="window_group">
+                            <div class="window_content">
+                                <div class="window_min img rclick file project_min">
+                                    <img src="<?=$addr;?>assets/images/icons/at.png" alt="website_image">
                                     <p>Von Harper</p>
-                                </a>
+                                </div>
                             </div>
+                            <div class="window_infos"></div>
                         </div>
                     </section>
                     <!-- END PROJECTS WINDOW -->
@@ -196,8 +197,8 @@
                     <div id="task_corner">
                         <div id="task_lang">
                             <button id="switch_lang">
-                                <p class="distorted" lang="fr">en</p>
-                                <p class="distorted" lang="en">fr</p>
+                                <p class="distorted" lang="en">en</p>
+                                <p class="distorted" lang="fr">fr</p>
                             </button>
                         </div>
                         <span lang="fr"></span>

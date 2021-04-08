@@ -8,6 +8,7 @@
           flex-flow: column;
   z-index: 3;
   border: 1px solid black;
+  background: #131a0d;
 }
 
 .window:not(.fullscreen) {
@@ -259,7 +260,7 @@
   pointer-events: none;
 }
 
-.window .window_content {
+.window .window_content, .window .window_group .window_content {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -272,11 +273,10 @@
       -ms-flex-flow: row;
           flex-flow: row;
   padding: 1% 2%;
-  background: #131a0d;
   color: greenyellow;
 }
 
-.window .window_content .window_min, .window .window_content .folder {
+.window .window_content .window_min, .window .window_content .folder, .window .window_group .window_content .window_min, .window .window_group .window_content .folder {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -285,7 +285,7 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  width: 12%;
+  width: initial;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -295,26 +295,23 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 1.5% 2%;
 }
 
-.window .window_content .window_min img, .window .window_content .folder img {
+.window .window_content .window_min img, .window .window_content .folder img, .window .window_group .window_content .window_min img, .window .window_group .window_content .folder img {
   width: 75px;
   height: 40px;
   -o-object-fit: contain;
      object-fit: contain;
 }
 
-.window .window_content .window_min a, .window .window_content .folder a {
-  text-decoration: none;
-  color: greenyellow;
-}
-
-.window .window_content .window_min a p, .window .window_content .folder a p {
+.window .window_content .window_min p, .window .window_content .folder p, .window .window_group .window_content .window_min p, .window .window_group .window_content .folder p {
   margin: 0;
   color: greenyellow;
+  cursor: default;
 }
 
-.window .window_content .window_min #contextmenu, .window .window_content .folder #contextmenu {
+.window .window_content .window_min #contextmenu, .window .window_content .folder #contextmenu, .window .window_group .window_content .window_min #contextmenu, .window .window_group .window_content .folder #contextmenu {
   position: absolute;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -322,7 +319,7 @@
   z-index: 7;
 }
 
-.window .window_content .window_min #contextmenu ul, .window .window_content .folder #contextmenu ul {
+.window .window_content .window_min #contextmenu ul, .window .window_content .folder #contextmenu ul, .window .window_group .window_content .window_min #contextmenu ul, .window .window_group .window_content .folder #contextmenu ul {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -336,7 +333,7 @@
           flex-flow: column;
 }
 
-.window .window_content .window_min #contextmenu ul li, .window .window_content .folder #contextmenu ul li {
+.window .window_content .window_min #contextmenu ul li, .window .window_content .folder #contextmenu ul li, .window .window_group .window_content .window_min #contextmenu ul li, .window .window_group .window_content .folder #contextmenu ul li {
   list-style-type: none;
   width: 100%;
   display: -webkit-box;
@@ -344,21 +341,65 @@
   display: flex;
 }
 
-.window .window_content .window_min #contextmenu ul li button, .window .window_content .folder #contextmenu ul li button {
+.window .window_content .window_min #contextmenu ul li button, .window .window_content .folder #contextmenu ul li button, .window .window_group .window_content .window_min #contextmenu ul li button, .window .window_group .window_content .folder #contextmenu ul li button {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   background: black;
 }
 
-.window .window_content .window_min #contextmenu ul li button:hover, .window .window_content .folder #contextmenu ul li button:hover {
+.window .window_content .window_min #contextmenu ul li button:hover, .window .window_content .folder #contextmenu ul li button:hover, .window .window_group .window_content .window_min #contextmenu ul li button:hover, .window .window_group .window_content .folder #contextmenu ul li button:hover {
   background: #4e4e4e;
 }
 
-.window .window_content .window_min #contextmenu ul li button p, .window .window_content .folder #contextmenu ul li button p {
+.window .window_content .window_min #contextmenu ul li button p, .window .window_content .folder #contextmenu ul li button p, .window .window_group .window_content .window_min #contextmenu ul li button p, .window .window_group .window_content .folder #contextmenu ul li button p {
   margin: 0;
   color: greenyellow;
   width: 100%;
   pointer-events: none;
+}
+
+.window#window_projects .window_group {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.window#window_projects .window_group .window_content {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.window#window_projects .window_group .window_content .window_min {
+  width: 100px;
+  min-width: 100px;
+}
+
+.window#window_projects .window_group .window_infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 0%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 /*# sourceMappingURL=windows.css.map */

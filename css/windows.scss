@@ -6,6 +6,7 @@ $color:rgb(173, 255, 47);
     flex-flow:column;
     z-index:3;
     border:1px solid black;
+    background:#131a0d;
     &:not(.fullscreen){
         position:absolute;
         top:10%;
@@ -158,34 +159,31 @@ $color:rgb(173, 255, 47);
             }
         }
     }
-    .window_content{
+    .window_content, .window_group .window_content{
         position:relative;
         display:flex;
         flex-grow:1;
         flex-flow:row;
         padding:1% 2%;
-        background:#131a0d;
         color:$color;
         .window_min, .folder{
             position:relative;
             display:flex;
             flex-flow:column;
-            width:12%;
+            width:initial;
             height:max-content;
             justify-content: center;
             align-items:center;
+            padding:1.5% 2%;
             img{
                 width:75px;
                 height:40px;
                 object-fit: contain;
             }
-            a{
-                text-decoration:none;
+            p{
+                margin:0;
                 color:$color;
-                p{
-                    margin:0;
-                    color:$color;
-                }
+                cursor:default;
             }
             #contextmenu{
                 position:absolute;
@@ -219,5 +217,29 @@ $color:rgb(173, 255, 47);
                 }
             }
         }
+    }
+    &#window_projects{
+        .window_group{
+            width:100%;
+            display:flex;
+            flex-grow:1;
+            flex-flow:row;
+            flex-wrap:nowrap;
+            .window_content{
+                width:100%;
+                flex-grow:1;
+                flex-wrap:wrap;
+                .window_min{
+                    width:100px;
+                    min-width:100px;
+                }
+            }
+            .window_infos{
+                display:flex;
+                width:0%;
+                flex-flow:column;
+                flex-grow:1;
+            }
+        } 
     }
 }

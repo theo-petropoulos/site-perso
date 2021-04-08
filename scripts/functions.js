@@ -239,7 +239,7 @@ function switchClass(e, fclass, target){
                 switch($(this).attr('id')){
                     case 'open':
                         $("#window_openimg .window_content").html('<img src="' + img_src + '">');
-                        $("#window_openimg").toggleClass('invisible');
+                        $("#window_openimg").toggleClass('invisible').css("z-index","7");
                         id=$(this).attr("id").replace('img_','');
                         if($("#tb_window_openimg").length<1) $("#task_windows ul").append("<li class='tb_window' id='tb_window_openimg'></li>");
                         $("#tb_window_openimg").css({
@@ -248,6 +248,12 @@ function switchClass(e, fclass, target){
                             "background-position":"center",
                             "background-repeat":"no-repeat"
                         });
+                        setTimeout(function(){
+                            if($(temp).length>0){
+                                temp.css('background', 'initial');
+                                temp=null;
+                            }
+                        }, 250);
                         break;
                     case 'setwp':
                         $("#screen_on").css(
