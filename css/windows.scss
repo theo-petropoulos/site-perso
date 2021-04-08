@@ -179,6 +179,14 @@ $color:rgb(173, 255, 47);
                 height:40px;
                 object-fit: contain;
             }
+            a{
+                text-decoration:none;
+                color:$color;
+                p{
+                    margin:0;
+                    color:$color;
+                }
+            }
             #contextmenu{
                 position:absolute;
                 width:max-content;

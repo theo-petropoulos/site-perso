@@ -8,13 +8,13 @@
                 </button>
                 <div id="window_file_menu" class="submenu invisible">
                     <ul>
-                        <li>
+                        <li id="file_open" class="submenu_item">
                             <button>
                                 <p lang="fr">Ouvrir</p>
                                 <p lang="en">Open</p>
                             </button>
                         </li>
-                        <li>
+                        <li id="file_close" class="submenu_item">
                             <button>
                                 <p lang="fr">Fermer</p>
                                 <p lang="en">Close</p>
@@ -36,13 +36,13 @@
                 </button>
                 <div id="window_view_menu" class="submenu invisible">
                     <ul>
-                        <li>
+                        <li id="view_list" class="submenu_item">
                             <button>
                                 <p lang="fr">Liste</p>
                                 <p lang="en">List</p>
                             </button>
                         </li>
-                        <li>
+                        <li id="view_icons" class="submenu_item">
                             <button>
                                 <p lang="fr">Icones</p>
                                 <p lang="en">Icons</p>

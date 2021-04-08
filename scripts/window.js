@@ -67,4 +67,47 @@ $(function(){
         let thisorigin=$(this).parents('.menu').children('.submenu');
         thisorigin.toggleClass("invisible visible");
     });
+
+    //Clicking a submenu item
+    $('.submenu_item').click(function(e){
+        e.preventDefault();
+        let thisid = $(this).parents('.window').attr('id');
+        let window_content = '#' + thisid + ' .window_content';
+        let window_min = window_content + ' .window_min';
+        let img = window_min + ' img';
+        switch($(this).attr('id')){
+            case 'view_list':
+                $(window_content).css({
+                    "flex-flow":"column"
+                });
+                $(window_min).css({
+                    "width":"100%",
+                    "display":"flex",
+                    "flex-flow": "row",
+                    "justify-content":"flex-start",
+                    "border-bottom":"2px solid rgba(255,255,255,0.3)"
+                });
+                $(img).css({
+                    "margin-right":"5%"
+                });
+                break;
+            case 'view_icons':
+                $(window_content).css({
+                    "flex-flow":"row"
+                });
+                $(window_min).css({
+                    "width":"12%",
+                    "display":"flex",
+                    "flex-flow": "column",
+                    "justify-content":"center",
+                    "align-items":"center",
+                    "border-bottom":"none"
+                });
+                $(img).css({
+                    "margin-right":"initial"
+                });
+                break;
+            default:break;
+        }
+    });
 });

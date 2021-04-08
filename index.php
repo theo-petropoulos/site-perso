@@ -147,6 +147,14 @@
                     <!-- PROJECTS WINDOW -->
                     <section class="window drag invisible" id="window_projects">
                         <?php require 'requires/window_menu.php';?>
+                        <div class="window_content">
+                            <div class="window_min img rclick file">
+                                <a href="../boutique/index.php">
+                                    <img src="<?=$addr;?>assets/images/icons/at.png">
+                                    <p>Von Harper</p>
+                                </a>
+                            </div>
+                        </div>
                     </section>
                     <!-- END PROJECTS WINDOW -->
 
