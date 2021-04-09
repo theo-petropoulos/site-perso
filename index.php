@@ -13,6 +13,7 @@
         <meta name="author" content="Petropoulos Théo">
         <meta name="robots" content="index">
         <meta property="og:title" content="Petropoulos Théo - Développeur Web">
+        <meta property="og:description" content="Petropoulos Théo, développeur web & web mobile à Marseille. En recherche d'alternance.">
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://theo-petropoulos.students-laplateforme.io/">
         <meta http-equiv="expires" content="86400">
