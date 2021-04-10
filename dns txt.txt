@@ -1,0 +1,3 @@
+google-site-verification=eauYrsnIu1i7NvvWLSc1jBCybsXYc6vYDHicOU4w8Ms
+
+v=spf1 +a +mx +a:students-laplateforme.io -all

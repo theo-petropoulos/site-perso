@@ -63,10 +63,12 @@ $(function(){
     //Show details of a project
     $('.project_min').click(function(e){
         e.preventDefault();
+        let article='#article_' + $(this).attr('id');
         $(this).parents('.window_group').children('.window_infos').css({
             "width":"70%",
-            "background":"rgba(0,0,0,0.5)"
+            "background":"rgba(0,0,0,0.8)"
         });
+        $(article).toggleClass('invisible');
     });
 
     //Open submenu

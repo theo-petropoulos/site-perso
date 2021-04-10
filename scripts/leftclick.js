@@ -29,7 +29,8 @@ $(function(){
     //Drag a file
     $(document).on('mousedown', '.drag', function(e){
         if( $(e.target).attr('id')=='music_volume'  || $(e.target).parents('.window').hasClass('fullscreen') ||  
-            $(e.target).is("button") || $(e.target).is('.window_content') || $(e.target).parent().is('.window_min')){
+            $(e.target).is("button") || $(e.target).is('.window_content') || $(e.target).parent().is('.window_min') || 
+            $(e.target).parents('.folder').hasClass('deleted')){
                 if($(temp).length>0 && !$(e.target).is('button')){
                     temp.css('background', 'initial');
                     temp=null;
@@ -37,6 +38,7 @@ $(function(){
                         "background":"initial",
                         "width":"0%"
                     });
+                    $('.window_infos_article').not('.invisible').toggleClass('invisible');
                 }
                 e.stopPropagation();
             }

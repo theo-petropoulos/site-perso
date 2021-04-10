@@ -21,7 +21,7 @@ $(function(){
 
             //Init the music
             if(typeof(k)=='undefined'){
-                k=2;
+                k=3;
                 mus=musList[k];
                 title=$(mus).attr('src').replace('assets/audio/musics/', '');
                 mus.volume=volume.value/100;

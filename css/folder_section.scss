@@ -24,6 +24,7 @@ $color:rgb(173, 255, 47);
         align-items:center;
         max-width:50px;
         img{
+            filter:hue-rotate(60);
             width:calc(16px + 1.5vw);
         }
         p{

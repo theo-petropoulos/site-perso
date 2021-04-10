@@ -43,6 +43,10 @@ body{
     font-weight:800;
 }
 
+em{
+    font-style: inherit;
+}
+
 .distorted{
     animation: textglitch 9s 4s infinite alternate;
 }
