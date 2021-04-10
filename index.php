@@ -155,6 +155,10 @@
                                     <img src="<?=$addr;?>assets/images/icons/at.png" alt="website_image">
                                     <p>Von Harper</p>
                                 </div>
+                                <div class="window_min img rclick file project_min" id="memory">
+                                    <img src="<?=$addr;?>assets/images/icons/at.png" alt="website_image">
+                                    <p>Memory</p>
+                                </div>
                             </div>
                             <aside class="window_infos">
                                 <article id="article_vonharper" class="window_infos_article invisible">
@@ -175,6 +179,23 @@ architecture pseudo-MVC, une POO et un accès à la base de donnée de type PDO.
                                     <footer>
                                         <a href="https://github.com/theo-petropoulos/boutique">GitHub</a>
                                         <a href="https://adam-fraga.students-laplateforme.io/">Adam Fraga</a>
+                                        <a href="https://theo-petropoulos.students-laplateforme.io/">Theo Petropoulos</a>
+                                    </footer>
+                                </article>
+                                <article id="article_memory" class="window_infos_article invisible">
+                                    <header>
+                                        <h1><b>Memory</b></h1>
+                                        <h3>Jeu de cartes</h3>
+                                        <h2>HTML / PHP / CSS / MySQL</h2>
+                                        <h4><a href="../memory/index.php" target="_blank" rel="noopener noreferrer">
+                                        <i class="fas fa-external-link-alt"></i>  Visiter le site</a></h4>
+                                    </header>
+<p>Le site <b><a id="a_vonharper" href="../memory/index.php" target="_blank" rel="noopener noreferrer">Memory</a></b>, est un projet 
+de début d'année portant sur le jeu de carte éponyme.
+Le site marquait le début de la <strong>programmation orientée objet</strong> et l'introduction à l'<strong>algorithmie</strong>. 
+Il est entièrement développé sous <b>PHP</b> et possède un accès à la base de données de type <b>mysqli</b>.
+                                    <footer>
+                                        <a href="https://github.com/theo-petropoulos/memory">GitHub</a>
                                         <a href="https://theo-petropoulos.students-laplateforme.io/">Theo Petropoulos</a>
                                     </footer>
                                 </article>

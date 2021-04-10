@@ -366,35 +366,35 @@
 }
 
 .window .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(1) img, .window .window_group .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(1) img {
-  animation: floating 6.2s 0s infinite ease-in-out alternate-reverse;
+  animation: floating 3.6s 0s infinite ease-in-out alternate-reverse;
 }
 
 .window .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(2) img, .window .window_group .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(2) img {
-  animation: floating 5s 0s infinite ease-in-out alternate-reverse;
+  animation: floating 5.6s 0s infinite ease-in-out alternate-reverse;
 }
 
 .window .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(3) img, .window .window_group .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(3) img {
-  animation: floating 7s 0s infinite ease-in-out alternate-reverse;
+  animation: floating 5.8s 0s infinite ease-in-out alternate-reverse;
 }
 
 .window .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(4) img, .window .window_group .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(4) img {
-  animation: floating 4.8s 0s infinite ease-in-out alternate-reverse;
+  animation: floating 8s 0s infinite ease-in-out alternate-reverse;
 }
 
 .window .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(5) img, .window .window_group .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(5) img {
-  animation: floating 3.8s 0s infinite ease-in-out alternate-reverse;
-}
-
-.window .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(6) img, .window .window_group .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(6) img {
-  animation: floating 7.6s 0s infinite ease-in-out alternate-reverse;
-}
-
-.window .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(7) img, .window .window_group .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(7) img {
   animation: floating 4.6s 0s infinite ease-in-out alternate-reverse;
 }
 
+.window .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(6) img, .window .window_group .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(6) img {
+  animation: floating 6.6s 0s infinite ease-in-out alternate-reverse;
+}
+
+.window .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(7) img, .window .window_group .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(7) img {
+  animation: floating 6.4s 0s infinite ease-in-out alternate-reverse;
+}
+
 .window .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(8) img, .window .window_group .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(8) img {
-  animation: floating 8s 0s infinite ease-in-out alternate-reverse;
+  animation: floating 3.2s 0s infinite ease-in-out alternate-reverse;
 }
 
 .window .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:hover p, .window .window_group .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:hover p {
@@ -560,10 +560,20 @@
       -ms-flex-positive: 1;
           flex-grow: 1;
   position: relative;
-  padding: 2% 2%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-color: greenyellow rgba(0, 0, 0, 0.9);
+  scrollbar-width: thin;
 }
 
 .window#window_projects .window_group .window_infos .window_infos_article {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2% 4%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -574,15 +584,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  text-align: center;
-  overflow-y: scroll;
-  overflow-x: hidden;
   color: greenyellow;
-  scrollbar-color: greenyellow rgba(0, 0, 0, 0.9);
-  scrollbar-width: thin;
+  text-align: center;
 }
 
 .window#window_projects .window_group .window_infos .window_infos_article header {
