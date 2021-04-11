@@ -20,7 +20,7 @@ $(function(){
     });
 
     //Highlight a clickable element + remember it
-    $(document).on('click', '.folder, .file', function(e){
+    $(document).on('click', '.folder, .file', function(){
         if($(temp).length>0) temp.css('background', 'initial');
         temp=$(this);
         temp.css("background","rgba(0,50,100,0.6)");

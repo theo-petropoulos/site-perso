@@ -11,12 +11,14 @@ $(function(){
     //Used to trigger dblclick event vs simple click
     var prevent = false;
     var timer = 0;
+
+    //Used to stop effects
+    let effects = 1;
     
     clock();
     
-    $("#switch_power").click(function(e){
+    $(document).on('click', "#switch_power", function(e){
         e.preventDefault();
-        audiobuzz.play();
         $("#screen_off").toggleClass("invisible visible");
         $("#screen_on").toggleClass("visible invisible");
         $("#screen_on").css("background-image", "radial-gradient(circle, rgba(40,57,20,0.95) 0%, rgba(20,29,9,0.97) 80%, rgba(0,0,0,0.99) 100%), url('assets/images/backgrounds/bg_stripes.jpg')");
@@ -30,8 +32,26 @@ $(function(){
             $("#user .user"+i).toggleClass("invisible");
             audiobip.currentTime=0;
             audiobip.play();}, 3500+i*250);
-        $(this).css("display", "none");
+        $(this).css('display', 'none');
         });
+
+    //Power off
+    $("#shutdown").click(function(e){
+        $("#folder_section").toggleClass("visible invisible");
+        setTimeout(() => {$("#music_player").toggleClass("invisible");}, 300);
+        setTimeout(() => {$("#screen_on").toggleClass("invisible visible");}, +00);
+        setTimeout(() => {
+            $("#user").toggleClass("invisible");screen_flick();
+            for(let i=1;i<5;i++) $("#user .user"+i).toggleClass("invisible");
+        }, 1100);
+        setTimeout(() => {$("#task_bar").toggleClass("visible invisible");}, 1800);
+        setTimeout(() => {$("#linkicon").html('<link id="linkicon" rel="icon" type="image/png" href="assets/images/icons/logo1.png">')}, 2250);
+        setTimeout(() => {$("#screen_off").toggleClass("visible invisible");}, 2500);
+        setTimeout(() => {
+            $("#switch_power").toggle();
+            $("title").html("No Signal");
+        }, 2700);
+    });
 
     //Background on folder' hover
     $(".drag.folder").hover(function(){

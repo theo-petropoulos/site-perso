@@ -71,6 +71,21 @@ footer#task_bar #menu #start_menu {
   z-index: 5;
 }
 
+footer#task_bar #menu #start_menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: column-reverse;
+          flex-flow: column-reverse;
+  padding: 0;
+}
+
+footer#task_bar #menu #start_menu ul li {
+  list-style-type: none;
+}
+
 footer#task_bar #task_windows {
   display: -webkit-box;
   display: -ms-flexbox;

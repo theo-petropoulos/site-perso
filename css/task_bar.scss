@@ -44,6 +44,14 @@ footer#task_bar{
             max-height:45vh;
             transform:translateY(-100%);
             z-index:5;
+            ul{
+                display:flex;
+                flex-flow:column-reverse;
+                padding:0;
+                li{
+                    list-style-type: none;
+                }
+            }
         }
     }
     #task_windows{

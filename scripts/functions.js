@@ -210,12 +210,13 @@ function switchClass(e, fclass, target){
                         break;
                     case 'delete':
                         if($(target).attr('id')!=='folder_bin'){
+                            let style= $(target).attr('style');
                             let origin= $(target).parent().attr('id');
                             let classes=$(target).attr("class").split(/\s+/);
                             classes= classes.toString().replace(/,/g, ' ');
                             let filename= $(target).children('p').html();
                                 $("#window_bin .window_content").append('\
-                                    <div origin="' + origin + '" class="deleted ' + classes + '" id="' + $(target).attr('id') +'">\
+                                    <div prevstyle="' + style + '" origin="' + origin + '" class="deleted ' + classes + '" id="' + $(target).attr('id') +'">\
                                         <img src="' + img_src + '">\
                                         <p class="distorted">' + filename + '</p>\
                                     </div>\
@@ -294,22 +295,28 @@ function switchClass(e, fclass, target){
                 e.preventDefault();
                 switch($(this).attr('id')){
                     case 'open':
-                        $("#window_openimg .window_content").html('<img src="' + img_src + '">');
-                        $("#window_openimg").toggleClass('invisible').css("z-index","7");
-                        id=$(this).attr("id").replace('img_','');
-                        if($("#tb_window_openimg").length<1) $("#task_windows ul").append("<li class='tb_window' id='tb_window_openimg'></li>");
-                        $("#tb_window_openimg").css({
-                            "background-image":"url('assets/images/icons/file.png')",
-                            "background-size":"contain",
-                            "background-position":"center",
-                            "background-repeat":"no-repeat"
-                        });
-                        setTimeout(function(){
-                            if($(temp).length>0){
-                                temp.css('background', 'initial');
-                                temp=null;
-                            }
-                        }, 250);
+                        if($(target).hasClass('project_min')){
+                            console.log('#a_' + $(target).attr('id'));
+                            $('#a_' + $(target).attr('id'))[0].click();
+                        }
+                        else{
+                            $("#window_openimg .window_content").html('<img src="' + img_src + '">');
+                            $("#window_openimg").toggleClass('invisible').css("z-index","7");
+                            id=$(this).attr("id").replace('img_','');
+                            if($("#tb_window_openimg").length<1) $("#task_windows ul").append("<li class='tb_window' id='tb_window_openimg'></li>");
+                            $("#tb_window_openimg").css({
+                                "background-image":"url('assets/images/icons/file.png')",
+                                "background-size":"contain",
+                                "background-position":"center",
+                                "background-repeat":"no-repeat"
+                            });
+                            setTimeout(function(){
+                                if($(temp).length>0){
+                                    temp.css('background', 'initial');
+                                    temp=null;
+                                }
+                            }, 250);
+                        }
                         break;
                     case 'setwp':
                         $("#screen_on").css(
@@ -355,6 +362,7 @@ function switchClass(e, fclass, target){
                 e.preventDefault();
                 switch($(this).attr('id')){
                     case 'restore':
+                        let style = $(target).attr('prevstyle');
                         let direction = '#' + $(target).attr('origin');
                         let idrestored = $(target).attr('id');
                         let classes=$(target).attr("class").split(/\s+/);
@@ -362,7 +370,7 @@ function switchClass(e, fclass, target){
                         classes= classes.toString().replace(/,/g, ' ').replace('deleted ', '');
                         if(classes.includes('window_min')) direction = direction + " .window_content";
                         $(direction).append('\
-                            <div class="' + classes + '" id="' + idrestored +'">\
+                            <div class="' + classes + '" id="' + idrestored +'" style="' + style + '">\
                                 <img src="' + img_src + '">\
                                 <p class="distorted">' + filename + '</p>\
                             </div>\

@@ -33,7 +33,7 @@
         <script src="<?=$addr;?>scripts/musicplayer.js"></script>
         <script src="<?=$addr;?>scripts/window.js"></script>
         <script src="https://kit.fontawesome.com/9ddb75d515.js" crossorigin="anonymous"></script>
-        <title></title>
+        <title>Petropoulos Théo - Web developer</title>
     </head>
 
     <body id="body_index">
@@ -54,12 +54,7 @@
                         <p class="distorted" lang="fr">Images</p>
                         <p class="distorted" lang="en">Pictures</p>
                     </div>
-                    <div class="folder drag rclick" id="folder_songs" style="left:200px">
-                        <img src="<?=$addr;?>assets/images/icons/folder.png" alt="folder_image" title="folder_min">
-                        <p class="distorted" lang="fr">Musiques</p>
-                        <p class="distorted" lang="en">Musics</p>
-                    </div>
-                    <div class="folder drag rclick" id="folder_projects" style="left:300px">
+                    <div class="folder drag rclick" id="folder_projects" style="left:200px">
                         <img src="<?=$addr;?>assets/images/icons/folder.png" alt="folder_image" title="folder_min">
                         <p class="distorted" lang="fr">Projets</p>
                         <p class="distorted" lang="en">Projects</p>
@@ -190,7 +185,7 @@ architecture pseudo-MVC, une POO et un accès à la base de donnée de type PDO.
                                         <h4><a href="../memory/index.php" target="_blank" rel="noopener noreferrer">
                                         <i class="fas fa-external-link-alt"></i>  Visiter le site</a></h4>
                                     </header>
-<p>Le site <b><a id="a_vonharper" href="../memory/index.php" target="_blank" rel="noopener noreferrer">Memory</a></b>, est un projet 
+<p>Le site <b><a id="a_memory" href="../memory/index.php" target="_blank" rel="noopener noreferrer">Memory</a></b>, est un projet 
 de début d'année portant sur le jeu de carte éponyme.
 Le site marquait le début de la <strong>programmation orientée objet</strong> et l'introduction à l'<strong>algorithmie</strong>. 
 Il est entièrement développé sous <b>PHP</b> et possède un accès à la base de données de type <b>mysqli</b>.
@@ -276,8 +271,32 @@ Il est entièrement développé sous <b>PHP</b> et possède un accès à la base
                         </button>
                         <div id="start_menu" class="invisible">
                             <ul>
-                                <li>Menu Item 1</li>
-                                <li>Menu Item 2</li>
+                                <li>
+                                    <button id="shutdown">
+                                        <p lang="fr">Éteindre</p>
+                                        <p lang="en">Shut down</p>
+                                    </button>
+                                </li>
+                                <li>
+                                    <span id="settings">
+                                        <p lang="fr">Paramètres</p>
+                                        <p lang="en">Settings</p>
+                                    </span>
+                                    <ul id="settings_list">
+                                        <li id="setting_color">
+                                            <p lang="fr">Couleur</p>
+                                            <p lang="en">Color</p>
+                                        </li>
+                                        <li id="setting_font">
+                                            <p lang="fr">Police</p>
+                                            <p lang="en">Font</p>
+                                        </li>
+                                        <li id="setting_effects">
+                                            <p lang="fr">Effets</p>
+                                            <p lang="en">Effects</p>
+                                        </li>
+                                    </ul>
+                                </li>
                                 <li>Menu Item 3</li>
                                 <li>Menu Item 4</li>
                                 <li>Menu Item 5</li>
