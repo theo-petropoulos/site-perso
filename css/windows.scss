@@ -21,7 +21,7 @@ $color:rgb(173, 255, 47);
             height:85vh;
             top:5%;
         }
-        &#window_openimg, &#window_infos{
+        &#window_openimg, &#window_infos, &#animation_dna, &#animation_corporations{
             .window_menu{
                 display:flex;
                 flex-flow:row;
@@ -50,7 +50,7 @@ $color:rgb(173, 255, 47);
         bottom:0;
         height:100vh - calc(2vh + 20px);
         width:100%;
-        &#window_openimg, &#window_infos{
+        &#window_openimg, &#window_infos, &#animation_dna, &#animation_corporations{
             .window_menu{
                 display:flex;
                 flex-flow:row;
@@ -180,6 +180,7 @@ $color:rgb(173, 255, 47);
         &.window_content_infos{
             flex-flow:column;
             align-items: center;
+            padding:3% 2%;
             .window_content_center{
                 display:flex;
                 background:rgba(0,0,0,0.95);
@@ -261,6 +262,12 @@ $color:rgb(173, 255, 47);
             justify-content: center;
             align-items:center;
             padding:1.5% 2%;
+            &.deleted{
+                width:100px;
+                p{
+                    text-align: center;
+                }
+            }
             img{
                 width:75px;
                 height:40px;
@@ -388,5 +395,68 @@ $color:rgb(173, 255, 47);
                 }
             }
         } 
+    }
+    &#animation_dna{
+        width:32px;
+        height:32px;
+        min-width:0;
+        justify-content: center;
+        align-items:center;
+        top:initial;
+        left:initial;
+        bottom:8%;
+        right:0;
+        background:none;
+        border:none;
+        img{
+            width:100%;
+            object-fit: contain;
+            object-position: right;
+        }
+    }
+    &#animation_corporations{
+        left:initial;
+        right:0;
+        top:initial;
+        bottom:calc(2vh + 20px);
+        background:none;
+        border:none;
+        height:400px;
+        width:300px;
+        &:hover{
+            button{
+                display:flex;
+            }
+            p{
+                display:block;
+            }
+        }
+        img{
+            width:100%;
+            object-fit: contain;
+        }
+        p{
+            position:absolute;
+            bottom:2%;
+            left:50%;
+            transform:translateX(-50%);
+            display:none;
+            color:$color;
+        }
+        button{
+            position:absolute;
+            top:2%;
+            right:2%;
+            background:none;
+            border:none;
+            display:none;
+            &:hover{
+                cursor:pointer;
+            }
+            i{
+                color:$color;
+                flex-grow:1;
+            }
+        }
     }
 }

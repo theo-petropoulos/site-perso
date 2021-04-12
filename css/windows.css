@@ -28,7 +28,7 @@
   top: 5%;
 }
 
-.window:not(.fullscreen)#window_openimg .window_menu, .window:not(.fullscreen)#window_infos .window_menu {
+.window:not(.fullscreen)#window_openimg .window_menu, .window:not(.fullscreen)#window_infos .window_menu, .window:not(.fullscreen)#animation_dna .window_menu, .window:not(.fullscreen)#animation_corporations .window_menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,7 +38,7 @@
           flex-flow: row;
 }
 
-.window:not(.fullscreen)#window_openimg .window_menu ul, .window:not(.fullscreen)#window_infos .window_menu ul {
+.window:not(.fullscreen)#window_openimg .window_menu ul, .window:not(.fullscreen)#window_infos .window_menu ul, .window:not(.fullscreen)#animation_dna .window_menu ul, .window:not(.fullscreen)#animation_corporations .window_menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,13 +54,13 @@
           justify-content: flex-end;
 }
 
-.window:not(.fullscreen)#window_openimg .window_content, .window:not(.fullscreen)#window_infos .window_content {
+.window:not(.fullscreen)#window_openimg .window_content, .window:not(.fullscreen)#window_infos .window_content, .window:not(.fullscreen)#animation_dna .window_content, .window:not(.fullscreen)#animation_corporations .window_content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.window:not(.fullscreen)#window_openimg .window_content img, .window:not(.fullscreen)#window_infos .window_content img {
+.window:not(.fullscreen)#window_openimg .window_content img, .window:not(.fullscreen)#window_infos .window_content img, .window:not(.fullscreen)#animation_dna .window_content img, .window:not(.fullscreen)#animation_corporations .window_content img {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -79,7 +79,7 @@
   width: 100%;
 }
 
-.window.fullscreen#window_openimg .window_menu, .window.fullscreen#window_infos .window_menu {
+.window.fullscreen#window_openimg .window_menu, .window.fullscreen#window_infos .window_menu, .window.fullscreen#animation_dna .window_menu, .window.fullscreen#animation_corporations .window_menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,7 +89,7 @@
           flex-flow: row;
 }
 
-.window.fullscreen#window_openimg .window_menu ul, .window.fullscreen#window_infos .window_menu ul {
+.window.fullscreen#window_openimg .window_menu ul, .window.fullscreen#window_infos .window_menu ul, .window.fullscreen#animation_dna .window_menu ul, .window.fullscreen#animation_corporations .window_menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -105,13 +105,13 @@
           justify-content: flex-end;
 }
 
-.window.fullscreen#window_openimg .window_content, .window.fullscreen#window_infos .window_content {
+.window.fullscreen#window_openimg .window_content, .window.fullscreen#window_infos .window_content, .window.fullscreen#animation_dna .window_content, .window.fullscreen#animation_corporations .window_content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.window.fullscreen#window_openimg .window_content img, .window.fullscreen#window_infos .window_content img {
+.window.fullscreen#window_openimg .window_content img, .window.fullscreen#window_infos .window_content img, .window.fullscreen#animation_dna .window_content img, .window.fullscreen#animation_corporations .window_content img {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -298,6 +298,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 3% 2%;
 }
 
 .window .window_content.window_content_infos .window_content_center, .window .window_group .window_content.window_content_infos .window_content_center {
@@ -370,11 +371,11 @@
 }
 
 .window .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(2) img, .window .window_group .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(2) img {
-  animation: floating 4.4s 0s infinite ease-in-out alternate-reverse;
+  animation: floating 5.6s 0s infinite ease-in-out alternate-reverse;
 }
 
 .window .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(3) img, .window .window_group .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(3) img {
-  animation: floating 6.4s 0s infinite ease-in-out alternate-reverse;
+  animation: floating 4s 0s infinite ease-in-out alternate-reverse;
 }
 
 .window .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(4) img, .window .window_group .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(4) img {
@@ -382,19 +383,19 @@
 }
 
 .window .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(5) img, .window .window_group .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(5) img {
-  animation: floating 4.2s 0s infinite ease-in-out alternate-reverse;
+  animation: floating 6.4s 0s infinite ease-in-out alternate-reverse;
 }
 
 .window .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(6) img, .window .window_group .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(6) img {
-  animation: floating 5.2s 0s infinite ease-in-out alternate-reverse;
+  animation: floating 7s 0s infinite ease-in-out alternate-reverse;
 }
 
 .window .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(7) img, .window .window_group .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(7) img {
-  animation: floating 7.6s 0s infinite ease-in-out alternate-reverse;
+  animation: floating 4.8s 0s infinite ease-in-out alternate-reverse;
 }
 
 .window .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(8) img, .window .window_group .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(8) img {
-  animation: floating 5.8s 0s infinite ease-in-out alternate-reverse;
+  animation: floating 4.6s 0s infinite ease-in-out alternate-reverse;
 }
 
 .window .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:hover p, .window .window_group .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:hover p {
@@ -452,6 +453,14 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 1.5% 2%;
+}
+
+.window .window_content .window_min.deleted, .window .window_content .folder.deleted, .window .window_group .window_content .window_min.deleted, .window .window_group .window_content .folder.deleted {
+  width: 100px;
+}
+
+.window .window_content .window_min.deleted p, .window .window_content .folder.deleted p, .window .window_group .window_content .window_min.deleted p, .window .window_group .window_content .folder.deleted p {
+  text-align: center;
 }
 
 .window .window_content .window_min img, .window .window_content .folder img, .window .window_group .window_content .window_min img, .window .window_group .window_content .folder img {
@@ -652,5 +661,88 @@
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+}
+
+.window#animation_dna {
+  width: 32px;
+  height: 32px;
+  min-width: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: initial;
+  left: initial;
+  bottom: 8%;
+  right: 0;
+  background: none;
+  border: none;
+}
+
+.window#animation_dna img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: right;
+     object-position: right;
+}
+
+.window#animation_corporations {
+  left: initial;
+  right: 0;
+  top: initial;
+  bottom: calc(2vh + 20px);
+  background: none;
+  border: none;
+  height: 400px;
+  width: 300px;
+}
+
+.window#animation_corporations:hover button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.window#animation_corporations:hover p {
+  display: block;
+}
+
+.window#animation_corporations img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.window#animation_corporations p {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: none;
+  color: greenyellow;
+}
+
+.window#animation_corporations button {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  background: none;
+  border: none;
+  display: none;
+}
+
+.window#animation_corporations button:hover {
+  cursor: pointer;
+}
+
+.window#animation_corporations button i {
+  color: greenyellow;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 /*# sourceMappingURL=windows.css.map */

@@ -33,23 +33,134 @@ footer#task_bar{
             }
         }
         #start_menu{
-            background:grey;
+            background:#0D1103;
             position:absolute;
             top:0;
             left:0;
             display:flex;
             flex-flow:column-reverse;
-            width:max-content;
             height:max-content;
-            max-height:45vh;
+            max-height:40vh;
             transform:translateY(-100%);
             z-index:5;
-            ul{
+            width:calc(24px + 7vw);
+            #start_menu_list{
                 display:flex;
+                width:100%;
+                position:relative;
                 flex-flow:column-reverse;
                 padding:0;
+                margin:0;
+                p{
+                    margin:0;
+                    font-family: $font;
+                    color:$color;
+                    font-size:calc(8px + 0.4vw);
+                    padding:4%;
+                }
                 li{
                     list-style-type: none;
+                    display:flex;
+                    flex-flow: row;
+                    justify-content: center;
+                    align-items: center;
+                    position:relative;
+                    flex-grow:1;
+                    padding:4%;
+                    cursor:pointer;
+                    border:2px solid $color;
+                    &#shutdown_li{
+                        button{
+                            background:none;
+                            border:none;
+                            flex-grow:1;
+                            position:relative;
+                            cursor:pointer;
+                        }
+                        &:hover{
+                            background:#303f0c;
+                        }
+                    }
+                    &#settings_li{
+                        border-bottom:none;
+                        #settings_list{
+                            display:none;
+                            position:absolute;
+                            right:0;
+                            top:100%;
+                            transform:translate(100%,-99%);
+                            margin:0;
+                            padding:0;
+                            color:$color;
+                            cursor:pointer;
+                        }
+                        #settings{
+                            flex-grow:1;
+                            display:flex;
+                            flex-flow:row;
+                            justify-content: center;
+                            align-items:center;
+                            position:relative;
+                            p{
+                                flex-grow:1;
+                                text-align: center;
+                            }
+                        }
+                        &:hover{
+                            background:#303f0c;
+                            #settings_list{
+                                background:#0D1103;
+                                display:flex;
+                                flex-flow:column-reverse;
+                                width:calc(24px + 7vw);
+                                cursor:pointer;
+                                li{
+                                    flex-grow:1;
+                                    display:flex;
+                                    justify-content: center;
+                                    align-items:center;
+                                    padding: 4%;
+                                    width:auto;
+                                    border-bottom:2px solid transparent;
+                                    &#settings_color{
+                                        border-bottom:2px solid $color;
+                                    }
+                                    &:hover{
+                                        background:#303f0c;
+                                        ul{
+                                            background:#0D1103;
+                                            display:flex;
+                                            flex-flow:column-reverse;
+                                            width:calc(24px + 7vw);
+                                            cursor:pointer;
+                                            li{
+                                                &:nth-of-type(1){
+                                                    border-bottom:2px solid $color;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    p{
+                                        margin:0;
+                                        flex-grow:1;
+                                        padding:4%;
+                                        text-align: center;
+                                    }
+                                    ul{
+                                        display:none;
+                                        position:absolute;
+                                        right:0;
+                                        top:100%;
+                                        transform:translate(100%,-99%);
+                                        margin:0;
+                                        padding:0;
+                                        color:$color;
+                                        cursor:pointer;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

@@ -6,14 +6,21 @@ X meta référencement
 X sitemap.xml
 X alt on images
 X titles h1 h2
-change color
 change start button color focus
-change font
-prevent bin delete
-calculator ?
-game ?
-fake cmd ?
-projects in iframe ?
+X prevent bin delete
+
+Ask user : 
+Favorite color
+Old School / New age
+-> Change font
+-> Change borders
+-> Change color
+-> Change icons
+
+//projects in iframe
 
 easter egg ? 
 konami code ?
+calculator ?
+game ?
+fake cmd ?

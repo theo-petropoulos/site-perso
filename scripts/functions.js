@@ -33,46 +33,52 @@ function clock(){
 
 //Randomly glitch the screen
 function screen_flick(){
-    var flick=Math.floor(Math.random()*8)+1;
-    var audioflick= new Audio('assets/audio/sounds/flick.mp3');
-    var audiobuzz= new Audio('assets/audio/sounds/buzz.mp3');
-    switch(flick){
-        case 1:
-            audioflick.play();
-            $("#screen_flicker").css("transition", "all 0s").toggleClass("invisible visible");
-            let p=Math.floor(Math.random()*(800-400))+400;
-            for(let i=0;i<3;i++){
-                let j=i*Math.floor(Math.random()*(280-80))+80;
-                p=p+j;
-                setTimeout(()=>{
-                    if(i==2) $("#screen_flicker").css("transition", "all 1s");
-                    $("#screen_flicker").toggleClass("invisible visible");}, p);
-            }
-            setTimeout(()=>{$("#screen_flicker").css("transition", "all 0s");audioflick.pause();audioflick.currentTime = 0;}, p+100);
-            break;
-        case 2:
-            audioflick.play();
-            $("#screen_flicker").css("transition", "all 0s").toggleClass("invisible visible");
-            let k=Math.floor(Math.random()*(1100-600))+600;
-            for(let i=0;i<5;i++){
-                let j=i*Math.floor(Math.random()*(300-100))+100;
-                k=k+j;
-                setTimeout(()=>{
-                    if(i==4) $("#screen_flicker").css("transition", "all 1s");
-                    $("#screen_flicker").toggleClass("invisible visible");}, k);
-            }
-            setTimeout(()=>{$("#screen_flicker").css("transition", "all 0s");audioflick.pause();audioflick.currentTime = 0;}, k+100);
-            break;
-        case 3:
-            audioflick.play();
-            setTimeout(()=>{audioflick.pause();audioflick.currentTime = 0;}, 500);
-            $("#screen_flicker").toggleClass("invisible visible");
-            setTimeout(()=>{$("#screen_flicker").css("transition", "all 2s");$("#screen_flicker").toggleClass("invisible visible");audiobuzz.currentTime = 0;audiobuzz.play();}, 2200);
-            break;
-        default:
-            break;
+    if(power=='shutdown'){
+        return 0;
     }
-    setTimeout(screen_flick, 11500);
+    else{
+        console.log(power);
+        var flick=Math.floor(Math.random()*8)+1;
+        var audioflick= new Audio('assets/audio/sounds/flick.mp3');
+        var audiobuzz= new Audio('assets/audio/sounds/buzz.mp3');
+        switch(flick){
+            case 1:
+                audioflick.play();
+                $("#screen_flicker").css("transition", "all 0s").toggleClass("invisible visible");
+                let p=Math.floor(Math.random()*(800-400))+400;
+                for(let i=0;i<3;i++){
+                    let j=i*Math.floor(Math.random()*(280-80))+80;
+                    p=p+j;
+                    setTimeout(()=>{
+                        if(i==2) $("#screen_flicker").css("transition", "all 1s");
+                        $("#screen_flicker").toggleClass("invisible visible");}, p);
+                }
+                setTimeout(()=>{$("#screen_flicker").css("transition", "all 0s");audioflick.pause();audioflick.currentTime = 0;}, p+100);
+                break;
+            case 2:
+                audioflick.play();
+                $("#screen_flicker").css("transition", "all 0s").toggleClass("invisible visible");
+                let k=Math.floor(Math.random()*(1100-600))+600;
+                for(let i=0;i<5;i++){
+                    let j=i*Math.floor(Math.random()*(300-100))+100;
+                    k=k+j;
+                    setTimeout(()=>{
+                        if(i==4) $("#screen_flicker").css("transition", "all 1s");
+                        $("#screen_flicker").toggleClass("invisible visible");}, k);
+                }
+                setTimeout(()=>{$("#screen_flicker").css("transition", "all 0s");audioflick.pause();audioflick.currentTime = 0;}, k+100);
+                break;
+            case 3:
+                audioflick.play();
+                setTimeout(()=>{audioflick.pause();audioflick.currentTime = 0;}, 500);
+                $("#screen_flicker").toggleClass("invisible visible");
+                setTimeout(()=>{$("#screen_flicker").css("transition", "all 2s");$("#screen_flicker").toggleClass("invisible visible");audiobuzz.currentTime = 0;audiobuzz.play();}, 2200);
+                break;
+            default:
+                break;
+        }
+        setTimeout(screen_flick, 11500);
+    }
 }
 
 //Play a random sound on keypress

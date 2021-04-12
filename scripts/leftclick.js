@@ -79,7 +79,7 @@ $(function(){
     });
 
     //Open folder on double click
-    $(".folder").dblclick(function(){
+    $(document).on('dblclick', ".folder", function(){
         let img_src=$(this).children("img").attr("src");
         let id=$(this).attr("id").replace('folder_','');
         if($("#window_" + id).hasClass("invisible")) $("#window_" + id).toggleClass("invisible visible");

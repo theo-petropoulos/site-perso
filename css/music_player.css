@@ -1,5 +1,9 @@
 #screen #screen_on #music_player {
   position: absolute;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   background: black;
   min-width: 350px;
   min-height: 100px;

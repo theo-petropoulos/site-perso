@@ -14,20 +14,30 @@ $(function(){
 
     //Used to stop effects
     let effects = 1;
+
+    //Used to stop functions
+    window.power = 'shutdown';
     
     clock();
     
     $(document).on('click', "#switch_power", function(e){
         e.preventDefault();
+        power='on';
         $("#screen_off").toggleClass("invisible visible");
+        //TOGGLE POINT
         $("#screen_on").toggleClass("visible invisible");
+        audiobuzz.play();
         $("#screen_on").css("background-image", "radial-gradient(circle, rgba(40,57,20,0.95) 0%, rgba(20,29,9,0.97) 80%, rgba(0,0,0,0.99) 100%), url('assets/images/backgrounds/bg_stripes.jpg')");
         setTimeout(() => {$("title").html("Bonjour, Monde.")}, 1850);
         setTimeout(() => {$("#linkicon").html('<link id="linkicon" rel="icon" type="image/png" href="assets/images/icons/logo2.png">')}, 2250);
         setTimeout(() => {$("#task_bar").toggleClass("visible invisible");}, 2500);
-        setTimeout(() => {$("#user").toggleClass("invisible");screen_flick();}, 3000);
+        setTimeout(() => {
+            $("#user").toggleClass("invisible");
+            screen_flick();
+        }, 3000);
         setTimeout(() => {$("#music_player").toggleClass("invisible");}, 3300);
         setTimeout(() => {$("#folder_section").toggleClass("visible invisible");}, 3500);
+        setTimeout(() => {$("#animation_dna").add($("#animation_corporations")).toggleClass("visible invisible");}, 3800);
         for(let i=1;i<5;i++) setTimeout(() => {
             $("#user .user"+i).toggleClass("invisible");
             audiobip.currentTime=0;
@@ -36,12 +46,13 @@ $(function(){
         });
 
     //Power off
-    $("#shutdown").click(function(e){
+    $("#shutdown_btn").click(function(e){
+        power='shutdown';
         $("#folder_section").toggleClass("visible invisible");
         setTimeout(() => {$("#music_player").toggleClass("invisible");}, 300);
         setTimeout(() => {$("#screen_on").toggleClass("invisible visible");}, +00);
         setTimeout(() => {
-            $("#user").toggleClass("invisible");screen_flick();
+            $("#user").toggleClass("invisible");
             for(let i=1;i<5;i++) $("#user .user"+i).toggleClass("invisible");
         }, 1100);
         setTimeout(() => {$("#task_bar").toggleClass("visible invisible");}, 1800);

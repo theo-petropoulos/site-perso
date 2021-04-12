@@ -23,7 +23,7 @@
         <meta property="og:image" content="assets/images/other/og.png">
         <link rel="stylesheet" href="<?=$addr;?>css/theo.petropoulos.css?v=<?php echo time(); ?>">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Gupter&family=Lexend:wght@300&family=Yusei+Magic&display=swap" rel="stylesheet"> 
         <link id="linkicon" rel="icon" type="image/png" href="assets/images/icons/logo1.png">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="<?=$addr;?>scripts/functions.js"></script>
@@ -44,17 +44,20 @@
                     <button id="switch_power" type="submit"><i class="fas fa-power-off"></i></button>
                 </form>
             </div>
+            <!-- <div id="screen_questions" class="invisible">
+            
+            </div> -->
             <div id="screen_on" class="invisible">
                 <div id="screen_flicker" class="invisible"></div>
                 <div id="screen_distorsion" class="invisible"></div>
 
                 <section id="folder_section" class="invisible">
-                    <div class="folder drag rclick" id="folder_images" style="left:100px">
+                    <div class="folder drag rclick" id="folder_images" style="top:100px; left:100px">
                         <img src="<?=$addr;?>assets/images/icons/folder.png" alt="folder_image" title="folder_min">
-                        <p class="distorted" lang="fr">Images</p>
-                        <p class="distorted" lang="en">Pictures</p>
+                        <p class="distorted" lang="fr">Fonds d'écran</p>
+                        <p class="distorted" lang="en">Wallpapers</p>
                     </div>
-                    <div class="folder drag rclick" id="folder_projects" style="left:200px">
+                    <div class="folder drag rclick" id="folder_projects" style="left:100px">
                         <img src="<?=$addr;?>assets/images/icons/folder.png" alt="folder_image" title="folder_min">
                         <p class="distorted" lang="fr">Projets</p>
                         <p class="distorted" lang="en">Projects</p>
@@ -83,8 +86,22 @@
                 </section>
                 <!-- END USER'S LOG -->
 
+                <!-- SMALL DNA ANIMATION -->
+                <section id="animation_dna" class="window invisible drag animation"> 
+                    <img src="<?=$addr;?>assets/images/other/dna.gif" alt="dna animation gif">
+                </section>
+                <!-- END SMALL DNA ANIMATION -->
+
+                <!-- PIXEL ART ANIMATION Credits : Kenze Wee https://www.behance.net/KenzeWeeHonMing -->
+                <section id="animation_corporations" class="window invisible drag animation">
+                    <img src="<?=$addr;?>assets/images/backgrounds/Kenze Wee - Corporations.gif" alt="Kenze Wee - Corporations animation gif">
+                    <p>Credits : Kenze Wee - Corporations</p>
+                    <button id="close_corporations"><i class="fas fa-times"></i></button>
+                </section>
+                <!-- END PIXEL ART ANIMATION -->
+
                 <!-- MUSIC PLAYER -->
-                <section id="music_player" class="invisible drag" style="left:70%;top:30%">
+                <section id="music_player" class="invisible drag">
                     <div id="music_title"><p class="distorted" style="pointer-events:none"></p></div>
                     <div id="music_controls">
                         <button id="music_prev"><i class="fas fa-backward"></i></button>
@@ -251,7 +268,7 @@ Il est entièrement développé sous <b>PHP</b> et possède un accès à la base
                                         </span>
                                         <span class="garnish_holder">
                                             <img src='<?=$addr;?>assets/images/other/ham_bottom.png' alt="Hamburger bottom">
-                                            <p>Pain au toastage bilatéral <b>délégation</b> & <b>motivation</b></p>
+                                            <p>Pain d'<b>équipe</b> et son toastage bilatéral <b>délégation</b> & <b>motivation</b></p>
                                         </span>
                                     </div>
                                 </div>
@@ -262,70 +279,7 @@ Il est entièrement développé sous <b>PHP</b> et possède un accès à la base
                 </section>
 
                 <!-- FOOTER -->
-                <footer id="task_bar" class="invisible">
-                    <!-- START MENU -->
-                    <div id="menu">
-                        <button id="start_btn">
-                            <p lang="fr">Démarrer</p>
-                            <p lang="en">Start</p>
-                        </button>
-                        <div id="start_menu" class="invisible">
-                            <ul>
-                                <li>
-                                    <button id="shutdown">
-                                        <p lang="fr">Éteindre</p>
-                                        <p lang="en">Shut down</p>
-                                    </button>
-                                </li>
-                                <li>
-                                    <span id="settings">
-                                        <p lang="fr">Paramètres</p>
-                                        <p lang="en">Settings</p>
-                                    </span>
-                                    <ul id="settings_list">
-                                        <li id="setting_color">
-                                            <p lang="fr">Couleur</p>
-                                            <p lang="en">Color</p>
-                                        </li>
-                                        <li id="setting_font">
-                                            <p lang="fr">Police</p>
-                                            <p lang="en">Font</p>
-                                        </li>
-                                        <li id="setting_effects">
-                                            <p lang="fr">Effets</p>
-                                            <p lang="en">Effects</p>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>Menu Item 3</li>
-                                <li>Menu Item 4</li>
-                                <li>Menu Item 5</li>
-                                <li>Menu Item 6</li>
-                                <li>Menu Item 7</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- END START MENU -->
-
-                    <!-- WINDOWS MINIATURES -->
-                    <div id="task_windows">
-                        <ul></ul>
-                    </div>
-                    <!-- END WINDOWS MINIATURES -->
-
-                    <!-- CORNER RIGHT -->
-                    <div id="task_corner">
-                        <div id="task_lang">
-                            <button id="switch_lang">
-                                <p class="distorted" lang="en">en</p>
-                                <p class="distorted" lang="fr">fr</p>
-                            </button>
-                        </div>
-                        <span lang="fr"></span>
-                        <span lang="en"></span>
-                    </div>
-                    <!-- END CORNER RIGHT -->
-                </footer>
+                <?php require 'requires/footer.php'; ?>
                 <!-- END FOOTER -->
             </div>
         </main>

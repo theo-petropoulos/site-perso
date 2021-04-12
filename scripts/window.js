@@ -14,7 +14,7 @@ $(function(){
     });
 
     //On window maximize
-    $(".window_maximize").click(function(e){
+    $(document).on('click', ".window_maximize", function(e){
         e.preventDefault();
         let window_id="#" + $(e.target).parents(".window").attr('id');
         if(!$(window_id).hasClass('fullscreen')){
@@ -30,7 +30,7 @@ $(function(){
     });
 
     //Expand window on menu double click
-    $(".window_menu").dblclick(function(e){
+    $(document).on('dblclick', '.window_menu', function(e){
         e.preventDefault();
         if(!$(e.target).is('span, button')){
             let maximize_window="#" + $(e.target).parents(".window").attr('id') + " .window_maximize";
