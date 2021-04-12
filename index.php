@@ -237,39 +237,48 @@ Il est entièrement développé sous <b>PHP</b> et possède un accès à la base
                                     <div id="hamburger" class="slide2">
                                         <span id="hamburger_name">
                                             <h3>Big Ol'Manager Burger</h3>
-                                            <h4>• Garniture •</h4>
+                                            <h4 lang="fr">• Garniture •</h4>
+                                            <h4 lang="en">• Garnish •</h4>
                                         </span>
                                         <span class="garnish_holder">
                                             <img src='<?=$addr;?>assets/images/other/ham_top.png' alt="Hamburger top">
-                                            <p>Pain d'<b>autonomie</b> brioché et ses graines de <b>responsabilité</b></p>
+                                            <p lang="fr">Pain d'<b>autonomie</b> brioché et ses graines de <b>responsabilité</b></p>
+                                            <p lang="en"><b>Autonomous</b> bun with its <b>responsability</b> seeds</p>
                                         </span>
                                         <span class="garnish_holder">
                                             <img src='<?=$addr;?>assets/images/other/ham_pickles.png' alt="Pickles">
-                                            <p>Couple de cornichons aigre-<b>curieux</b> "<b>écoute</b>" et "<b>communication</b>"</p>
+                                            <p lang="fr">Couple de cornichons aigre-<b>curieux</b> "<b>écoute</b>" et "<b>communication</b>"</p>
+                                            <p lang="en">Pair of pickles <b>curious</b> & sour "<b>listening</b>" and "<b>communication</b>"</p>
                                         </span>
                                         <span class="garnish_holder">
                                             <img src='<?=$addr;?>assets/images/other/ham_tomato.png' alt="Tomato">
-                                            <p><b>Concentration</b> de tomate en tranche 'La <b>Créative</b>'</p>
+                                            <p lang="fr"><b>Concentration</b> de tomate en tranche 'La <b>Créative</b>'</p>
+                                            <p lang="en">Slice of tomato <b>concentration</b> 'The <b>Creative</b> One'</p>
                                         </span>
                                         <span class="garnish_holder">
                                             <img src='<?=$addr;?>assets/images/other/ham_lettuce.png' alt="Lettuce">
-                                            <p>Salade de <b>leadership</b> & <b>esprit d'équipe</b></p>
+                                            <p lang="fr">Salade de <b>leadership</b> & <b>esprit d'équipe</b></p>
+                                            <p lang="en">Salad mix of <b>leadership</b> & <b>team spirit</b></p>
                                         </span>
                                         <span class="garnish_holder">
                                             <img src='<?=$addr;?>assets/images/other/ham_cheddar.png' alt="Cheese">
-                                            <p>Fromage <b>rigoureux</b> fumé au bois de <b>confiance</b> fondu</p>
+                                            <p lang="fr">Fromage <b>rigoureux</b> fumé au bois de <b>confiance</b> fondu</p>
+                                            <p lang="en"><b>Confident</b> wood smoked <b>rigorous</b> melted cheese</p>
                                         </span>
                                         <span class="garnish_holder">
                                             <img src='<?=$addr;?>assets/images/other/ham_steak.png' alt="Burger patty">
-                                            <p>Hâché 230g 'Le <b>Résolveur de problèmes</b>' et sa cuisson <b>adaptative</b></p>
+                                            <p lang="fr">Hâché 230g 'Le <b>Résolveur de problèmes</b>' et sa cuisson <b>adaptative</b></p>
+                                            <p lang="en">'<b>Problem solver</b>' 8oz patty and its <b>adaptative</b> cooking</p>
                                         </span>
                                         <span class="garnish_holder">
                                             <img src='<?=$addr;?>assets/images/other/ham_sauce.png' alt="Sauces">
-                                            <p>Duo de sauces <b>gestion</b> '<b>stress</b>' et '<b>temps</b>'</p>
+                                            <p lang="fr">Duo de sauces <b>gestion</b> '<b>stress</b>' et '<b>temps</b>'</p>
+                                            <p lang="en">Couple of '<b>handling</b>' sauces '<b>stress</b>' and '<b>time</b>'</p>
                                         </span>
                                         <span class="garnish_holder">
                                             <img src='<?=$addr;?>assets/images/other/ham_bottom.png' alt="Hamburger bottom">
-                                            <p>Pain d'<b>équipe</b> et son toastage bilatéral <b>délégation</b> & <b>motivation</b></p>
+                                            <p lang="fr">Pain d'<b>équipe</b> et son toastage bilatéral '<b>délégation</b>'' & '<b>motivation</b>'</p>
+                                            <p lang="en"><b>Teamed</b> bottom bun and its bilateral toasting '<b>delegate</b>'' & '<b>motivate</b>'</p>
                                         </span>
                                     </div>
                                 </div>

@@ -27,7 +27,7 @@ $(function(){
         //TOGGLE POINT
         $("#screen_on").toggleClass("visible invisible");
         audiobuzz.play();
-        $("#screen_on").css("background-image", "radial-gradient(circle, rgba(40,57,20,0.95) 0%, rgba(20,29,9,0.97) 80%, rgba(0,0,0,0.99) 100%), url('assets/images/backgrounds/bg_stripes.jpg')");
+        $("#screen_on").css("background-image", "radial-gradient(circle, rgba(40,57,20,0.45) 0%, rgba(20,29,9,0.8) 80%, rgba(0,0,0,0.99) 100%), url('assets/images/backgrounds/Waneella - Desos Pizza.gif')");
         setTimeout(() => {$("title").html("Bonjour, Monde.")}, 1850);
         setTimeout(() => {$("#linkicon").html('<link id="linkicon" rel="icon" type="image/png" href="assets/images/icons/logo2.png">')}, 2250);
         setTimeout(() => {$("#task_bar").toggleClass("visible invisible");}, 2500);
