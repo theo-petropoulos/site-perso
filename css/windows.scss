@@ -173,6 +173,7 @@ $color:rgb(173, 255, 47);
         position:relative;
         display:flex;
         flex-grow:1;
+        flex-wrap:wrap;
         flex-flow:row;
         padding:1% 2%;
         color:$color;
@@ -277,6 +278,8 @@ $color:rgb(173, 255, 47);
                 margin:0;
                 color:$color;
                 cursor:default;
+                word-break:break-all;
+                max-width:150px;
             }
             #contextmenu{
                 position:absolute;
@@ -330,11 +333,11 @@ $color:rgb(173, 255, 47);
                 }
             }
             .window_infos{
+                position:relative;
                 display:flex;
                 width:0%;
                 flex-flow:column;
                 flex-grow:1;
-                position:relative;
                 overflow-y:scroll;
                 overflow-x:hidden;
                 scrollbar-color: $color rgba(0,0,0,0.9);

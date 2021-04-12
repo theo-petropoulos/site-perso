@@ -37,7 +37,6 @@ function screen_flick(){
         return 0;
     }
     else{
-        console.log(power);
         var flick=Math.floor(Math.random()*8)+1;
         var audioflick= new Audio('assets/audio/sounds/flick.mp3');
         var audiobuzz= new Audio('assets/audio/sounds/buzz.mp3');
@@ -72,7 +71,7 @@ function screen_flick(){
                 audioflick.play();
                 setTimeout(()=>{audioflick.pause();audioflick.currentTime = 0;}, 500);
                 $("#screen_flicker").toggleClass("invisible visible");
-                setTimeout(()=>{$("#screen_flicker").css("transition", "all 2s");$("#screen_flicker").toggleClass("invisible visible");audiobuzz.currentTime = 0;audiobuzz.play();}, 2200);
+                setTimeout(()=>{$("#screen_flicker").css("transition", "all 2s");$("#screen_flicker").toggleClass("invisible visible")});
                 break;
             default:
                 break;
@@ -302,7 +301,6 @@ function switchClass(e, fclass, target){
                 switch($(this).attr('id')){
                     case 'open':
                         if($(target).hasClass('project_min')){
-                            console.log('#a_' + $(target).attr('id'));
                             $('#a_' + $(target).attr('id'))[0].click();
                         }
                         else{

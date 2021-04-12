@@ -71,6 +71,10 @@ $(function(){
         $(article).toggleClass('invisible');
     });
 
+    $("#close_corporations").click(function(){
+        $(this).parents('.animation').remove();
+    });
+
     //Open submenu
     $('.menu button').click(function(e){
         e.preventDefault();

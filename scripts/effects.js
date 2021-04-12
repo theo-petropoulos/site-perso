@@ -31,13 +31,11 @@ $(function(){
         setTimeout(() => {$("title").html("Bonjour, Monde.")}, 1850);
         setTimeout(() => {$("#linkicon").html('<link id="linkicon" rel="icon" type="image/png" href="assets/images/icons/logo2.png">')}, 2250);
         setTimeout(() => {$("#task_bar").toggleClass("visible invisible");}, 2500);
-        setTimeout(() => {
-            $("#user").toggleClass("invisible");
-            screen_flick();
-        }, 3000);
+        setTimeout(() => {$("#user").toggleClass("invisible");}, 3000);
         setTimeout(() => {$("#music_player").toggleClass("invisible");}, 3300);
         setTimeout(() => {$("#folder_section").toggleClass("visible invisible");}, 3500);
         setTimeout(() => {$("#animation_dna").add($("#animation_corporations")).toggleClass("visible invisible");}, 3800);
+        setTimeout(() => {screen_flick();}, 9800);
         for(let i=1;i<5;i++) setTimeout(() => {
             $("#user .user"+i).toggleClass("invisible");
             audiobip.currentTime=0;
@@ -55,6 +53,7 @@ $(function(){
             $("#user").toggleClass("invisible");
             for(let i=1;i<5;i++) $("#user .user"+i).toggleClass("invisible");
         }, 1100);
+        setTimeout(() => {$("#animation_dna").add($("#animation_corporations")).toggleClass("visible invisible");}, 1200);
         setTimeout(() => {$("#task_bar").toggleClass("visible invisible");}, 1800);
         setTimeout(() => {$("#linkicon").html('<link id="linkicon" rel="icon" type="image/png" href="assets/images/icons/logo1.png">')}, 2250);
         setTimeout(() => {$("#screen_off").toggleClass("visible invisible");}, 2500);

@@ -32,6 +32,7 @@
         <script src="<?=$addr;?>scripts/rightclick.js"></script>
         <script src="<?=$addr;?>scripts/musicplayer.js"></script>
         <script src="<?=$addr;?>scripts/window.js"></script>
+        <script src="<?=$addr;?>scripts/userinput.js"></script>
         <script src="https://kit.fontawesome.com/9ddb75d515.js" crossorigin="anonymous"></script>
         <title>Petropoulos Théo - Web developer</title>
     </head>
@@ -94,7 +95,7 @@
 
                 <!-- PIXEL ART ANIMATION Credits : Kenze Wee https://www.behance.net/KenzeWeeHonMing -->
                 <section id="animation_corporations" class="window invisible drag animation">
-                    <img src="<?=$addr;?>assets/images/backgrounds/Kenze Wee - Corporations.gif" alt="Kenze Wee - Corporations animation gif">
+                    <img src="<?=$addr;?>assets/images/other/Kenze Wee - Corporations.gif" alt="Kenze Wee - Corporations animation gif">
                     <p>Credits : Kenze Wee - Corporations</p>
                     <button id="close_corporations"><i class="fas fa-times"></i></button>
                 </section>
