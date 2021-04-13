@@ -33,7 +33,7 @@ function clock(){
 
 //Randomly glitch the screen
 function screen_flick(){
-    if(power=='shutdown'){
+    if(power=='shutdown' || power=='switch_off'){
         return 0;
     }
     else{
@@ -309,7 +309,7 @@ function switchClass(e, fclass, target){
                             id=$(this).attr("id").replace('img_','');
                             if($("#tb_window_openimg").length<1) $("#task_windows ul").append("<li class='tb_window' id='tb_window_openimg'></li>");
                             $("#tb_window_openimg").css({
-                                "background-image":"url('assets/images/icons/file.png')",
+                                "background-image":"url('assets/images/icons/file_" + color + ".png')",
                                 "background-size":"contain",
                                 "background-position":"center",
                                 "background-repeat":"no-repeat"

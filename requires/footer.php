@@ -62,6 +62,16 @@
                         <li id="settings_effects">
                             <p lang="fr">Effets <i class="fas fa-caret-right"></i></p>
                             <p lang="en">Effects <i class="fas fa-caret-right"></i></p>
+                            <ul>
+                                <li>
+                                    <p id="effects_on" class="effects_switch" lang="fr">Activer</p>
+                                    <p id="effects_on" class="effects_switch" lang="en">On</p>
+                                </li>
+                                <li>
+                                    <p id="effects_off" class="effects_switch" lang="fr">Désctiver</p>
+                                    <p id="effects_off" class="effects_switch" lang="en">Off</p>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </li>

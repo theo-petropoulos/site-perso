@@ -54,22 +54,22 @@
 
                 <section id="folder_section" class="invisible">
                     <div class="folder drag rclick" id="folder_images" style="top:100px; left:100px">
-                        <img src="<?=$addr;?>assets/images/icons/folder.png" alt="folder_image" title="folder_min">
+                        <img src="<?=$addr;?>assets/images/icons/folder_green.png" alt="folder_image" title="folder_min">
                         <p class="distorted" lang="fr">Fonds d'écran</p>
                         <p class="distorted" lang="en">Wallpapers</p>
                     </div>
                     <div class="folder drag rclick" id="folder_projects" style="left:100px">
-                        <img src="<?=$addr;?>assets/images/icons/folder.png" alt="folder_image" title="folder_min">
+                        <img src="<?=$addr;?>assets/images/icons/folder_green.png" alt="folder_image" title="folder_min">
                         <p class="distorted" lang="fr">Projets</p>
                         <p class="distorted" lang="en">Projects</p>
                     </div>
                     <div class="folder drag rclick" id="folder_bin" style="left:0px">
-                        <img src="<?=$addr;?>assets/images/icons/bin.png" alt="recycle_bin_image" title="folder_min">
+                        <img src="<?=$addr;?>assets/images/icons/bin_green.png" alt="recycle_bin_image" title="folder_min">
                         <p class="distorted" lang="fr">Corbeille</p>
                         <p class="distorted" lang="en">Recycle bin</p>
                     </div>
                     <div class="folder drag rclick" id="folder_infos" style="left:0px;top:100px">
-                        <img src="<?=$addr;?>assets/images/icons/infos.png" alt="personal_informations_images" title="folder_min">
+                        <img src="<?=$addr;?>assets/images/icons/infos_green.png" alt="personal_informations_images" title="folder_min">
                         <p class="distorted" lang="fr">Informations personnelles</p>
                         <p class="distorted" lang="en">Personal informations</p>
                     </div>
@@ -165,11 +165,11 @@
                         <div class="window_group">
                             <div class="window_content">
                                 <div class="window_min img rclick file project_min" id="vonharper">
-                                    <img src="<?=$addr;?>assets/images/icons/at.png" alt="website_image">
+                                    <img src="<?=$addr;?>assets/images/icons/at_green.png" alt="website_image">
                                     <p>Von Harper</p>
                                 </div>
                                 <div class="window_min img rclick file project_min" id="memory">
-                                    <img src="<?=$addr;?>assets/images/icons/at.png" alt="website_image">
+                                    <img src="<?=$addr;?>assets/images/icons/at_green.png" alt="website_image">
                                     <p>Memory</p>
                                 </div>
                             </div>
