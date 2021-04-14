@@ -22,6 +22,25 @@ $color:rgb(173, 255, 47);
     100%{transform:translateY(10%);}
 }
 
+@keyframes slap{
+    0%{transform:translateX(0);}
+    10%{transform:translateX(0);}
+    20%{transform:translateX(20%);}
+    35%{transform:translateX(-15%);}
+    45%{transform:translateX(10%);}
+    54%{transform:translateX(-5%);}
+    60%{transform:translateX(0);}
+}
+
+@keyframes refresh{
+    0%{transform:translateY(0);}
+    40%{transform:translateY(100%);}
+    41%{visibility:hidden;transform:translateY(100%);}
+    44%{visibility:hidden;transform:translateY(-100%);}
+    50%{transform:translateY(-100%);visibility: visible;}
+    80%{transform:translateY(0);}
+}
+
 @keyframes textglitch_green{
     0%{text-shadow:1.5px 0.4px 0px $color;}
     1%{text-shadow:-2.4px -0.8px 0px $color;}

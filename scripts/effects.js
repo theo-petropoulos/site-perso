@@ -3,7 +3,7 @@ $(function(){
     const audiobip= new Audio('assets/audio/sounds/bip.mp3');
     const audioclick= new Audio('assets/audio/sounds/click.mp3');
     const audiodbclick= new Audio('assets/audio/sounds/dbclick.mp3');
-    const punchscreen= new Audio('assets/audio/sounds/punch.mp3');
+    window.punch= new Audio('assets/audio/sounds/punch.mp3');
     $("*").not('.example').css("color", "rgb(173, 255, 47)");
 
     //Init array of colors, current font and current wallpaper for dynamic purposes
@@ -25,9 +25,6 @@ $(function(){
     var prevent = false;
     var timer = 0;
 
-    //Used to stop effects
-    let effects = 1;
-
     //Used to stop functions
     window.power = 'shutdown';
     
@@ -46,7 +43,7 @@ $(function(){
         setTimeout(() => {$("#linkicon").html('<link id="linkicon" rel="icon" type="image/png" href="assets/images/icons/logo2.png">')}, 2250);
         setTimeout(() => {$("#task_bar").toggleClass("visible invisible");}, 2500);
         setTimeout(() => {$("#user").toggleClass("invisible");}, 3000);
-        setTimeout(() => {$("#music_player").toggleClass("invisible");}, 3300);
+        setTimeout(() => {$("#music_player").add($("#screen_toggle")).toggleClass("invisible");}, 3300);
         setTimeout(() => {$("#folder_section").toggleClass("visible invisible");}, 3500);
         setTimeout(() => {$("#animation_dna").add($("#animation_corporations")).toggleClass("visible invisible");}, 3800);
         setTimeout(() => {screen_flick(); glitch_font();}, 9800);
