@@ -102,7 +102,7 @@
                 <!-- PIXEL ART ANIMATION Credits : Kenze Wee https://www.behance.net/KenzeWeeHonMing -->
                 <section id="animation_corporations" class="window invisible drag animation">
                     <img src="<?=$addr;?>assets/images/other/Kenze Wee - Corporations.gif" alt="Kenze Wee - Corporations animation gif">
-                    <p>Credits : Kenze Wee - Corporations</p>
+                    <p>Kenze Wee - Corporations</p>
                     <button id="close_corporations"><i class="fas fa-times"></i></button>
                 </section>
                 <!-- END PIXEL ART ANIMATION -->

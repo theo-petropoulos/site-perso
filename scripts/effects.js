@@ -123,32 +123,35 @@ $(function(){
     //Show text when hovering mascot
     $(document).on("mouseover", "#screen_toggle", function(e){
         const mascot_quotes=[
-            "Je ne suis pas un punching ball", "Ah d'accord on en est là.", "Vous n'en avez pas marre ?", 
+            "Je ne suis pas un punching ball.", "Ah d'accord on en est là.", "Vous n'en avez pas marre ?", 
             "BRAVO ! Très mature, vraiment.", "Ben bien sûr, toujours plus.", "Bon, il serait peut-être temps d'arrêter non ?", 
             "...zZzZzZ", "Je vais finir par m'énerver.", "A qui vais-je faire croire ça, je ne suis qu'un tas de 14400 pixels.",
             "Vous êtes en train de vous demander combien de phrases je peux réciter ?", "Vous n'êtes pas au bout de vos surprises.",
             "Vous savez, on peut jouer à ce jeu encore trèèèèès longtemps.", "Entre deux patates, pensez à envoyer un mail au créateur du site si vous êtes recruteur.",
-            "C'est l'histoire d'un type qui avait cassé sa souris à force de cliquer ici.", "Vous me frappez pour la " + punchcount + " fois",
+            "C'est l'histoire d'un type qui avait cassé sa souris à force de cliquer ici.", "Vous me frappez pour la " + punchcount + "ème fois",
             "Et pourtant, vous continuez. Faudrait se poser des questions.", "Si seulement je n'étais pas un écran dans un écran, je ...",
-            "Je vous le dit, je n'aura pas hésite une seule seconde à ...", "Ouaip, c'est ça que je vous ferais.", "Ouaip", 
+            "Je vous le dis, je n'aurai pas hésité une seule seconde à ...", "Ouaip, c'est ce que j'aurai fait.", "Ouaip", 
             "Bon, on a peut-être fait le tour de la question là non ?", "Je ne suis pas un punching ball", "Vous pensiez que je n'avais plus de phrases en stock ?",
-            "Grossière erreur très cher", punchcount + " coups plus tard, toujours debout.", "Je ressens la douleur vous savez ?",
-            "La douleur de constater qu'il aura fallu 800 millions d'années d'évolution pour que vous soyez là derrière votre écran à cliquer frénétiquement sur ce bouton.",
+            "Grossière erreur.", punchcount + " coups plus tard, toujours debout.", "Je ressens la douleur vous savez ?",
+            "La douleur de constater qu'il aura fallu 800 millions d'années.", "800 millions d'années d'évolution pour que vous soyez là derrière votre écran à cliquer frénétiquement sur ce bouton.",
             "Vous êtes en plein dans l'engagement, vous vous dites \"après tous ces clics, j'aimerai quand même voir la fin\".",
-            "Et s'il n'y avait pas de fin, on fait comment ?", "Vous et moi, vos clics, mes messages, jusqu'à la fin des temps.",
-            "Le fait est que passer le reste de ma vie numérique avec un fou des claques ne me plait guère."
+            "Et s'il n'y avait pas de fin ?", "Vous et moi, vos clics, mes messages, jusqu'à la fin des temps.",
+            "Le fait est que passer le reste de ma vie numérique avec un fou de la baffe ne me plait guère."
         ];
         if($("#screen_toggle p").length<1){
-            $("#screen_toggle").append("<p>" + mascot_quotes[punchcount] + "</p>");
+            if(mascot_quotes[punchcount]!=undefined) $("#screen_toggle").append("<p>" + mascot_quotes[punchcount] + "</p>");
+            else $("#screen_toggle").append("<p>Félicitations, vous m'avez cassé.</p>");
             $("#screen_toggle p").css({
                 "position":"absolute",
-                "top":"0",
+                "bottom":"100%",
                 "right":"0",
-                "transform":"translate(115%,-50%)",
-                "max-width":"175px",
+                "transform":"translate(115%,50%)",
+                "max-width":"250px",
                 "background": "rgba(0,0,0,0.9)",
-                "padding":"5px 15x",
-                "border-radius":"5px"
+                "padding":"10%",
+                "padding-bottom":"40%",
+                "border-radius":"5px",
+                "clip-path": "polygon(0% 0%, 100% 0%, 100% 82%, 71% 82%, 0 100%, 17% 82%, 0 82%)"
             })
         }
     });

@@ -26,10 +26,13 @@ $(function(){
     });
 
     $('.effects_switch').click(function(e){
+        var loctimer=0;
         let prev_bg=$("#screen_on").css("background-image").split("backgrounds/");
         let background=prev_bg[1].replace(/%20/g, " ").replace('")', '');
+        power='switch_off';
         $(this).trigger('mouseleave');
         if($(this).attr('id')=='effects_off'){
+            clearTimeout(loctimer);
             power='switch_off';
             $(this).attr('id', 'effects_on');
             e.stopPropagation();
@@ -38,6 +41,7 @@ $(function(){
             $("#screen_on").css("animation","none");
             setTimeout(()=>{
                 $("#screen_on").css("animation","slap 0.4s 0s ease-in forwards");
+                $(this).attr('src', 'assets/images/other/trans-e.png');
             }, 100);
             setTimeout(()=>{
                 $(this).attr('src', 'assets/images/other/hap-e.png');
@@ -65,10 +69,10 @@ $(function(){
             }, 550);
             window.background=$("#screen_on").css("background-image");
             punchcount++;
-            setTimeout(() => {
-                screen_flick();
-                glitch_font();
-                glitch_color();
+            loctimer=setTimeout(() => {
+                glitch_font;
+                glitch_color;
+                screen_flick;
             }, 4900);
         }
     });
