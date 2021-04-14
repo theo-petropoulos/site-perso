@@ -68,7 +68,7 @@
                                     <p id="effects_on" class="effects_switch" lang="en">On</p>
                                 </li>
                                 <li>
-                                    <p id="effects_off" class="effects_switch" lang="fr">Désctiver</p>
+                                    <p id="effects_off" class="effects_switch" lang="fr">Désactiver</p>
                                     <p id="effects_off" class="effects_switch" lang="en">Off</p>
                                 </li>
                             </ul>

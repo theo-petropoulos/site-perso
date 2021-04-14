@@ -1,17 +1,6 @@
 $font:'DotGothic16', Courier;
 $color:rgb(173, 255, 47);
 
-@keyframes textglitch{
-    0%{text-shadow:1.5px 0.4px 0px $color;}
-    1%{text-shadow:-2.4px -0.8px 0px $color;}
-    2%{text-shadow:2.3px 0.2px 0px $color;}
-    5%{text-shadow:2.3px 0.2px 0px $color;}
-    6%{text-shadow:-1.7px 0.4px 0px $color;}
-    7%{text-shadow:-1.7px 0.4px 0px $color;}
-    8%{text-shadow:0.8px 0.2px 0px $color;}
-    10%{text-shadow:0px 0px 0px $color;}
-}
-
 @keyframes slidertoleft{
     0%{transform:translateX(125%);}
     100%{transform:translateX(-125%);}
@@ -31,4 +20,48 @@ $color:rgb(173, 255, 47);
 @keyframes floating{
     0%{transform:translateY(-10%);}
     100%{transform:translateY(10%);}
+}
+
+@keyframes textglitch_green{
+    0%{text-shadow:1.5px 0.4px 0px $color;}
+    1%{text-shadow:-2.4px -0.8px 0px $color;}
+    2%{text-shadow:2.3px 0.2px 0px $color;}
+    5%{text-shadow:2.3px 0.2px 0px $color;}
+    6%{text-shadow:-1.7px 0.4px 0px $color;}
+    7%{text-shadow:-1.7px 0.4px 0px $color;}
+    8%{text-shadow:0.8px 0.2px 0px $color;}
+    10%{text-shadow:0px 0px 0px $color;}
+}
+
+@keyframes textglitch_red{
+    0%{text-shadow:1.5px 0.4px 0px rgb(165, 17, 17);}
+    1%{text-shadow:-2.4px -0.8px 0px rgb(165, 17, 17);}
+    2%{text-shadow:2.3px 0.2px 0px rgb(165, 17, 17);}
+    5%{text-shadow:2.3px 0.2px 0px rgb(165, 17, 17);}
+    6%{text-shadow:-1.7px 0.4px 0px rgb(165, 17, 17);}
+    7%{text-shadow:-1.7px 0.4px 0px rgb(165, 17, 17);}
+    8%{text-shadow:0.8px 0.2px 0px rgb(165, 17, 17);}
+    10%{text-shadow:0px 0px 0px rgb(165, 17, 17);}
+}
+
+@keyframes textglitch_blue{
+    0%{text-shadow:1.5px 0.4px 0px rgb(35, 105, 200);}
+    1%{text-shadow:-2.4px -0.8px 0px rgb(35, 105, 200);}
+    2%{text-shadow:2.3px 0.2px 0px rgb(35, 105, 200);}
+    5%{text-shadow:2.3px 0.2px 0px rgb(35, 105, 200);}
+    6%{text-shadow:-1.7px 0.4px 0px rgb(35, 105, 200);}
+    7%{text-shadow:-1.7px 0.4px 0px rgb(35, 105, 200);}
+    8%{text-shadow:0.8px 0.2px 0px rgb(35, 105, 200);}
+    10%{text-shadow:0px 0px 0px rgb(35, 105, 200);}
+}
+
+@keyframes textglitch_white{
+    0%{text-shadow:1.5px 0.4px 0px rgba(255,255,255,0.9);}
+    1%{text-shadow:-2.4px -0.8px 0px rgba(255,255,255,0.9);}
+    2%{text-shadow:2.3px 0.2px 0px rgba(255,255,255,0.9);}
+    5%{text-shadow:2.3px 0.2px 0px rgba(255,255,255,0.9);}
+    6%{text-shadow:-1.7px 0.4px 0px rgba(255,255,255,0.9);}
+    7%{text-shadow:-1.7px 0.4px 0px rgba(255,255,255,0.9);}
+    8%{text-shadow:0.8px 0.2px 0px rgba(255,255,255,0.9);}
+    10%{text-shadow:0px 0px 0px rgba(255,255,255,0.9);}
 }

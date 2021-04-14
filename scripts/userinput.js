@@ -1,18 +1,13 @@
 $(function(){
-    window.array_colors={
-        'green':'rgb(173, 255, 47)',
-        'red':'rgb(165, 17, 17)',
-        'blue':'rgb(35, 105, 200)',
-        'white':'rgba(255,255,255,0.9)'
-    };
-    window.color='green';
-
     $('.example').click(function(){
         let selector=$("*").not('.example');
         let id=$(this).attr('id').split('_');
         if($(this).hasClass('example')){
             let style=$(this).attr('style').split(":");
-            if(style[0]=="font-family") selector=selector.not('i');
+            if(style[0]=="font-family"){
+                selector=selector.not('i');
+                font=style[1];
+            }
             selector.css(style[0],style[1]);
             if(style[0]=="color"){
                 color=Object.keys(array_colors).find(key => array_colors[key] === style[1]);
@@ -24,7 +19,7 @@ $(function(){
                 $(".tb_window").each(function(){
                     let tbimg = $(this).css("background-image").replace('.png', '').split('_');
                     $(this).css("background-image", tbimg[0] + '_' + color + '.png');
-                });  
+                });
             }
         }
     });
@@ -35,10 +30,12 @@ $(function(){
         if($(this).attr('id')=='effects_off'){
             power='switch_off';
             $("#screen_on").css("background-image", "url('assets/images/backgrounds/" + background + "')");
+            window.background=$("#screen_on").css("background-image");
         }
         else if($(this).attr('id')=='effects_on'){
             power='on';
             $("#screen_on").css("background-image", "radial-gradient(circle, rgba(40,57,20,0.45) 0%, rgba(20,29,9,0.8) 80%, rgba(0,0,0,0.99) 100%), url('assets/images/backgrounds/" + background + "')");
+            window.background=$("#screen_on").css("background-image");
         }
     });
 });

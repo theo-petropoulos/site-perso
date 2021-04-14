@@ -61,7 +61,7 @@ $(function(){
     });
 
     //Show details of a project
-    $('.project_min').click(function(e){
+    $(document).on('click', '.project_min', function(e){
         e.preventDefault();
         let article='#article_' + $(this).attr('id');
         $(this).parents('.window_group').children('.window_infos').css({

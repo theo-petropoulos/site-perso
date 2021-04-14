@@ -28,16 +28,40 @@ function clock(){
         "<p lang='en'>" + h_en + ":" + t_en + "</p>\
         <p lang='en'>" + m + "/" + d + "/" + y + "</p>"
     );
+    if(typeof(array_colors)!='undefined') $("#task_corner span p").css("color", array_colors[color]);
     setTimeout(clock, 30000);
+}
+
+//Glitch the text
+function glitch_font(){
+    if(power=='shutdown' || power=='switch_off') return 0;
+    else{
+        let timeout=Math.floor(Math.random()*6000)+10000;
+        $("*").not('.example, i').css("font-family", "Courier");
+        setTimeout(() => {$("*").not('.example, i').css("font-family", "Impact");}, 200);
+        setTimeout(() => {$("*").not('.example, i').css("font-family", "Verdana");}, 450);
+        setTimeout(() => {$("*").not('.example, i').css("font-family", "Comic sans MS");}, 550);
+        setTimeout(() => {$("*").not('.example, i').css("font-family", font);}, 650);
+        setTimeout(glitch_color, timeout);
+    }
+}
+
+//Glitch text's color
+function glitch_color(){
+    if(power=='shutdown' || power=='switch_off') return 0;
+    else{
+        let i=Math.floor(Math.random()*10)+4;
+        let timeout=Math.floor(Math.random()*6000)+10000;
+        $('.distorted').css('animation', 'textglitch_' + color + ' ' + i +'s 0s linear');
+        setTimeout(glitch_font, timeout);
+    }
 }
 
 //Randomly glitch the screen
 function screen_flick(){
-    if(power=='shutdown' || power=='switch_off'){
-        return 0;
-    }
+    if(power=='shutdown' || power=='switch_off') return 0;
     else{
-        var flick=Math.floor(Math.random()*8)+1;
+        var flick=Math.floor(Math.random()*10)+1;
         var audioflick= new Audio('assets/audio/sounds/flick.mp3');
         var audiobuzz= new Audio('assets/audio/sounds/buzz.mp3');
         switch(flick){
@@ -323,11 +347,9 @@ function switchClass(e, fclass, target){
                         }
                         break;
                     case 'setwp':
-                        $("#screen_on").css(
-                            "background-image",
-                            "radial-gradient(circle, rgba(40,57,20,0.45) 0%,\
-                            rgba(20,29,9,0.8) 80%, rgba(0,0,0,0.99) 100%),\
-                            url('" + img_src + "')");
+                        let old_background=background.split('url');
+                        let new_background=old_background[0].concat("url('" + img_src + "')");
+                        $("#screen_on").css("background-image", new_background);
                         break;
                     case 'delete':
                         let origin= $(target).parents('.window').attr('id');

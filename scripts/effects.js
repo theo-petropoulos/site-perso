@@ -3,6 +3,17 @@ $(function(){
     const audiobip= new Audio('assets/audio/sounds/bip.mp3');
     const audioclick= new Audio('assets/audio/sounds/click.mp3');
     const audiodbclick= new Audio('assets/audio/sounds/dbclick.mp3');
+    const punchscreen= new Audio('assets/audio/sounds/punch.mp3');
+    //Init array of colors, current font and current wallpaper for dynamic purposes
+    window.array_colors={
+        'green':'rgb(173, 255, 47)',
+        'red':'rgb(165, 17, 17)',
+        'blue':'rgb(35, 105, 200)',
+        'white':'rgba(255,255,255,0.9)'
+    };
+    window.color='green';
+    window.font='DotGothic16';
+    window.background='';
     //Init tittle for google search
     $("title").html("Petropoulos Théo - Web developer");
     //Init title and set default language to fr
@@ -28,6 +39,7 @@ $(function(){
         $("#screen_on").toggleClass("visible invisible");
         audiobuzz.play();
         $("#screen_on").css("background-image", "radial-gradient(circle, rgba(40,57,20,0.45) 0%, rgba(20,29,9,0.8) 80%, rgba(0,0,0,0.99) 100%), url('assets/images/backgrounds/Waneella - Desos Pizza.gif')");
+        background=$("#screen_on").css("background-image");
         setTimeout(() => {$("title").html("Bonjour, Monde.")}, 1850);
         setTimeout(() => {$("#linkicon").html('<link id="linkicon" rel="icon" type="image/png" href="assets/images/icons/logo2.png">')}, 2250);
         setTimeout(() => {$("#task_bar").toggleClass("visible invisible");}, 2500);
@@ -35,7 +47,7 @@ $(function(){
         setTimeout(() => {$("#music_player").toggleClass("invisible");}, 3300);
         setTimeout(() => {$("#folder_section").toggleClass("visible invisible");}, 3500);
         setTimeout(() => {$("#animation_dna").add($("#animation_corporations")).toggleClass("visible invisible");}, 3800);
-        setTimeout(() => {screen_flick();}, 9800);
+        setTimeout(() => {screen_flick(); glitch_font();}, 9800);
         for(let i=1;i<5;i++) setTimeout(() => {
             $("#user .user"+i).toggleClass("invisible");
             audiobip.currentTime=0;
