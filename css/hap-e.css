@@ -19,24 +19,9 @@
 #screen_toggle img {
   width: 150px;
   height: 150px;
-  -webkit-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.5);
-          box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 #screen_toggle img:hover {
   cursor: pointer;
-}
-
-#screen_toggle button {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-}
-
-#screen_toggle button p {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 1% 2%;
 }
 /*# sourceMappingURL=hap-e.css.map */

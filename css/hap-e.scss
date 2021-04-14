@@ -9,16 +9,8 @@
     img{
         width:150px;
         height:150px;
-        box-shadow:8px 8px 10px 0px rgba(0,0,0,0.5);
         &:hover{
             cursor:pointer;
-        }
-    }
-    button{
-        width:max-content;
-        p{
-            width:max-content;
-            padding:1% 2%;
         }
     }
 }

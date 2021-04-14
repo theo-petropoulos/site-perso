@@ -28,51 +28,43 @@ $(function(){
     $('.effects_switch').click(function(e){
         let prev_bg=$("#screen_on").css("background-image").split("backgrounds/");
         let background=prev_bg[1].replace(/%20/g, " ").replace('")', '');
+        $(this).trigger('mouseleave');
         if($(this).attr('id')=='effects_off'){
             power='switch_off';
             $(this).attr('id', 'effects_on');
-            if($(this).parents("#screen_toggle")){
-                e.stopPropagation();
-                punch.currentTime=0;
-                punch.play();
-                $("#screen_on").css("animation","none");
-                setTimeout(()=>{
-                    $("#screen_on").css("animation","slap 0.4s 0s ease-in forwards");
-                    $(this).attr('src', 'assets/images/other/trans-e.png');
-                }, 100);
-                setTimeout(()=>{
-                    $(this).attr('src', 'assets/images/other/hap-e.png');
-                    $("#screen_on").css("background-image", "url('assets/images/backgrounds/" + background + "')");
-                }, 550);
-            }
-            else{
-                $("#screen_on").css("background-image", "url('assets/images/backgrounds/" + background + "')");
+            e.stopPropagation();
+            punch.currentTime=0;
+            punch.play();
+            $("#screen_on").css("animation","none");
+            setTimeout(()=>{
+                $("#screen_on").css("animation","slap 0.4s 0s ease-in forwards");
+            }, 100);
+            setTimeout(()=>{
                 $(this).attr('src', 'assets/images/other/hap-e.png');
-            }
+                $("#screen_on").css("background-image", "url('assets/images/backgrounds/" + background + "')");
+                $(this).trigger('mouseover');
+            }, 550);
             window.background=$("#screen_on").css("background-image");
+            punchcount++;
         }
         else if($(this).attr('id')=='effects_on'){
             power='on';
             $(this).attr('id', 'effects_off');
-            if($(this).parents("#screen_toggle")){
-                e.stopPropagation();
-                punch.currentTime=0;
-                punch.play();
-                $("#screen_on").css("animation","none");
-                setTimeout(()=>{
-                    $("#screen_on").css("animation","slap 0.4s 0s ease-in forwards");
-                    $(this).attr('src', 'assets/images/other/trans-e.png');
-                }, 100);
-                setTimeout(()=>{
-                    $(this).attr('src', 'assets/images/other/gloom-e.png');
-                    $("#screen_on").css("background-image", "radial-gradient(circle, rgba(40,57,20,0.45) 0%, rgba(20,29,9,0.8) 80%, rgba(0,0,0,0.99) 100%), url('assets/images/backgrounds/" + background + "')");
-                }, 550);
-            }
-            else{
-                $("#screen_on").css("background-image", "radial-gradient(circle, rgba(40,57,20,0.45) 0%, rgba(20,29,9,0.8) 80%, rgba(0,0,0,0.99) 100%), url('assets/images/backgrounds/" + background + "')");
+            e.stopPropagation();
+            punch.currentTime=0;
+            punch.play();
+            $("#screen_on").css("animation","none");
+            setTimeout(()=>{
+                $("#screen_on").css("animation","slap 0.4s 0s ease-in forwards");
+                $(this).attr('src', 'assets/images/other/trans-e.png');
+            }, 100);
+            setTimeout(()=>{
                 $(this).attr('src', 'assets/images/other/gloom-e.png');
-            }
+                $("#screen_on").css("background-image", "radial-gradient(circle, rgba(40,57,20,0.45) 0%, rgba(20,29,9,0.8) 80%, rgba(0,0,0,0.99) 100%), url('assets/images/backgrounds/" + background + "')");
+                $(this).trigger('mouseover');
+            }, 550);
             window.background=$("#screen_on").css("background-image");
+            punchcount++;
             setTimeout(() => {
                 screen_flick();
                 glitch_font();

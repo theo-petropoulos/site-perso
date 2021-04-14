@@ -3,6 +3,7 @@ $(function(){
     const audiobip= new Audio('assets/audio/sounds/bip.mp3');
     const audioclick= new Audio('assets/audio/sounds/click.mp3');
     const audiodbclick= new Audio('assets/audio/sounds/dbclick.mp3');
+    window.punchcount=0;
     window.punch= new Audio('assets/audio/sounds/punch.mp3');
     $("*").not('.example').css("color", "rgb(173, 255, 47)");
 
@@ -117,5 +118,41 @@ $(function(){
     //Play sound on keypress
     $(document).keyup(function(e){
         randomKeyboardSound();
+    });
+
+    //Show text when hovering mascot
+    $(document).on("mouseover", "#screen_toggle", function(e){
+        const mascot_quotes=[
+            "Je ne suis pas un punching ball", "Ah d'accord on en est là.", "Vous n'en avez pas marre ?", 
+            "BRAVO ! Très mature, vraiment.", "Ben bien sûr, toujours plus.", "Bon, il serait peut-être temps d'arrêter non ?", 
+            "...zZzZzZ", "Je vais finir par m'énerver.", "A qui vais-je faire croire ça, je ne suis qu'un tas de 14400 pixels.",
+            "Vous êtes en train de vous demander combien de phrases je peux réciter ?", "Vous n'êtes pas au bout de vos surprises.",
+            "Vous savez, on peut jouer à ce jeu encore trèèèèès longtemps.", "Entre deux patates, pensez à envoyer un mail au créateur du site si vous êtes recruteur.",
+            "C'est l'histoire d'un type qui avait cassé sa souris à force de cliquer ici.", "Vous me frappez pour la " + punchcount + " fois",
+            "Et pourtant, vous continuez. Faudrait se poser des questions.", "Si seulement je n'étais pas un écran dans un écran, je ...",
+            "Je vous le dit, je n'aura pas hésite une seule seconde à ...", "Ouaip, c'est ça que je vous ferais.", "Ouaip", 
+            "Bon, on a peut-être fait le tour de la question là non ?", "Je ne suis pas un punching ball", "Vous pensiez que je n'avais plus de phrases en stock ?",
+            "Grossière erreur très cher", punchcount + " coups plus tard, toujours debout.", "Je ressens la douleur vous savez ?",
+            "La douleur de constater qu'il aura fallu 800 millions d'années d'évolution pour que vous soyez là derrière votre écran à cliquer frénétiquement sur ce bouton.",
+            "Vous êtes en plein dans l'engagement, vous vous dites \"après tous ces clics, j'aimerai quand même voir la fin\".",
+            "Et s'il n'y avait pas de fin, on fait comment ?", "Vous et moi, vos clics, mes messages, jusqu'à la fin des temps.",
+            "Le fait est que passer le reste de ma vie numérique avec un fou des claques ne me plait guère."
+        ];
+        if($("#screen_toggle p").length<1){
+            $("#screen_toggle").append("<p>" + mascot_quotes[punchcount] + "</p>");
+            $("#screen_toggle p").css({
+                "position":"absolute",
+                "top":"0",
+                "right":"0",
+                "transform":"translate(115%,-50%)",
+                "max-width":"175px",
+                "background": "rgba(0,0,0,0.9)",
+                "padding":"5px 15x",
+                "border-radius":"5px"
+            })
+        }
+    });
+    $(document).on("mouseleave", "#screen_toggle", function(e){
+        $("#screen_toggle p").remove();
     });
 });
