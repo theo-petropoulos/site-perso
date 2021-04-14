@@ -64,20 +64,20 @@
                         <h1><b>Von Harper</b></h1>
                         <h3>Vente hologère de luxe</h3>
                         <h2>HTML / PHP / SCSS / MySQL</h2>
-                        <h4><a href="../boutique/index.php" target="_blank" rel="noopener noreferrer">
-                        <i class="fas fa-external-link-alt"></i>  Visiter le site</a></h4>
+                        <h4><a href="../boutique/index.php" class="example" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt example"></i>  Visiter le site</a></h4>
                     </header>
-<p>Le site <b><a id="a_vonharper" href="../boutique/index.php" target="_blank" rel="noopener noreferrer">Von Harper</a></b>, entièrement 
+<p>Le site <b><a id="a_vonharper" href="../boutique/index.php" class="example" target="_blank" rel="noopener noreferrer">Von Harper</a></b>, entièrement 
 reponsive a été réalisé 'from scratch' 
-avec <a href="https://adam-fraga.students-laplateforme.io/" target="_blank" rel="noopener noreferrer">@<strong>Adam Fraga</strong></a> 
+avec <a href="https://adam-fraga.students-laplateforme.io/" class="example" target="_blank" rel="noopener noreferrer">@<strong class="example">Adam Fraga</strong></a> 
 dans le cadre d'un projet de boutique en ligne. 
 Nous avons utilisé deux bibliothèques <strong>PHP</strong> : <em>mPDF</em> pour la création de factures, 
 et <em>PHPmailer</em> pour la gestion des mails ( inscription, confirmation d'achat, mot de passe oublié...). Nous avons opté pour une 
 architecture pseudo-MVC, une POO et un accès à la base de donnée de type PDO.</p>
                     <footer>
-                        <a href="https://github.com/theo-petropoulos/boutique">GitHub</a>
-                        <a href="https://adam-fraga.students-laplateforme.io/">Adam Fraga</a>
-                        <a href="https://theo-petropoulos.students-laplateforme.io/">Theo Petropoulos</a>
+                        <a href="https://github.com/theo-petropoulos/boutique" class="example">GitHub</a>
+                        <a href="https://adam-fraga.students-laplateforme.io/" class="example">Adam Fraga</a>
+                        <a href="https://theo-petropoulos.students-laplateforme.io/" class="example">Theo Petropoulos</a>
                     </footer>
                 </article>
                 <article id="article_memory" class="window_infos_article invisible">
@@ -85,16 +85,16 @@ architecture pseudo-MVC, une POO et un accès à la base de donnée de type PDO.
                         <h1><b>Memory</b></h1>
                         <h3>Jeu de cartes</h3>
                         <h2>HTML / PHP / CSS / MySQL</h2>
-                        <h4><a href="../memory/index.php" target="_blank" rel="noopener noreferrer">
-                        <i class="fas fa-external-link-alt"></i>  Visiter le site</a></h4>
+                        <h4><a href="../memory/index.php" class="example" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt example"></i>  Visiter le site</a></h4>
                     </header>
-<p>Le site <b><a id="a_memory" href="../memory/index.php" target="_blank" rel="noopener noreferrer">Memory</a></b>, est un projet 
+<p>Le site <b><a id="a_memory" href="../memory/index.php" class="example" target="_blank" rel="noopener noreferrer">Memory</a></b>, est un projet 
 de début d'année portant sur le jeu de carte éponyme.
 Le site marquait le début de la <strong>programmation orientée objet</strong> et l'introduction à l'<strong>algorithmie</strong>. 
 Il est entièrement développé sous <b>PHP</b> et possède un accès à la base de données de type <b>mysqli</b>.
                     <footer>
-                        <a href="https://github.com/theo-petropoulos/memory">GitHub</a>
-                        <a href="https://theo-petropoulos.students-laplateforme.io/">Theo Petropoulos</a>
+                        <a href="https://github.com/theo-petropoulos/memory" class="example">GitHub</a>
+                        <a href="https://theo-petropoulos.students-laplateforme.io/" class="example">Theo Petropoulos</a>
                     </footer>
                 </article>
             </aside>

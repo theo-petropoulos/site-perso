@@ -43,9 +43,11 @@ $(function(){
                 $("#screen_on").css("animation","slap 0.4s 0s ease-in forwards");
                 $(this).attr('src', 'assets/images/other/trans-e.png');
             }, 100);
+            setTimeout(() => {
+                $("#screen_on").css("background-image", "url('assets/images/backgrounds/" + background + "')");
+            }, 350);
             setTimeout(()=>{
                 $(this).attr('src', 'assets/images/other/hap-e.png');
-                $("#screen_on").css("background-image", "url('assets/images/backgrounds/" + background + "')");
                 $(this).trigger('mouseover');
             }, 550);
             window.background=$("#screen_on").css("background-image");
@@ -62,9 +64,11 @@ $(function(){
                 $("#screen_on").css("animation","slap 0.4s 0s ease-in forwards");
                 $(this).attr('src', 'assets/images/other/trans-e.png');
             }, 100);
+            setTimeout(() => {
+                $("#screen_on").css("background-image", "radial-gradient(circle, rgba(40,57,20,0.45) 0%, rgba(20,29,9,0.8) 80%, rgba(0,0,0,0.99) 100%), url('assets/images/backgrounds/" + background + "')");
+            }, 350);
             setTimeout(()=>{
                 $(this).attr('src', 'assets/images/other/gloom-e.png');
-                $("#screen_on").css("background-image", "radial-gradient(circle, rgba(40,57,20,0.45) 0%, rgba(20,29,9,0.8) 80%, rgba(0,0,0,0.99) 100%), url('assets/images/backgrounds/" + background + "')");
                 $(this).trigger('mouseover');
             }, 550);
             window.background=$("#screen_on").css("background-image");

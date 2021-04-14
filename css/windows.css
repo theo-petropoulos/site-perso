@@ -369,35 +369,35 @@
 }
 
 .window .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(1) img, .window .window_group .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(1) img {
-  animation: floating 4.8s 0s infinite ease-in-out alternate-reverse;
+  animation: floating 5.2s 0s infinite ease-in-out alternate-reverse;
 }
 
 .window .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(2) img, .window .window_group .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(2) img {
-  animation: floating 4.6s 0s infinite ease-in-out alternate-reverse;
+  animation: floating 6.6s 0s infinite ease-in-out alternate-reverse;
 }
 
 .window .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(3) img, .window .window_group .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(3) img {
-  animation: floating 7s 0s infinite ease-in-out alternate-reverse;
+  animation: floating 7.6s 0s infinite ease-in-out alternate-reverse;
 }
 
 .window .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(4) img, .window .window_group .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(4) img {
-  animation: floating 6.2s 0s infinite ease-in-out alternate-reverse;
+  animation: floating 6.8s 0s infinite ease-in-out alternate-reverse;
 }
 
 .window .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(5) img, .window .window_group .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(5) img {
-  animation: floating 5.4s 0s infinite ease-in-out alternate-reverse;
+  animation: floating 4s 0s infinite ease-in-out alternate-reverse;
 }
 
 .window .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(6) img, .window .window_group .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(6) img {
-  animation: floating 3.4s 0s infinite ease-in-out alternate-reverse;
+  animation: floating 5.2s 0s infinite ease-in-out alternate-reverse;
 }
 
 .window .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(7) img, .window .window_group .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(7) img {
-  animation: floating 3.4s 0s infinite ease-in-out alternate-reverse;
+  animation: floating 6.6s 0s infinite ease-in-out alternate-reverse;
 }
 
 .window .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(8) img, .window .window_group .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:nth-of-type(8) img {
-  animation: floating 6.2s 0s infinite ease-in-out alternate-reverse;
+  animation: floating 5.8s 0s infinite ease-in-out alternate-reverse;
 }
 
 .window .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:hover p, .window .window_group .window_content.window_content_infos .window_content_center #hamburger .garnish_holder:hover p {
@@ -710,7 +710,7 @@
   display: flex;
 }
 
-.window#animation_corporations:hover p {
+.window#animation_corporations:hover a {
   display: block;
 }
 
@@ -720,13 +720,19 @@
      object-fit: contain;
 }
 
-.window#animation_corporations p {
+.window#animation_corporations a {
+  display: none;
   position: absolute;
+  text-decoration: none;
+  text-align: center;
   bottom: 2%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  display: none;
+}
+
+.window#animation_corporations a p {
+  text-align: center;
   color: greenyellow;
   background: black;
   padding: 1% 2%;
