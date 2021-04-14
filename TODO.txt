@@ -9,13 +9,13 @@ X titles h1 h2
 change start button color focus
 X prevent bin delete
 
-Ask user : 
-Favorite color
-Old School / New age
--> Change font
--> Change borders
--> Change color
--> Change icons
+// Ask user : 
+// Favorite color
+// Old School / New age
+X -> Change font
+X -> Change borders
+X -> Change color
+X -> Change icons
 
 //projects in iframe
 

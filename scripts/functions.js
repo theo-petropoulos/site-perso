@@ -218,7 +218,7 @@ function switchClass(e, fclass, target){
                         );
                         $("#this_rename").css({
                             "background":"transparent", 
-                            "color":"rgb(173, 255, 47)", 
+                            "color":array_colors[color], 
                             "font-family":"DotGothic16, Courier",
                             "border":"none",
                             "outline":"none",
@@ -411,5 +411,6 @@ function switchClass(e, fclass, target){
             break;
         default:break;
     }
+    $("#contextmenu p").css("color", array_colors[color]);
     keepLang();
 }

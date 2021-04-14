@@ -4,6 +4,8 @@ $(function(){
     const audioclick= new Audio('assets/audio/sounds/click.mp3');
     const audiodbclick= new Audio('assets/audio/sounds/dbclick.mp3');
     const punchscreen= new Audio('assets/audio/sounds/punch.mp3');
+    $("*").not('.example').css("color", "rgb(173, 255, 47)");
+
     //Init array of colors, current font and current wallpaper for dynamic purposes
     window.array_colors={
         'green':'rgb(173, 255, 47)',

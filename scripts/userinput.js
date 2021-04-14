@@ -20,6 +20,7 @@ $(function(){
                     let tbimg = $(this).css("background-image").replace('.png', '').split('_');
                     $(this).css("background-image", tbimg[0] + '_' + color + '.png');
                 });
+                $(".folder p").add($("#contextmenu")).css(style[0], style[1]);         
             }
         }
     });
