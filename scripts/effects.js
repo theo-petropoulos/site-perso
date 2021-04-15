@@ -170,7 +170,10 @@ $(function(){
                 if(language=='fr')$("#screen_toggle").append("<p class='distorted' lang='fr'>" + mascot_quotes_fr[punchcount] + "</p>");
                 else $("#screen_toggle").append("<p class='distorted' lang='en'>" + mascot_quotes_en[punchcount] + "</p>");
             }
-            else $("#screen_toggle").append("<p>Félicitations, vous m'avez cassé.</p>");
+            else{
+                if(language=='fr') $("#screen_toggle").append("<p>Félicitations, vous m'avez cassé.</p>");
+                else $("#screen_toggle").append("<p>Congratulations, you broke me.</p>");
+            }
             $("#screen_toggle p").css({
                 "position":"absolute",
                 "bottom":"100%",
