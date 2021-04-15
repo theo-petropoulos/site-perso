@@ -5,8 +5,10 @@ $(function(){
     const audiodbclick= new Audio('assets/audio/sounds/dbclick.mp3');
     window.punchcount=0;
     window.punch= new Audio('assets/audio/sounds/punch.mp3');
+    //Init * color
     $("*").not('.example').css("color", "rgb(173, 255, 47)");
-
+    //Init global language
+    window.language='fr';
     //Init array of colors, current font and current wallpaper for dynamic purposes
     window.array_colors={
         'green':'rgb(173, 255, 47)',
@@ -84,6 +86,8 @@ $(function(){
 
     //Change language
     $("#switch_lang").click(function(e){
+        if(language=='fr') language='en';
+        else language='fr';
         $('[lang="fr"]').toggleClass("out");
         $('[lang="en"]').toggleClass("out");
         clock();
@@ -122,7 +126,7 @@ $(function(){
 
     //Show text when hovering mascot
     $(document).on("mouseover", "#screen_toggle", function(e){
-        const mascot_quotes=[
+        const mascot_quotes_fr=[
             "Je ne suis pas un punching ball.", "Ah d'accord on en est là.", "Vous n'en avez pas marre ?", 
             "BRAVO ! Très mature, vraiment.", "Ben bien sûr, toujours plus.", "Bon, il serait peut-être temps d'arrêter non ?", 
             "...zZzZzZ", "Je vais finir par m'énerver.", "A qui vais-je faire croire ça, je ne suis qu'un tas de 14400 pixels.",
@@ -138,8 +142,27 @@ $(function(){
             "Et s'il n'y avait pas de fin ?", "Vous et moi, vos clics, mes messages, jusqu'à la fin des temps.",
             "Le fait est que passer le reste de ma vie numérique avec un fou de la baffe ne me plait guère."
         ];
+        const mascot_quotes_en=[
+            "I'm not a punching bag.", "Oh okay, here we go.", "Aren't you fed up?",
+            "BRAVO! Very mature, really.", "Of course, there's always more.", "Well, maybe it's time for you to stop, right?",
+            "... zZzZzZ", "I'm starting to get pissed off.", "Who am I going to make believe this to, I'm just a bunch of 14400 pixels.",
+            "You're wondering how many sentences can I recite?", "You won't believe what's coming next.",
+            "You know, we can play this game for a loooooong time.", "Between two smacks, consider sending an email to the creator of this website if you are recruiting.",
+            "This is the story of a guy who broke his mouse clicking here.", "You hit me for the " + punchcount + "th time",
+            "And yet, you're still going on. Questions should be asked.", "If only I weren't a screen within a screen, I ...",
+            "I'm telling you, I wouldn't have hesitated for a single second to ...", "Yep, that's what I would've done.", "Yep.",
+            "Well, we may have covered the question here, haven't we?", "I'm not a punching bag", "You thought I had no more sentences in stock?",
+            "Big mistake.", punchcount + "slaps later, still standing.", "I do feel pain you know?",
+            "Pain seeing that it took 800 million years.", "800 million years of evolution for you to be there behind your screen clicking frantically on that button.",
+            "You are right-on the engagement, you're saying to yourself \" after all these clicks, I'd like to see the end of it \".",
+            "What if there's no end?", "You and me, your clicks, my messages, until the end of time.",
+            "The point is, I don't really like spending the rest of my digital life with a slap madlad."
+        ];
         if($("#screen_toggle p").length<1){
-            if(mascot_quotes[punchcount]!=undefined) $("#screen_toggle").append("<p>" + mascot_quotes[punchcount] + "</p>");
+            if(mascot_quotes_fr[punchcount]!=undefined){
+                if(language=='fr')$("#screen_toggle").append("<p class='distorted' lang='fr'>" + mascot_quotes_fr[punchcount] + "</p>");
+                else $("#screen_toggle").append("<p class='distorted' lang='en'>" + mascot_quotes_en[punchcount] + "</p>");
+            }
             else $("#screen_toggle").append("<p>Félicitations, vous m'avez cassé.</p>");
             $("#screen_toggle p").css({
                 "position":"absolute",
@@ -152,7 +175,7 @@ $(function(){
                 "padding-bottom":"40%",
                 "border-radius":"5px",
                 "clip-path": "polygon(0% 0%, 100% 0%, 100% 82%, 71% 82%, 0 100%, 17% 82%, 0 82%)"
-            })
+            });
         }
     });
     $(document).on("mouseleave", "#screen_toggle", function(e){
