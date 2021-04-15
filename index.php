@@ -83,7 +83,13 @@
                     <div class="distorted" lang="en">Status : <h2 style="display:inline" class="str user2 invisible" lang="en">Web developer</h2></div>
                     <p class="distorted" lang="fr">Adresse : <span class="str user3 invisible" lang="fr">176.173.216.180</span></p>
                     <p class="distorted" lang="en">Adress : <span class="str user3 invisible" lang="en">176.173.216.180</span></p>
-                    <p class="distorted"><span class="str user4 invisible"><i class="far fa-envelope"></i> Contact</span></p>
+                    <details>
+                        <summary><p class="distorted"><span class="str user4 invisible"><i class="far fa-envelope"></i> Contact</span></p></summary>
+                        <p class="distorted"><i class="fas fa-phone"></i> 06.49.93.18.58</p>
+                        <p class="distorted"><i class="fas fa-at"></i> <a id="amail" href="mailto:mpetropoulos.theo@gmail.com">mpetropoulos.theo@gmail.com</a></p>
+                        <p class="distorted" lang="fr" id="copy_mail">Copier l'adresse mail</p>
+                        <p class="distorted" lang="en" id="copy_mail">Copy mail adress</p>
+                    </details>
                 </section>
                 <!-- END USER'S LOG -->
 
@@ -93,14 +99,10 @@
                 </section>
                 <!-- END SCREEN TOGGLE EFFECTS -->
 
-                <!-- SMALL DNA ANIMATION -->
-                <section id="animation_dna" class="window invisible drag animation"> 
-                    <img src="<?=$addr;?>assets/images/other/dna.gif" alt="dna animation gif">
-                </section>
-                <!-- END SMALL DNA ANIMATION -->
-
                 <!-- PIXEL ART ANIMATION Credits : Kenze Wee https://www.behance.net/KenzeWeeHonMing -->
                 <section id="animation_corporations" class="window invisible drag animation">
+                    <p lang="fr" class="distorted post">e-Carte Postale</p>
+                    <p lang="en" class="distorted post">e-Postcard</p>
                     <img src="<?=$addr;?>assets/images/other/Kenze Wee - Corporations.gif" alt="Kenze Wee - Corporations animation gif">
                     <a href="https://www.behance.net/KenzeWeeHonMing"><p>Kenze Wee - Corporations</p></a>
                     <button id="close_corporations"><i class="fas fa-times"></i></button>

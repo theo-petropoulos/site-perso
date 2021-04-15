@@ -28,7 +28,7 @@ $(function(){
     $('.effects_switch').click(function(e){
         var loctimer=0;
         let prev_bg=$("#screen_on").css("background-image").split("backgrounds/");
-        let background=prev_bg[1].replace(/%20/g, " ").replace('")', '');
+        let obackground=prev_bg[1].replace(/%20/g, " ").replace('")', '');
         power='switch_off';
         $(this).trigger('mouseleave');
         if($(this).attr('id')=='effects_off'){
@@ -44,13 +44,13 @@ $(function(){
                 $(this).attr('src', 'assets/images/other/trans-e.png');
             }, 100);
             setTimeout(() => {
-                $("#screen_on").css("background-image", "url('assets/images/backgrounds/" + background + "')");
+                $("#screen_on").css("background-image", "url('assets/images/backgrounds/" + obackground + "')");
+                window.background=$("#screen_on").css("background-image");
             }, 350);
             setTimeout(()=>{
                 $(this).attr('src', 'assets/images/other/hap-e.png');
                 $(this).trigger('mouseover');
             }, 550);
-            window.background=$("#screen_on").css("background-image");
             punchcount++;
         }
         else if($(this).attr('id')=='effects_on'){
@@ -65,17 +65,16 @@ $(function(){
                 $(this).attr('src', 'assets/images/other/trans-e.png');
             }, 100);
             setTimeout(() => {
-                $("#screen_on").css("background-image", "radial-gradient(circle, rgba(40,57,20,0.45) 0%, rgba(20,29,9,0.8) 80%, rgba(0,0,0,0.99) 100%), url('assets/images/backgrounds/" + background + "')");
+                $("#screen_on").css("background-image", "radial-gradient(circle, rgba(40,57,20,0.45) 0%, rgba(20,29,9,0.8) 80%, rgba(0,0,0,0.99) 100%), url('assets/images/backgrounds/" + obackground + "')");
+                window.background=$("#screen_on").css("background-image");
             }, 350);
             setTimeout(()=>{
                 $(this).attr('src', 'assets/images/other/gloom-e.png');
                 $(this).trigger('mouseover');
             }, 550);
-            window.background=$("#screen_on").css("background-image");
             punchcount++;
             loctimer=setTimeout(() => {
                 glitch_font;
-                glitch_color;
                 screen_flick;
             }, 4900);
         }

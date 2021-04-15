@@ -421,11 +421,12 @@ $color:rgb(173, 255, 47);
         left:initial;
         right:0;
         top:initial;
-        bottom:calc(2vh + 20px);
+        bottom:10%;
         background:none;
         border:none;
         height:400px;
         width:300px;
+        overflow:visible;
         &:hover{
             button{
                 display:flex;
@@ -453,10 +454,20 @@ $color:rgb(173, 255, 47);
                 padding:1% 2%;
             }
         }
+        .post{
+            position:absolute;
+            background:black;
+            top:0;
+            left:0;
+            width:100%;
+            font-size: calc(14px + 0.5vw);
+            transform:translateY(-100%);
+            text-align: center;
+        }
         button{
             position:absolute;
-            top:2%;
-            right:2%;
+            top:0;
+            right:5%;
             background:none;
             border:none;
             display:none;

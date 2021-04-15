@@ -347,7 +347,7 @@ function switchClass(e, fclass, target){
                         }
                         break;
                     case 'setwp':
-                        let old_background=background.split('url');
+                        let old_background=window.background.split('url');
                         let new_background=old_background[0].concat("url('" + img_src + "')");
                         $("#screen_on").css("background-image", new_background);
                         break;

@@ -67,7 +67,7 @@ $(function(){
             $("#user").toggleClass("invisible");
             for(let i=1;i<5;i++) $("#user .user"+i).toggleClass("invisible");
         }, 1100);
-        setTimeout(() => {$("#animation_dna").add($("#animation_corporations")).toggleClass("visible invisible");}, 1200);
+        setTimeout(() => {$("#animation_dna").add($("#animation_corporations")).add($("#screen_toggle")).toggleClass("visible invisible");}, 1200);
         setTimeout(() => {$("#task_bar").toggleClass("visible invisible");}, 1800);
         setTimeout(() => {$("#linkicon").html('<link id="linkicon" rel="icon" type="image/png" href="assets/images/icons/logo1.png">')}, 2250);
         setTimeout(() => {$("#screen_off").toggleClass("visible invisible");}, 2500);
@@ -91,6 +91,13 @@ $(function(){
         $('[lang="fr"]').toggleClass("out");
         $('[lang="en"]').toggleClass("out");
         clock();
+    });
+
+    //Copy mail adress
+    $("#copy_mail").click(function(){
+        let element = document.getElementById('amail');
+        let elementText = element.textContent; 
+        navigator.clipboard.writeText(elementText);
     });
 
     //Play sound on double click
@@ -169,7 +176,9 @@ $(function(){
                 "bottom":"100%",
                 "right":"0",
                 "transform":"translate(115%,50%)",
+                "min-width":"175px",
                 "max-width":"250px",
+                "z-index":"7",
                 "background": "rgba(0,0,0,0.9)",
                 "padding":"10%",
                 "padding-bottom":"40%",
