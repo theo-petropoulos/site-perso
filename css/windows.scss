@@ -177,7 +177,7 @@ $color:rgb(173, 255, 47);
         flex-flow:row;
         padding:1% 2%;
         color:$color;
-        height:90%;
+        height:max-content;
         &.window_content_infos{
             flex-flow:column;
             align-items: center;
@@ -185,10 +185,15 @@ $color:rgb(173, 255, 47);
             .window_content_center{
                 display:flex;
                 background:rgba(0,0,0,0.95);
-                width:90%;
-                height:100%;
+                width:max-content;
+                height:max-content;
                 overflow-y:scroll;
+                scrollbar-color: $color rgba(0,0,0,0.9);
+                scrollbar-width: thin;
                 position:relative;
+                img{
+
+                }
                 #hamburger{
                     flex-grow:1;
                     display:flex;

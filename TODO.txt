@@ -6,7 +6,7 @@ X meta référencement
 X sitemap.xml
 X alt on images
 X titles h1 h2
-change start button color focus
+X change start button color focus
 X prevent bin delete
 
 // Ask user : 
@@ -24,3 +24,4 @@ konami code ?
 calculator ?
 game ?
 fake cmd ?
+ben & jerry's ?

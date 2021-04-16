@@ -26,6 +26,7 @@
         <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Gupter&family=Lexend:wght@300&family=Yusei+Magic&display=swap" rel="stylesheet"> 
         <link id="linkicon" rel="icon" type="image/png" href="assets/images/icons/logo1.png">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="node_modules/maphilight/jquery.maphilight.min.js"></script>
         <script src="<?=$addr;?>scripts/functions.js"></script>
         <script src="<?=$addr;?>scripts/effects.js"></script>
         <script src="<?=$addr;?>scripts/leftclick.js"></script>
@@ -92,6 +93,12 @@
                     </details>
                 </section>
                 <!-- END USER'S LOG -->
+
+                <!-- TIPS MASCOT -->
+                <section id="tips_mascot" class="invisible">
+                    
+                </section>
+                <!-- END TIPS MASCOT -->
 
                 <!-- SCREEN TOGGLE EFFECTS -->
                 <section id="screen_toggle" class="invisible">

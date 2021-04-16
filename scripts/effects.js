@@ -31,6 +31,7 @@ $(function(){
     //Used to stop functions
     window.power = 'shutdown';
     
+    //Display time
     clock();
     
     $(document).on('click', "#switch_power", function(e){
@@ -131,6 +132,23 @@ $(function(){
         randomKeyboardSound();
     });
 
+    //Used to highlight animation items
+    var animlight={};
+    jQuery('#animation_room').maphilight();
+    animlight.alwaysOn = false;
+    animlight.fillColor = '83f16d';
+    animlight.stroke = false;
+    animlight.fillOpacity = '0.2';
+    animlight.shadow = true;
+    shadowX= '0';
+	shadowY= '0';
+	shadowRadius= '15';
+	shadowColor= '83f16d';
+	shadowOpacity= '0.2';
+	shadowPosition= 'outside';
+	shadowFrom= true;
+    $('area').data('maphilight', animlight).trigger('alwaysOn.maphilight');
+
     //Show text when hovering mascot
     $(document).on("mouseover", "#screen_toggle", function(e){
         const mascot_quotes_fr=[
@@ -165,16 +183,16 @@ $(function(){
             "What if there's no end?", "You and me, your clicks, my messages, until the end of time.",
             "The point is, I don't really like spending the rest of my digital life with a slap madlad."
         ];
-        if($("#screen_toggle p").length<1){
+        if($("#hape_speaks").length<1){
             if(mascot_quotes_fr[punchcount]!=undefined){
-                if(language=='fr')$("#screen_toggle").append("<p class='distorted' lang='fr'>" + mascot_quotes_fr[punchcount] + "</p>");
-                else $("#screen_toggle").append("<p class='distorted' lang='en'>" + mascot_quotes_en[punchcount] + "</p>");
+                if(language=='fr')$("#screen_toggle").append("<p class='distorted' lang='fr' id='hape_speaks'>" + mascot_quotes_fr[punchcount] + "</p>");
+                else $("#screen_toggle").append("<p class='distorted' lang='en' id='hape_speaks'>" + mascot_quotes_en[punchcount] + "</p>");
             }
             else{
-                if(language=='fr') $("#screen_toggle").append("<p>Félicitations, vous m'avez cassé.</p>");
-                else $("#screen_toggle").append("<p>Congratulations, you broke me.</p>");
+                if(language=='fr') $("#screen_toggle").append("<p lang='fr' id='hape_speaks'>Félicitations, vous m'avez cassé.</p>");
+                else $("#screen_toggle").append("<p lang='en' id='hape_speaks'>Congratulations, you broke me.</p>");
             }
-            $("#screen_toggle p").css({
+            $("#hape_speaks").css({
                 "position":"absolute",
                 "bottom":"100%",
                 "right":"0",
@@ -191,6 +209,6 @@ $(function(){
         }
     });
     $(document).on("mouseleave", "#screen_toggle", function(e){
-        $("#screen_toggle p").remove();
+        $("#hape_speaks").remove();
     });
 });

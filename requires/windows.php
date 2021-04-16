@@ -115,11 +115,13 @@ Il est entièrement développé sous <b>PHP</b> et possède un accès à la base
         </div>
         <div class="window_content window_content_infos">
                 <div class="window_content_center">
-                    <!-- <div id="about_manager" class="slide1">
-                        <h1>Petropoulos Théo</h1>
-                        <h2>Anciennement Responsable opérationnel (Manager) dans la restauration rapide</h2>
-                    </div> -->
-                    <div id="hamburger" class="slide2">
+                    <div id="animation_div">
+                        <img id="animation_room" src="assets/images/other/animation.gif" usemap="#animation-map">
+                        <map name="animation-map">
+                            <area id="poster_area" class="area" target="_blank" alt="anim_poster" title="anim_poster" href="" coords="124,30,124,197,238,219,238,48" shape="poly">
+                        </map>
+                    </div>
+                    <!-- <div id="hamburger" class="slide2">
                         <span id="hamburger_name">
                             <h3>Big Ol'Manager Burger</h3>
                             <h4 lang="fr">• Garniture •</h4>
@@ -165,8 +167,8 @@ Il est entièrement développé sous <b>PHP</b> et possède un accès à la base
                             <p lang="fr">Pain d'<b>équipe</b> et son toastage bilatéral '<b>délégation</b>'' & '<b>motivation</b>'</p>
                             <p lang="en"><b>Teamed</b> bottom bun and its bilateral toasting '<b>delegate</b>'' & '<b>motivate</b>'</p>
                         </span>
-                    </div>
-                </div>
+                    </div> -->
+                </div> 
         </div>
     </section>
     <!-- END WINDOW INFOS -->

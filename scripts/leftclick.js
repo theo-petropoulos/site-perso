@@ -92,6 +92,11 @@ $(function(){
         });
     });
 
+    //On area click
+    $(document).on('click', '.area', function(e){
+        e.preventDefault();
+    });
+
     //Open file on double click
     $(".file").dblclick(function(){
         $(this).trigger('contextmenu');
