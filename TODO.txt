@@ -8,6 +8,9 @@ X alt on images
 X titles h1 h2
 X change start button color focus
 X prevent bin delete
+Confirm "copy contact"
+Camera titles
+Hamburger & all
 
 // Ask user : 
 // Favorite color

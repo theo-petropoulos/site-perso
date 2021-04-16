@@ -181,7 +181,7 @@ $(function(){
             "Pain seeing that it took 800 million years.", "800 million years of evolution for you to be there behind your screen clicking frantically on that button.",
             "You are right-on the engagement, you're saying to yourself \" after all these clicks, I'd like to see the end of it \".",
             "What if there's no end?", "You and me, your clicks, my messages, until the end of time.",
-            "The point is, I don't really like spending the rest of my digital life with a slap madlad."
+            "The point is, I don't really like the idea of spending the rest of my digital life with a slap madlad."
         ];
         if($("#hape_speaks").length<1){
             if(mascot_quotes_fr[punchcount]!=undefined){

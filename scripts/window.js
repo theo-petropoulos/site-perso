@@ -64,7 +64,7 @@ $(function(){
     $(document).on('click', '.project_min', function(e){
         e.preventDefault();
         let article='#article_' + $(this).attr('id');
-        $(this).parents('.window_group').children('.window_infos').css({
+        $(this).parents('.window_group').children('.window_articles').css({
             "width":"70%",
             "background":"rgba(0,0,0,0.8)"
         });

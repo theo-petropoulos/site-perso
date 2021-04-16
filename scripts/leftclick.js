@@ -34,7 +34,7 @@ $(function(){
                 if($(temp).length>0 && !$(e.target).is('button')){
                     temp.css('background', 'initial');
                     temp=null;
-                    $(e.target).parents('.window_group').children('.window_infos').css({
+                    $(e.target).parents('.window_group').children('.window_articles').css({
                         "background":"initial",
                         "width":"0%"
                     });
@@ -45,7 +45,7 @@ $(function(){
         else{
             const thisdrag= document.getElementById($(this).attr('id'));
             $(".drag").not($(this)).css("z-index","initial")
-            $(thisdrag).css("z-index", "6");
+            $(thisdrag).css({"z-index":"6"});
             e.preventDefault();
             let prevX= e.clientX;
             let prevY= e.clientY;
@@ -62,7 +62,7 @@ $(function(){
                 const box= thisdrag.getBoundingClientRect();
                 let newX = box.left - ( prevX - e.clientX ) + "px";
                 let newY = box.top - ( prevY - e.clientY ) + "px";
-                $(thisdrag).css({"left" : newX, "top" : newY});
+                $(thisdrag).css({"left" : newX, "top" : newY, "transform":"none"});
                 if(thisdrag.id!=='music_player' && !thisdrag.classList.contains('window')){
                     $(thisdrag).css("background","rgba(0,0,0,0.5)");
                 }

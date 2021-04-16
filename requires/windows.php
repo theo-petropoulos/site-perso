@@ -58,7 +58,7 @@
                     <p>Memory</p>
                 </div>
             </div>
-            <aside class="window_infos">
+            <aside class="window_articles">
                 <article id="article_vonharper" class="window_infos_article invisible">
                     <header>
                         <h1><b>Von Harper</b></h1>
@@ -114,13 +114,16 @@ Il est entièrement développé sous <b>PHP</b> et possède un accès à la base
             </ul>
         </div>
         <div class="window_content window_content_infos">
-                <div class="window_content_center">
-                    <div id="animation_div">
-                        <img id="animation_room" src="assets/images/other/animation.gif" usemap="#animation-map">
-                        <map name="animation-map">
-                            <area id="poster_area" class="area" target="_blank" alt="anim_poster" title="anim_poster" href="" coords="124,30,124,197,238,219,238,48" shape="poly">
-                        </map>
-                    </div>
+            <div class="window_content_center">
+                <div id="animation_div">
+                    <img id="animation_room" src="assets/images/other/animation.gif" usemap="#animation-map">
+                    <map name="animation-map">
+                        <area id="poster_area" class="area" target="_blank" alt="anim_poster" title="anim_poster" href="" coords="124,30,124,197,238,219,238,48" shape="poly">
+                    </map>
+                </div>
+                <p id="window_infos_message_box" class="distorted" lang="fr">
+                    <b>Localisation</b> : 14°41'22"S 75°06'27"W
+                </p>
                     <!-- <div id="hamburger" class="slide2">
                         <span id="hamburger_name">
                             <h3>Big Ol'Manager Burger</h3>
@@ -168,7 +171,7 @@ Il est entièrement développé sous <b>PHP</b> et possède un accès à la base
                             <p lang="en"><b>Teamed</b> bottom bun and its bilateral toasting '<b>delegate</b>'' & '<b>motivate</b>'</p>
                         </span>
                     </div> -->
-                </div> 
+            </div> 
         </div>
     </section>
     <!-- END WINDOW INFOS -->
