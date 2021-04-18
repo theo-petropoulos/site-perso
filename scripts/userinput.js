@@ -1,5 +1,5 @@
 $(function(){
-    $('.example').on('click touchstart', function(){
+    $('.example').on('click ', function(){
         let selector=$("*").not('.example, textarea');
         let id=$(this).attr('id').split('_');
         if($(this).hasClass('example')){
@@ -25,7 +25,7 @@ $(function(){
         }
     });
 
-    $('.effects_switch').on('click touchstart', function(e){
+    $('.effects_switch').on('click ', function(e){
         let prev_bg=$("#screen_on").css("background-image").split("backgrounds/");
         let obackground=prev_bg[1].replace(/%20/g, " ").replace('")', '');
         power='switch_off';

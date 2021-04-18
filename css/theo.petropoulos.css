@@ -94,7 +94,7 @@ em {
   z-index: 8;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px), screen and (max-height: 500px) {
   #animation_corporations {
     display: none;
   }

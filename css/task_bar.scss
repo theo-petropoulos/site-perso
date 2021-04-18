@@ -89,10 +89,56 @@ footer#task_bar{
                             right:0;
                             top:100%;
                             transform:translate(100%,-99%);
+                            flex-flow:column-reverse;
+                            background:#0D1103;
+                            width:calc(24px + 7vw);
                             margin:0;
                             padding:0;
                             color:$color;
                             cursor:pointer;
+                            li{
+                                flex-grow:1;
+                                display:flex;
+                                justify-content: center;
+                                align-items:center;
+                                padding: 4%;
+                                width:auto;
+                                border-bottom:2px solid transparent;
+                                &#settings_color{
+                                    border-bottom:2px solid $color;
+                                }
+                                &:hover{
+                                    background:#303f0c;
+                                    ul{
+                                        display:flex;
+                                    }
+                                }
+                                p{
+                                    margin:0;
+                                    flex-grow:1;
+                                    padding:4%;
+                                    text-align: center;
+                                }
+                                ul{
+                                    display:none;
+                                    position:absolute;
+                                    background:#0D1103;
+                                    flex-flow:column-reverse;
+                                    width:calc(24px + 7vw);
+                                    right:0;
+                                    top:100%;
+                                    transform:translate(100%,-99%);
+                                    margin:0;
+                                    padding:0;
+                                    color:$color;
+                                    cursor:pointer;
+                                    li{
+                                        &:nth-of-type(1){
+                                            border-bottom:2px solid $color;
+                                        }
+                                    }
+                                }
+                            }
                         }
                         #settings{
                             flex-grow:1;
@@ -109,55 +155,7 @@ footer#task_bar{
                         &:hover{
                             background:#303f0c;
                             #settings_list{
-                                background:#0D1103;
                                 display:flex;
-                                flex-flow:column-reverse;
-                                width:calc(24px + 7vw);
-                                cursor:pointer;
-                                li{
-                                    flex-grow:1;
-                                    display:flex;
-                                    justify-content: center;
-                                    align-items:center;
-                                    padding: 4%;
-                                    width:auto;
-                                    border-bottom:2px solid transparent;
-                                    &#settings_color{
-                                        border-bottom:2px solid $color;
-                                    }
-                                    &:hover{
-                                        background:#303f0c;
-                                        ul{
-                                            background:#0D1103;
-                                            display:flex;
-                                            flex-flow:column-reverse;
-                                            width:calc(24px + 7vw);
-                                            cursor:pointer;
-                                            li{
-                                                &:nth-of-type(1){
-                                                    border-bottom:2px solid $color;
-                                                }
-                                            }
-                                        }
-                                    }
-                                    p{
-                                        margin:0;
-                                        flex-grow:1;
-                                        padding:4%;
-                                        text-align: center;
-                                    }
-                                    ul{
-                                        display:none;
-                                        position:absolute;
-                                        right:0;
-                                        top:100%;
-                                        transform:translate(100%,-99%);
-                                        margin:0;
-                                        padding:0;
-                                        color:$color;
-                                        cursor:pointer;
-                                    }
-                                }
                             }
                         }
                     }

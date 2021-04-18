@@ -225,8 +225,31 @@ Il est entièrement développé sous <b>PHP</b> et possède un accès à la base
     </section>
     <!-- END WINDOW CUMPUTER -->
 
-    <!-- WINDOW USER DATA -->
-
-    <!-- END WINDOW DATA -->
+    <!-- WINDOW SELF -->
+    <section class="window drag invisible window_anim" id="window_self">
+        <div class="window_menu">
+            <ul class="window_menu_bar">
+                <div class="window_menu_right">
+                    <li><button class="window_minimize"><i class="far fa-window-minimize"></i></button></li>
+                    <li><button class="window_maximize"><i class="far fa-window-maximize"></i></button></li>
+                    <li><button class="window_close"><i class="fas fa-times"></i></button></li>
+                </div>
+            </ul>
+        </div>
+        <div class="window_content window_content_infos">
+            <div class="window_content_center">
+                <p class="distorted" lang="fr">
+                    Petropoulos Théo, anciennement responsable opérationnel au restaurant McDonald's Bonneveine à Marseille. <br>
+                    Actuellement en formation au sein de La Plateforme afin d'exercer le métier de développeur web.<br>
+                    Une vieux parchemin traine sur le bureau.</p>
+                <p class="distorted" lang="en">
+                    Petropoulos Theo, formerly manager at the Bonneveine's McDonald's in Marseilles.<br>
+                    Currently studying at La Plateforme to work as a web developer.<br>
+                    An ancient parchment lingers on the desk.</p>
+                <a href="" id="open_parchment"><img src="<?=$addr;?>assets/images/other/parchment.png"></a>
+            </div>
+        </div>
+    </section>
+    <!-- END WINDOW SELF -->
 
 </section>

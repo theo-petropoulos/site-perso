@@ -43,7 +43,7 @@ $color:rgb(173, 255, 47);
         left:0;
         right:0;
         bottom:0;
-        height:100vh - calc(2vh + 20px);
+        height:100vh - calc(max(2vh,30px));
         width:100%;
         &#window_openimg, &#window_infos, &#animation_dna, &#animation_corporations, &.window_anim{
             .window_menu{
@@ -556,6 +556,25 @@ $color:rgb(173, 255, 47);
         flex-grow:1;
         color:black;
         font-family: Consolas;
+    }
+}
+
+#window_self{
+    .window_content{
+        .window_content_center{
+            a{
+                display:block;
+                text-decoration:none;
+                width:150px;
+                position:relative;
+                margin-left:auto;
+                margin-right: auto;
+                img{
+                    width:100%;
+                    position:relative;
+                }
+            }
+        }
     }
 }
 

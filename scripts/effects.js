@@ -35,7 +35,7 @@ $(function(){
     //Display time
     clock();
     
-    $(document).on('click touchstart', "#switch_power", function(e){
+    $(document).on('click ', "#switch_power", function(e){
         e.preventDefault();
         power='on';
         $("#screen_off").toggleClass("invisible visible");
@@ -60,7 +60,7 @@ $(function(){
         });
 
     //Power off
-    $("#shutdown_btn").on('click touchstart', function(e){
+    $(document).on('click ', "#shutdown_btn", function(e){
         power='shutdown';
         $("#folder_section").toggleClass("visible invisible");
         setTimeout(() => {$("#music_player").toggleClass("invisible");}, 300);
@@ -80,14 +80,14 @@ $(function(){
     });
 
     //Background on folder' hover
-    $(".drag.folder").on('mouseover', function(){
+    $(document).on('mouseover', ".drag.folder", function(){
         $(this).css("background", "rgba(0,0,0,0.2");
     }, function(){
         $(this).css("background", "initial");
     });
 
     //Change language
-    $("#switch_lang").on('click touchstart', function(e){
+    $(document).on('click ', "#switch_lang", function(e){
         if(language=='fr') language='en';
         else language='fr';
         $('[lang="fr"]').toggleClass("out");
@@ -96,7 +96,7 @@ $(function(){
     });
 
     //Copy mail adress
-    $('#copy_mail').on('click touchstart', function(){
+    $(document).on('click ', '#copy_mail', function(){
         let element = document.getElementById('amail');
         let elementText = element.textContent; 
         navigator.clipboard.writeText(elementText);
@@ -111,7 +111,7 @@ $(function(){
     });
     
     //Play sound on left click
-    $(document).on('click touchstart', function(e){
+    $(document).on('click ', function(e){
         if(!e.isTrigger){
             audioclick.currentTime=0;
             timer=setTimeout(() => {
@@ -151,7 +151,7 @@ $(function(){
     $('area').data('maphilight', animlight).trigger('alwaysOn.maphilight');
 
     //Show text when hovering mascot
-    $("#screen_toggle").on("mouseover", function(e){
+    $(document).on("mouseover", "#screen_toggle", function(e){
         const mascot_quotes_fr=[
             "Je ne suis pas un punching ball.", "Je passe l'éponge sur ce coup.", "Ah d'accord on en est là.", "Vous n'en avez pas marre ?", 
             "BRAVO ! Très mature, vraiment.", "Ben bien sûr, toujours plus.", "Bon, il serait peut-être temps d'arrêter non ?", 
@@ -209,7 +209,7 @@ $(function(){
             });
         }
     });
-    $("#screen_toggle").on("mouseleave", function(e){
+    $(document).on("mouseleave", "#screen_toggle", function(e){
         $("#hape_speaks").remove();
     });
 });

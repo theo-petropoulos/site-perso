@@ -1,12 +1,12 @@
 $(function(){
     //On window close
-    $(".window_close").on('click touchstart', function(e){
+    $(document).on('click', ".window_close", function(e){
         e.preventDefault();
         closeWindow($(e.target).parents('.window').attr('id'));
     });
 
     //On window minimize
-    $(".window_minimize").on('click touchstart', function(e){
+    $(document).on('click ', ".window_minimize", function(e){
         e.preventDefault();
         let window_id="#" + $(e.target).parents(".window").attr('id');
         $(window_id).toggleClass("visible");
@@ -14,7 +14,7 @@ $(function(){
     });
 
     //On window maximize
-    $(".window_maximize").on('click touchstart', function(e){
+    $(document).on('click ', ".window_maximize", function(e){
         e.preventDefault();
         let window_id="#" + $(e.target).parents(".window").attr('id');
         if(!$(window_id).hasClass('fullscreen')){
@@ -30,7 +30,7 @@ $(function(){
     });
 
     //Expand window on menu double click
-    $('.window_menu').on('dblclick', function(e){
+    $(document).on('dblclick', '.window_menu', function(e){
         e.preventDefault();
         if(!$(e.target).is('span, button')){
             let maximize_window="#" + $(e.target).parents(".window").attr('id') + " .window_maximize";
@@ -39,7 +39,7 @@ $(function(){
     });
 
     //On window minimized left click
-    $('.tb_window').on('click touchstart', function() {
+    $(document).on('click ', '.tb_window', function() {
         let id= $(this).attr('id').replace('tb_window_', '');
         let window_id="#window_" + id;
         if($(window_id).css("visibility")=='hidden'){
@@ -53,7 +53,7 @@ $(function(){
     });
 
     //On window minimized right click
-    $('.tb_window').on('contextmenu', function(e) {
+    $(document).on('contextmenu', '.tb_window', function(e) {
         let target=document.getElementById($(this).attr('id'));
         let classes=$(target).attr("class").split(/\s+/);
         if($("#contextmenu").length>0) $("#contextmenu").remove();
@@ -61,7 +61,7 @@ $(function(){
     });
 
     //Show details of a project
-    $('.project_min').on('click touchstart', function(e){
+    $(document).on('click ', '.project_min', function(e){
         e.preventDefault();
         let article='#article_' + $(this).attr('id');
         $(this).parents('.window_group').children('.window_articles').css({
@@ -71,12 +71,12 @@ $(function(){
         $(article).toggleClass('invisible');
     });
 
-    $("#close_corporations").on('click touchstart', function(){
+    $("#close_corporations").on('click ', function(){
         $(this).parents('.animation').remove();
     });
 
     //Open submenu
-    $('.menu button').on('click touchstart', function(e){
+    $(document).on('click ', '.menu button', function(e){
         e.preventDefault();
         if($('.submenu.visible')) $('.submenu.visible').toggleClass('invisible visible');
         let thisorigin=$(this).parents('.menu').children('.submenu');
@@ -84,7 +84,7 @@ $(function(){
     });
 
     //Clicking a submenu item
-    $('.submenu_item').on('click touchstart', function(e){
+    $(document).on('click ', '.submenu_item', function(e){
         e.preventDefault();
         let thisid = '#' + $(this).parents('.window').attr('id');
         let window_content = thisid + ' .window_content';
@@ -162,7 +162,7 @@ $(function(){
         }
     });
     
-    $("area").on('mouseleave', function(){
+    $(document).on('mouseleave', 'area', function(){
         $(".pdetails").remove();
         $("#window_infos_message_box").toggle();
     });

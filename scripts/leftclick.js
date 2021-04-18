@@ -1,10 +1,10 @@
 $(function(){
     window.temp=null;
+    
     //Standards for click
-    $(document).on('click touchstart', function(e){
-        console.log(e);
+    $(document).on('click ', function(e){
         if($("#contextmenu").length>0) $("#contextmenu").remove();
-        if(!$("#start_menu").hasClass('invisible') && !$(e.target).is('#start_menu')) $("#start_menu").toggleClass('invisible');
+        if(!$("#start_menu").hasClass('invisible') && !$(e.target).is('#start_menu') && !$(e.target).parents('#settings')) $("#start_menu").toggleClass('invisible');
         if(!$(e.target).parents('.menu').children('.submenu').hasClass('visible')) $('.submenu.visible').toggleClass('invisible visible');
         if( !($(e.target).parents('.folder, .file') || $(e.target).hasClass('.folder, .file'))
             && $(temp).length>0 ) {
@@ -14,21 +14,32 @@ $(function(){
     });
 
     //Open start menu
-    $("#start_btn").on('click touchstart', function(e){
+    $(document).on('click ', "#start_btn", function(e){
         e.preventDefault();
         e.stopPropagation();
         $("#start_menu").toggleClass("invisible");
     });
 
+    //Open settings for mobile
+    $(document).on('click', '#settings', function(){
+        if($('#settings_list').css('display')=='none') $('#settings_list').css({"display":"flex"});
+        else $('#settings_list').css({"display":"none"});
+    });
+    $(document).on('click', '#settings_list li', function(){
+        $('#settings_list li ul').not(this).css("display", "none"); 
+        if($(this).children('ul').css('display')=='none') $(this).children('ul').css({"display":"flex"});
+        else $(this).children('ul').css({"display":"none"});
+    });
+
     //Highlight a clickable element + remember it
-    $('.folder, .file').on('click touchstart', function(){
+    $(document).on('click ', '.folder, .file', function(){
         if($(temp).length>0) temp.css('background', 'initial');
         temp=$(this);
         temp.css("background","rgba(0,50,100,0.6)");
     });
 
     //Drag a file
-    $('.drag').on('mousedown', function(e){
+    $(document).on('mousedown', '.drag', function(e){
         if( $(e.target).attr('id')=='music_volume'  || $(e.target).parents('.window').hasClass('fullscreen') ||  
             $(e.target).is("button") || $(e.target).is('.window_content') || $(e.target).parent().is('.window_min') || 
             $(e.target).parents('.folder').hasClass('deleted') || $(e.target).is('#window_infos_message_box') || $(e.target).is('textarea')){
@@ -80,7 +91,7 @@ $(function(){
     });
 
     //Open folder on double click
-    $(".folder").on('dblclick', function(){
+    $(document).on('dblclick', ".folder", function(){
         let img_src=$(this).children("img").attr("src");
         let id=$(this).attr("id").replace('folder_','');
         if(id=='credits'){
@@ -88,13 +99,15 @@ $(function(){
                 $('#window_credits_textarea').html("Effet 'Machine à écrire' : Tameem Safi - https://github.com/tameemsafi/typewriterjs &#13;&#10;\
 Surbrillance des éléments clickables dans 'Informations Personnelles' : David Lynch - https://github.com/kemayo/maphilight &#13;&#10;\
 Animation de l'e-Carte Postale : Kenze Wee - https://www.instagram.com/kenze_wee/?hl=fr &#13;&#10;\
-Fond d'écran par défaut : Waneella - https://waneella.tumblr.com/ &#13;&#10;")
+Fond d'écran par défaut : Waneella - https://waneella.tumblr.com/ &#13;&#10;\
+Générateur de parchemin : Léonard Allain-Launay / Mathieu Thoretton / Cosmina - http://htck.github.io/bayeux/#!/ &#13;&#10;");
             }
             else if(language=='en'){
                 $('#window_credits_textarea').html("Typewriter effect : Tameem Safi - https://github.com/tameemsafi/typewriterjs &#13;&#10;\
 Clickable elements' highlight inside 'Personal Informations' : David Lynch - https://github.com/kemayo/maphilight &#13;&#10;\
 e-Postcard animation : Kenze Wee - https://www.instagram.com/kenze_wee/?hl=fr &#13;&#10;\
-Default background : Waneella - https://waneella.tumblr.com/ &#13;&#10;")
+Default background : Waneella - https://waneella.tumblr.com/ &#13;&#10;\
+Parchment generator : Léonard Allain-Launay / Mathieu Thoretton / Cosmina - http://htck.github.io/bayeux/#!/ &#13;&#10;");
             }
         }
         if($("#window_" + id).hasClass("invisible")) $("#window_" + id).toggleClass("invisible visible");
@@ -108,7 +121,7 @@ Default background : Waneella - https://waneella.tumblr.com/ &#13;&#10;")
     });
 
     //On area click
-    $('area').on('click touchstart', function(e){
+    $(document).on('click ', 'area', function(e){
         e.preventDefault();
         let id=$(this).attr("id");
         $('#window_' + id).toggleClass('invisible').css("z-index","8");
@@ -193,17 +206,26 @@ Default background : Waneella - https://waneella.tumblr.com/ &#13;&#10;")
     });
 
     //Close warning message
-    $("#close_warning").on('click touchstart', function(){
+    $(document).on('click ', "#close_warning", function(){
         $("#warning_message").remove();
     });
 
     //Open file on double click
-    $(".file").on('dblclick', function(){
+    $(document).on('dblclick', ".file", function(){
         $(this).trigger('contextmenu');
         $("#contextmenu #open").trigger("click");
     });
 
-    $(".window_view").on('click touchstart', function(e){
+    $(document).on('click ',".window_view", function(e){
         e.preventDefault();
+    });
+
+    $(document).on('click', "#open_parchment", function(e){
+        e.preventDefault();
+        $(this).parents('.window_content_center').html('<img id="parchment" src="assets/images/other/parchment.png">');
+        $("#parchment").css({"width":"100%", "object-fit":"contain"});
+        $(this).parents('.window_content_center').css({"width":"100%"});
+        $("#window_self.window.drag.window_anim div.window_menu ul.window_menu_bar div.window_menu_right li button.window_maximize").trigger('click');
+        $("#window_self.window.drag.window_anim.fullscreen div.window_content.window_content_infos").css({"padding":"0"});
     });
 });

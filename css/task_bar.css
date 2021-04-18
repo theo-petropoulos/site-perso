@@ -140,10 +140,80 @@ footer#task_bar #menu #start_menu #start_menu_list li#settings_li #settings_list
   top: 100%;
   -webkit-transform: translate(100%, -99%);
           transform: translate(100%, -99%);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: column-reverse;
+          flex-flow: column-reverse;
+  background: #0D1103;
+  width: calc(24px + 7vw);
   margin: 0;
   padding: 0;
   color: greenyellow;
   cursor: pointer;
+}
+
+footer#task_bar #menu #start_menu #start_menu_list li#settings_li #settings_list li {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4%;
+  width: auto;
+  border-bottom: 2px solid transparent;
+}
+
+footer#task_bar #menu #start_menu #start_menu_list li#settings_li #settings_list li#settings_color {
+  border-bottom: 2px solid greenyellow;
+}
+
+footer#task_bar #menu #start_menu #start_menu_list li#settings_li #settings_list li:hover {
+  background: #303f0c;
+}
+
+footer#task_bar #menu #start_menu #start_menu_list li#settings_li #settings_list li:hover ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer#task_bar #menu #start_menu #start_menu_list li#settings_li #settings_list li p {
+  margin: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 4%;
+  text-align: center;
+}
+
+footer#task_bar #menu #start_menu #start_menu_list li#settings_li #settings_list li ul {
+  display: none;
+  position: absolute;
+  background: #0D1103;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: column-reverse;
+          flex-flow: column-reverse;
+  width: calc(24px + 7vw);
+  right: 0;
+  top: 100%;
+  -webkit-transform: translate(100%, -99%);
+          transform: translate(100%, -99%);
+  margin: 0;
+  padding: 0;
+  color: greenyellow;
+  cursor: pointer;
+}
+
+footer#task_bar #menu #start_menu #start_menu_list li#settings_li #settings_list li ul li:nth-of-type(1) {
+  border-bottom: 2px solid greenyellow;
 }
 
 footer#task_bar #menu #start_menu #start_menu_list li#settings_li #settings {
@@ -178,81 +248,9 @@ footer#task_bar #menu #start_menu #start_menu_list li#settings_li:hover {
 }
 
 footer#task_bar #menu #start_menu #start_menu_list li#settings_li:hover #settings_list {
-  background: #0D1103;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-flow: column-reverse;
-          flex-flow: column-reverse;
-  width: calc(24px + 7vw);
-  cursor: pointer;
-}
-
-footer#task_bar #menu #start_menu #start_menu_list li#settings_li:hover #settings_list li {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 4%;
-  width: auto;
-  border-bottom: 2px solid transparent;
-}
-
-footer#task_bar #menu #start_menu #start_menu_list li#settings_li:hover #settings_list li#settings_color {
-  border-bottom: 2px solid greenyellow;
-}
-
-footer#task_bar #menu #start_menu #start_menu_list li#settings_li:hover #settings_list li:hover {
-  background: #303f0c;
-}
-
-footer#task_bar #menu #start_menu #start_menu_list li#settings_li:hover #settings_list li:hover ul {
-  background: #0D1103;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-flow: column-reverse;
-          flex-flow: column-reverse;
-  width: calc(24px + 7vw);
-  cursor: pointer;
-}
-
-footer#task_bar #menu #start_menu #start_menu_list li#settings_li:hover #settings_list li:hover ul li:nth-of-type(1) {
-  border-bottom: 2px solid greenyellow;
-}
-
-footer#task_bar #menu #start_menu #start_menu_list li#settings_li:hover #settings_list li p {
-  margin: 0;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  padding: 4%;
-  text-align: center;
-}
-
-footer#task_bar #menu #start_menu #start_menu_list li#settings_li:hover #settings_list li ul {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 100%;
-  -webkit-transform: translate(100%, -99%);
-          transform: translate(100%, -99%);
-  margin: 0;
-  padding: 0;
-  color: greenyellow;
-  cursor: pointer;
 }
 
 footer#task_bar #task_windows {
