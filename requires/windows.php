@@ -24,6 +24,14 @@
     </section>
     <!-- END RECYCLE BIN WINDOW -->
 
+    <!-- RECYCLE BIN WINDOW -->
+    <section class="window drag invisible" id="window_credits">
+        <?php require 'window_menu.php';?>
+        <textarea id="window_credits_textarea" spellcheck="false">
+        </textarea>
+    </section>
+    <!-- END RECYCLE BIN WINDOW -->
+
     <!-- IMAGES WINDOW -->
     <section class="window drag invisible" id="window_images">
         <?php require 'window_menu.php';?>
@@ -118,62 +126,107 @@ Il est entièrement développé sous <b>PHP</b> et possède un accès à la base
                 <div id="animation_div">
                     <img id="animation_room" src="assets/images/other/animation.gif" usemap="#animation-map">
                     <map name="animation-map">
-                        <area id="poster_area" class="area" target="_blank" alt="anim_poster" title="anim_poster" href="" coords="124,30,124,197,238,219,238,48" shape="poly">
+                        <area id="hamburger" target="_blank" alt="anim_poster" title="anim_poster" href="" coords="124,30,124,197,238,219,238,48" shape="poly">
+                        <area id="computer" target="_blank" alt="computer" title="anim_computer" href="" coords="101,268,52,285,52,449,400,449,399,340" shape="poly">
+                        <area id="self" target="_blank" alt="anim_self" title="anim_self" href="" coords="285,225,282,134,318,85,351,82,402,90,430,146,426,202,411,225,408,273,436,301,503,331,544,384,543,450,407,450,406,335,284,312,302,300,288,279,280,253" shape="poly">
                     </map>
                 </div>
-                <p id="window_infos_message_box" class="distorted" lang="fr">
-                    <b>Localisation</b> : 14°41'22"S 75°06'27"W
+                <p id="window_infos_message_box" class="distorted">
+                    <b>SecCam : 4ll.1n-87C</b><br>
+                    <b>Loc</b> : -14.680366592708031, -75.10059156065051
                 </p>
-                    <!-- <div id="hamburger" class="slide2">
-                        <span id="hamburger_name">
-                            <h3>Big Ol'Manager Burger</h3>
-                            <h4 lang="fr">• Garniture •</h4>
-                            <h4 lang="en">• Garnish •</h4>
-                        </span>
-                        <span class="garnish_holder">
-                            <img src='<?=$addr;?>assets/images/other/ham_top.png' alt="Hamburger top">
-                            <p lang="fr">Pain d'<b>autonomie</b> brioché et ses graines de <b>responsabilité</b></p>
-                            <p lang="en"><b>Autonomous</b> bun with its <b>responsability</b> seeds</p>
-                        </span>
-                        <span class="garnish_holder">
-                            <img src='<?=$addr;?>assets/images/other/ham_pickles.png' alt="Pickles">
-                            <p lang="fr">Couple de cornichons aigre-<b>curieux</b> "<b>écoute</b>" et "<b>communication</b>"</p>
-                            <p lang="en">Pair of pickles <b>curious</b> & sour "<b>listening</b>" and "<b>communication</b>"</p>
-                        </span>
-                        <span class="garnish_holder">
-                            <img src='<?=$addr;?>assets/images/other/ham_tomato.png' alt="Tomato">
-                            <p lang="fr"><b>Concentration</b> de tomate en tranche 'La <b>Créative</b>'</p>
-                            <p lang="en">Slice of tomato <b>concentration</b> 'The <b>Creative</b> One'</p>
-                        </span>
-                        <span class="garnish_holder">
-                            <img src='<?=$addr;?>assets/images/other/ham_lettuce.png' alt="Lettuce">
-                            <p lang="fr">Salade de <b>leadership</b> & <b>esprit d'équipe</b></p>
-                            <p lang="en">Salad mix of <b>leadership</b> & <b>team spirit</b></p>
-                        </span>
-                        <span class="garnish_holder">
-                            <img src='<?=$addr;?>assets/images/other/ham_cheddar.png' alt="Cheese">
-                            <p lang="fr">Fromage <b>rigoureux</b> fumé au bois de <b>confiance</b> fondu</p>
-                            <p lang="en"><b>Confident</b> wood smoked <b>rigorous</b> melted cheese</p>
-                        </span>
-                        <span class="garnish_holder">
-                            <img src='<?=$addr;?>assets/images/other/ham_steak.png' alt="Burger patty">
-                            <p lang="fr">Hâché 230g 'Le <b>Résolveur de problèmes</b>' et sa cuisson <b>adaptative</b></p>
-                            <p lang="en">'<b>Problem solver</b>' 8oz patty and its <b>adaptative</b> cooking</p>
-                        </span>
-                        <span class="garnish_holder">
-                            <img src='<?=$addr;?>assets/images/other/ham_sauce.png' alt="Sauces">
-                            <p lang="fr">Duo de sauces <b>gestion</b> '<b>stress</b>' et '<b>temps</b>'</p>
-                            <p lang="en">Couple of '<b>handling</b>' sauces '<b>stress</b>' and '<b>time</b>'</p>
-                        </span>
-                        <span class="garnish_holder">
-                            <img src='<?=$addr;?>assets/images/other/ham_bottom.png' alt="Hamburger bottom">
-                            <p lang="fr">Pain d'<b>équipe</b> et son toastage bilatéral '<b>délégation</b>'' & '<b>motivation</b>'</p>
-                            <p lang="en"><b>Teamed</b> bottom bun and its bilateral toasting '<b>delegate</b>'' & '<b>motivate</b>'</p>
-                        </span>
-                    </div> -->
             </div> 
         </div>
     </section>
     <!-- END WINDOW INFOS -->
+
+    <!-- WINDOW HAMBURGER -->
+    <section class="window drag invisible window_anim" id="window_hamburger">
+        <div class="window_menu">
+            <ul class="window_menu_bar">
+                <div class="window_menu_right">
+                    <li><button class="window_minimize"><i class="far fa-window-minimize"></i></button></li>
+                    <li><button class="window_maximize"><i class="far fa-window-maximize"></i></button></li>
+                    <li><button class="window_close"><i class="fas fa-times"></i></button></li>
+                </div>
+            </ul>
+        </div>
+        <div class="window_content window_content_infos">
+            <div class="window_content_center">
+                <div id="hamburger" class="slide2">
+                    <span id="hamburger_name">
+                        <h3>McManager Burger</h3>
+                        <h4 lang="fr">• Garniture •</h4>
+                        <h4 lang="en">• Garnish •</h4>
+                    </span>
+                    <span class="garnish_holder">
+                        <img src='<?=$addr;?>assets/images/other/ham_top.png' alt="Hamburger top">
+                        <p lang="fr">Pain d'<b>autonomie</b> brioché et ses graines de <b>responsabilité</b></p>
+                        <p lang="en"><b>Autonomous</b> bun with its <b>responsability</b> seeds</p>
+                    </span>
+                    <span class="garnish_holder">
+                        <img src='<?=$addr;?>assets/images/other/ham_pickles.png' alt="Pickles">
+                        <p lang="fr">Couple de cornichons aigre-<b>curieux</b> "<b>écoute</b>" et "<b>communication</b>"</p>
+                        <p lang="en">Pair of pickles <b>curious</b> & sour "<b>listening</b>" and "<b>communication</b>"</p>
+                    </span>
+                    <span class="garnish_holder">
+                        <img src='<?=$addr;?>assets/images/other/ham_tomato.png' alt="Tomato">
+                        <p lang="fr"><b>Concentration</b> de tomate en tranche 'La <b>Créative</b>'</p>
+                        <p lang="en">Slice of tomato <b>concentration</b> 'The <b>Creative</b> One'</p>
+                    </span>
+                    <span class="garnish_holder">
+                        <img src='<?=$addr;?>assets/images/other/ham_lettuce.png' alt="Lettuce">
+                        <p lang="fr">Salade de <b>leadership</b> & <b>esprit d'équipe</b></p>
+                        <p lang="en">Salad mix of <b>leadership</b> & <b>team spirit</b></p>
+                    </span>
+                    <span class="garnish_holder">
+                        <img src='<?=$addr;?>assets/images/other/ham_cheddar.png' alt="Cheese">
+                        <p lang="fr">Fromage <b>rigoureux</b> fumé au bois de <b>confiance</b> fondu</p>
+                        <p lang="en"><b>Confident</b> wood smoked <b>rigorous</b> melted cheese</p>
+                    </span>
+                    <span class="garnish_holder">
+                        <img src='<?=$addr;?>assets/images/other/ham_steak.png' alt="Burger patty">
+                        <p lang="fr">Hâché 230g 'Le <b>Résolveur de problèmes</b>' et sa cuisson <b>adaptative</b></p>
+                        <p lang="en">'<b>Problem solver</b>' 8oz patty and its <b>adaptative</b> cooking</p>
+                    </span>
+                    <span class="garnish_holder">
+                        <img src='<?=$addr;?>assets/images/other/ham_sauce.png' alt="Sauces">
+                        <p lang="fr">Duo de sauces <b>gestion</b> '<b>stress</b>' et '<b>temps</b>'</p>
+                        <p lang="en">Couple of '<b>handling</b>' sauces '<b>stress</b>' and '<b>time</b>'</p>
+                    </span>
+                    <span class="garnish_holder">
+                        <img src='<?=$addr;?>assets/images/other/ham_bottom.png' alt="Hamburger bottom">
+                        <p lang="fr">Pain d'<b>équipe</b> et son toastage bilatéral '<b>délégation</b>'' & '<b>motivation</b>'</p>
+                        <p lang="en"><b>Teamed</b> bottom bun and its bilateral toasting '<b>delegate</b>'' & '<b>motivate</b>'</p>
+                    </span>
+                </div>
+            </div> 
+        </div>
+    </section>
+    <!-- END WINDOW HAMBURER -->
+
+    <!-- WINDOW COMPUTER --> 
+    <section class="window drag invisible window_anim" id="window_computer">
+        <div class="window_menu">
+            <ul class="window_menu_bar">
+                <div class="window_menu_right">
+                    <li><button class="window_minimize"><i class="far fa-window-minimize"></i></button></li>
+                    <li><button class="window_maximize"><i class="far fa-window-maximize"></i></button></li>
+                    <li><button class="window_close"><i class="fas fa-times"></i></button></li>
+                </div>
+            </ul>
+        </div>
+        <div class="window_content window_content_infos">
+            <div class="window_content_center">
+                <p class="distorted" lang="fr" id="pcomputer_fr"></p>
+                <p class="distorted" lang="en" id="pcomputer_en"></p>
+            </div>
+        </div>
+    </section>
+    <!-- END WINDOW CUMPUTER -->
+
+    <!-- WINDOW USER DATA -->
+
+    <!-- END WINDOW DATA -->
 
 </section>

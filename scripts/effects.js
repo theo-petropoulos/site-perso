@@ -3,10 +3,11 @@ $(function(){
     const audiobip= new Audio('assets/audio/sounds/bip.mp3');
     const audioclick= new Audio('assets/audio/sounds/click.mp3');
     const audiodbclick= new Audio('assets/audio/sounds/dbclick.mp3');
+    window.loctimer='';
     window.punchcount=0;
     window.punch= new Audio('assets/audio/sounds/punch.mp3');
     //Init * color
-    $("*").not('.example').css("color", "rgb(173, 255, 47)");
+    $("*").not('.example, textarea').css("color", "rgb(173, 255, 47)");
     //Init global language
     window.language='fr';
     //Init array of colors, current font and current wallpaper for dynamic purposes
@@ -34,7 +35,7 @@ $(function(){
     //Display time
     clock();
     
-    $(document).on('click', "#switch_power", function(e){
+    $(document).on('click touchstart', "#switch_power", function(e){
         e.preventDefault();
         power='on';
         $("#screen_off").toggleClass("invisible visible");
@@ -59,7 +60,7 @@ $(function(){
         });
 
     //Power off
-    $("#shutdown_btn").click(function(e){
+    $("#shutdown_btn").on('click touchstart', function(e){
         power='shutdown';
         $("#folder_section").toggleClass("visible invisible");
         setTimeout(() => {$("#music_player").toggleClass("invisible");}, 300);
@@ -79,14 +80,14 @@ $(function(){
     });
 
     //Background on folder' hover
-    $(".drag.folder").hover(function(){
+    $(".drag.folder").on('mouseover', function(){
         $(this).css("background", "rgba(0,0,0,0.2");
     }, function(){
         $(this).css("background", "initial");
     });
 
     //Change language
-    $("#switch_lang").click(function(e){
+    $("#switch_lang").on('click touchstart', function(e){
         if(language=='fr') language='en';
         else language='fr';
         $('[lang="fr"]').toggleClass("out");
@@ -95,14 +96,14 @@ $(function(){
     });
 
     //Copy mail adress
-    $("#copy_mail").click(function(){
+    $('#copy_mail').on('click touchstart', function(){
         let element = document.getElementById('amail');
         let elementText = element.textContent; 
         navigator.clipboard.writeText(elementText);
     });
 
     //Play sound on double click
-    $(document).dblclick(function(){
+    $(document).on('dblclick', function(){
         clearTimeout(timer);
         prevent=true;
         audiodbclick.currentTime=0;
@@ -110,7 +111,7 @@ $(function(){
     });
     
     //Play sound on left click
-    $(document).click(function(e){
+    $(document).on('click touchstart', function(e){
         if(!e.isTrigger){
             audioclick.currentTime=0;
             timer=setTimeout(() => {
@@ -122,13 +123,13 @@ $(function(){
     });
 
     //Play sound on right click
-    $(document).contextmenu(function(e){
+    $(document).on('contextmenu', function(e){
         audioclick.currentTime=0;
         audioclick.play();
     });
 
     //Play sound on keypress
-    $(document).keyup(function(e){
+    $(document).on('keyup', function(e){
         randomKeyboardSound();
     });
 
@@ -150,9 +151,9 @@ $(function(){
     $('area').data('maphilight', animlight).trigger('alwaysOn.maphilight');
 
     //Show text when hovering mascot
-    $(document).on("mouseover", "#screen_toggle", function(e){
+    $("#screen_toggle").on("mouseover", function(e){
         const mascot_quotes_fr=[
-            "Je ne suis pas un punching ball.", "Ah d'accord on en est là.", "Vous n'en avez pas marre ?", 
+            "Je ne suis pas un punching ball.", "Je passe l'éponge sur ce coup.", "Ah d'accord on en est là.", "Vous n'en avez pas marre ?", 
             "BRAVO ! Très mature, vraiment.", "Ben bien sûr, toujours plus.", "Bon, il serait peut-être temps d'arrêter non ?", 
             "...zZzZzZ", "Je vais finir par m'énerver.", "A qui vais-je faire croire ça, je ne suis qu'un tas de 14400 pixels.",
             "Vous êtes en train de vous demander combien de phrases je peux réciter ?", "Vous n'êtes pas au bout de vos surprises.",
@@ -168,7 +169,7 @@ $(function(){
             "Le fait est que passer le reste de ma vie numérique avec un fou de la baffe ne me plait guère."
         ];
         const mascot_quotes_en=[
-            "I'm not a punching bag.", "Oh okay, here we go.", "Aren't you fed up?",
+            "I'm not a punching bag.", "I'm forgiving you on this one.", "Oh okay, here we go.", "Aren't you fed up?",
             "BRAVO! Very mature, really.", "Of course, there's always more.", "Well, maybe it's time for you to stop, right?",
             "... zZzZzZ", "I'm starting to get pissed off.", "Who am I going to make believe this to, I'm just a bunch of 14400 pixels.",
             "You're wondering how many sentences can I recite?", "You won't believe what's coming next.",
@@ -208,7 +209,7 @@ $(function(){
             });
         }
     });
-    $(document).on("mouseleave", "#screen_toggle", function(e){
+    $("#screen_toggle").on("mouseleave", function(e){
         $("#hape_speaks").remove();
     });
 });

@@ -1,11 +1,11 @@
 $(function(){
     //Actions on right click
-    $(document).contextmenu(function(e){
-        e.preventDefault();
+    $(document).on('contextmenu', function(e){
+        if($(e.target).not('textarea')) e.preventDefault();
     });
 
     //When a "left-clickable" element is clicked
-    $(document).on('contextmenu', '.rclick', function(e){
+    $('.rclick').on('contextmenu', function(e){
         let target=document.getElementById($(this).attr('id'));
         $(target).not('.window_min').css("background","rgba(0,0,0,0.5)");
         let classes=$(target).attr("class").split(/\s+/);

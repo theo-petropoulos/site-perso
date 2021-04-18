@@ -23,9 +23,10 @@
         <meta property="og:image" content="assets/images/other/og.png">
         <link rel="stylesheet" href="<?=$addr;?>css/theo.petropoulos.css?v=<?php echo time(); ?>">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Gupter&family=Lexend:wght@300&family=Yusei+Magic&display=swap" rel="stylesheet"> 
         <link id="linkicon" rel="icon" type="image/png" href="assets/images/icons/logo1.png">
+        <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Gupter&family=Lexend:wght@300&family=Yusei+Magic&display=swap" rel="stylesheet"> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
         <script type="text/javascript" src="node_modules/maphilight/jquery.maphilight.min.js"></script>
         <script src="<?=$addr;?>scripts/functions.js"></script>
         <script src="<?=$addr;?>scripts/effects.js"></script>
@@ -70,11 +71,24 @@
                         <p class="distorted" lang="en">Recycle bin</p>
                     </div>
                     <div class="folder drag rclick" id="folder_infos" style="left:0px;top:100px">
-                        <img src="<?=$addr;?>assets/images/icons/infos_green.png" alt="personal_informations_images" title="folder_min">
+                        <img src="<?=$addr;?>assets/images/icons/infos_green.png" alt="personal_informations_images" title="infos_min">
                         <p class="distorted" lang="fr">Informations personnelles</p>
                         <p class="distorted" lang="en">Personal informations</p>
                     </div>
+                    <div class="folder drag rclick" id="folder_credits" style="left:0px;top:200px">
+                        <img src="<?=$addr;?>assets/images/icons/txt_green.png" alt="textfile_images" title="text_min">
+                        <p class="distorted" lang="fr">Crédits.txt</p>
+                        <p class="distorted" lang="en">Credits.txt</p>
+                    </div>
                 </section>
+
+                <!-- WARNING MESSAGE -->
+                <section id="warning_message">
+                    <p lang="fr">Ce site n'est pas optimisé pour une utilisation mobile. Certaines fonctionalités ne seront pas disponibles.</p>
+                    <p lang="en">This website isn't optimized for mobile users. Some functionalities won't be available.</p>
+                    <button id="close_warning">X</button>
+                </section>
+                <!-- END WARNING MESSAGE -->
                 
                 <!-- USER'S LOG -->
                 <section id="user" class="invisible">

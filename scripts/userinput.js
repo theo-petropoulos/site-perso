@@ -1,6 +1,6 @@
 $(function(){
-    $('.example').click(function(){
-        let selector=$("*").not('.example');
+    $('.example').on('click touchstart', function(){
+        let selector=$("*").not('.example, textarea');
         let id=$(this).attr('id').split('_');
         if($(this).hasClass('example')){
             let style=$(this).attr('style').split(":");
@@ -8,10 +8,9 @@ $(function(){
                 selector=selector.not('i');
                 font=style[1];
             }
-            selector.css(style[0],style[1]);
             if(style[0]=="color"){
                 color=Object.keys(array_colors).find(key => array_colors[key] === style[1]);
-                $("*").not('.example').css("border-color", style[1]);
+                selector.css("border-color", style[1]);
                 $(".folder img").add($(".project_min img")).each(function(){
                     let src=$(this).attr('src').replace('.png', '').split('_');
                     $(this).attr('src', src[0].concat('_', id[1], '.png'));
@@ -22,11 +21,11 @@ $(function(){
                 });
                 $(".folder p").add($("#contextmenu")).css(style[0], style[1]);         
             }
+            selector.css(style[0],style[1]);
         }
     });
 
-    $('.effects_switch').click(function(e){
-        var loctimer=0;
+    $('.effects_switch').on('click touchstart', function(e){
         let prev_bg=$("#screen_on").css("background-image").split("backgrounds/");
         let obackground=prev_bg[1].replace(/%20/g, " ").replace('")', '');
         power='switch_off';

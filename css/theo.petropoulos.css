@@ -40,6 +40,10 @@ body {
   font-weight: 800;
 }
 
+.it {
+  font-style: italic;
+}
+
 em {
   font-style: inherit;
 }
@@ -88,5 +92,32 @@ em {
   background: rgba(0, 0, 0, 0.7);
   pointer-events: none;
   z-index: 8;
+}
+
+@media screen and (max-width: 800px) {
+  #animation_corporations {
+    display: none;
+  }
+  #warning_message {
+    display: block;
+  }
+  html body#body_index main#screen div#screen_on.visible section#music_player.drag {
+    padding: 0;
+    min-width: 200px;
+    left: initial;
+    top: initial;
+    right: 0;
+    bottom: 20px;
+    -webkit-transform: none;
+            transform: none;
+  }
+  #window_infos .window_content .window_content_center #animation_div #animation_room {
+    width: 60%;
+    height: auto;
+  }
+  #screen_toggle img {
+    width: 80px;
+    height: 80px;
+  }
 }
 /*# sourceMappingURL=theo.petropoulos.css.map */

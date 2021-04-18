@@ -37,11 +37,12 @@ function glitch_font(){
     if(power=='shutdown' || power=='switch_off') return 0;
     else{
         let timeout=Math.floor(Math.random()*6000)+10000;
-        $("*").not('.example, i').css("font-family", "Courier");
-        setTimeout(() => {$("*").not('.example, i').css("font-family", "Impact");}, 200);
-        setTimeout(() => {$("*").not('.example, i').css("font-family", "Verdana");}, 450);
-        setTimeout(() => {$("*").not('.example, i').css("font-family", "Comic sans MS");}, 550);
-        setTimeout(() => {$("*").not('.example, i').css("font-family", font);}, 650);
+        const selector=$("*").not('.example, i, textarea');
+        selector.css("font-family", "Courier");
+        setTimeout(() => {selector.css("font-family", "Impact");}, 200);
+        setTimeout(() => {selector.css("font-family", "Verdana");}, 450);
+        setTimeout(() => {selector.css("font-family", "Comic sans MS");}, 550);
+        setTimeout(() => {selector.css("font-family", font);}, 650);
         setTimeout(glitch_color, timeout);
     }
 }
@@ -63,7 +64,6 @@ function screen_flick(){
     else{
         var flick=Math.floor(Math.random()*10)+1;
         var audioflick= new Audio('assets/audio/sounds/flick.mp3');
-        var audiobuzz= new Audio('assets/audio/sounds/buzz.mp3');
         switch(flick){
             case 1:
                 audioflick.play();
