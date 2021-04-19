@@ -49,6 +49,10 @@
   text-decoration: none;
 }
 
+#user a:hover {
+  text-decoration: underline;
+}
+
 #user details summary {
   list-style-type: none;
 }

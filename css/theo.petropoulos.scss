@@ -96,6 +96,14 @@ em{
     }
 }
 
+html body#body_index main#screen div#screen_on.visible section#windows section#window_openimg.window.drag div.window_content{
+    overflow-y:auto;
+    overflow-x:hidden;
+    img{
+        width:100%;
+    }
+}
+
 @media screen and (max-width:800px), screen and (max-height:500px){
     #animation_corporations{
         display:none;

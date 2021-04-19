@@ -784,35 +784,35 @@
 }
 
 #window_hamburger .window_content .window_content_center #hamburger .garnish_holder:nth-of-type(1) img {
-  animation: floating 4.4s 0s infinite ease-in-out alternate-reverse;
-}
-
-#window_hamburger .window_content .window_content_center #hamburger .garnish_holder:nth-of-type(2) img {
   animation: floating 4s 0s infinite ease-in-out alternate-reverse;
 }
 
+#window_hamburger .window_content .window_content_center #hamburger .garnish_holder:nth-of-type(2) img {
+  animation: floating 6s 0s infinite ease-in-out alternate-reverse;
+}
+
 #window_hamburger .window_content .window_content_center #hamburger .garnish_holder:nth-of-type(3) img {
-  animation: floating 5s 0s infinite ease-in-out alternate-reverse;
+  animation: floating 7.4s 0s infinite ease-in-out alternate-reverse;
 }
 
 #window_hamburger .window_content .window_content_center #hamburger .garnish_holder:nth-of-type(4) img {
-  animation: floating 4.8s 0s infinite ease-in-out alternate-reverse;
-}
-
-#window_hamburger .window_content .window_content_center #hamburger .garnish_holder:nth-of-type(5) img {
-  animation: floating 7.6s 0s infinite ease-in-out alternate-reverse;
-}
-
-#window_hamburger .window_content .window_content_center #hamburger .garnish_holder:nth-of-type(6) img {
   animation: floating 3.6s 0s infinite ease-in-out alternate-reverse;
 }
 
+#window_hamburger .window_content .window_content_center #hamburger .garnish_holder:nth-of-type(5) img {
+  animation: floating 6.6s 0s infinite ease-in-out alternate-reverse;
+}
+
+#window_hamburger .window_content .window_content_center #hamburger .garnish_holder:nth-of-type(6) img {
+  animation: floating 4.8s 0s infinite ease-in-out alternate-reverse;
+}
+
 #window_hamburger .window_content .window_content_center #hamburger .garnish_holder:nth-of-type(7) img {
-  animation: floating 8s 0s infinite ease-in-out alternate-reverse;
+  animation: floating 3.2s 0s infinite ease-in-out alternate-reverse;
 }
 
 #window_hamburger .window_content .window_content_center #hamburger .garnish_holder:nth-of-type(8) img {
-  animation: floating 3.8s 0s infinite ease-in-out alternate-reverse;
+  animation: floating 6.6s 0s infinite ease-in-out alternate-reverse;
 }
 
 #window_hamburger .window_content .window_content_center #hamburger .garnish_holder:hover p {
