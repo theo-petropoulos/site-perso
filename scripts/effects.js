@@ -267,4 +267,9 @@ $(function(){
             $("#hape_speaks").remove();
         });
     });
+
+    $(document).on('click', '#clipe_speaks, #hape_speaks', function(e){
+        e.stopImmediatePropagation();
+        $(this).remove();
+    });
 });
