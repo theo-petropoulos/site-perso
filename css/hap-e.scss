@@ -1,14 +1,31 @@
 #screen_toggle{
     width:max-content;
     position:fixed;
-    bottom:calc(2vh + 20px);
+    bottom:calc(max(3vh, 30px));
     left:50%;
     transform:translateX(-50%);
     display:flex;
     flex-flow:column;
     img{
-        width:150px;
-        height:150px;
+        width:120px;
+        height:120px;
+        &:hover{
+            cursor:pointer;
+        }
+    }
+}
+
+#tips_mascot{
+    width:max-content;
+    position:fixed;
+    bottom:calc(max(3.5vh, 40px));
+    left:30%;
+    transform:translateX(-30%);
+    display:flex;
+    flex-flow:column;
+    img{
+        width:120px;
+        height:120px;
         &:hover{
             cursor:pointer;
         }

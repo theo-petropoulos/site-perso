@@ -48,7 +48,7 @@ $(function(){
         setTimeout(() => {$("#linkicon").html('<link id="linkicon" rel="icon" type="image/png" href="assets/images/icons/logo2.png">')}, 2250);
         setTimeout(() => {$("#task_bar").toggleClass("visible invisible");}, 2500);
         setTimeout(() => {$("#user").toggleClass("invisible");}, 3000);
-        setTimeout(() => {$("#music_player").add($("#screen_toggle")).toggleClass("invisible");}, 3300);
+        setTimeout(() => {$("#music_player").add($("#screen_toggle")).add($("#tips_mascot")).toggleClass("invisible");}, 3300);
         setTimeout(() => {$("#folder_section").toggleClass("visible invisible");}, 3500);
         setTimeout(() => {$("#animation_dna").add($("#animation_corporations")).toggleClass("visible invisible");}, 3800);
         setTimeout(() => {screen_flick(); glitch_font();}, 9800);
@@ -69,7 +69,7 @@ $(function(){
             $("#user").toggleClass("invisible");
             for(let i=1;i<5;i++) $("#user .user"+i).toggleClass("invisible");
         }, 1100);
-        setTimeout(() => {$("#animation_dna").add($("#animation_corporations")).add($("#screen_toggle")).toggleClass("visible invisible");}, 1200);
+        setTimeout(() => {$("#animation_dna").add($("#animation_corporations")).add($("#screen_toggle")).add($("#tips_mascot")).toggleClass("visible invisible");}, 1200);
         setTimeout(() => {$("#task_bar").toggleClass("visible invisible");}, 1800);
         setTimeout(() => {$("#linkicon").html('<link id="linkicon" rel="icon" type="image/png" href="assets/images/icons/logo1.png">')}, 2250);
         setTimeout(() => {$("#screen_off").toggleClass("visible invisible");}, 2500);

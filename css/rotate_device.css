@@ -1,0 +1,21 @@
+#rotate_device {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  background-image: url("../assets/images/other/rotate_device.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 12;
+  display: none;
+}
+
+@media all and (orientation: portrait) {
+  #rotate_device {
+    display: block;
+  }
+}
+/*# sourceMappingURL=rotate_device.css.map */

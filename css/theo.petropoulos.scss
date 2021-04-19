@@ -6,6 +6,7 @@
 @import url('task_bar.css');
 @import url('animations.css');
 @import url('hap-e.css');
+@import url('rotate_device.css');
 
 $font:'DotGothic16', Courier;
 $color:rgb(173, 255, 47);
@@ -20,6 +21,7 @@ html,body{
 body{
     width:100vw;
     height:100vh;
+    position:relative;
 }
 
 .visible{
@@ -114,7 +116,7 @@ em{
         width:60%;
         height:auto;
     }
-    #screen_toggle img{
+    #screen_toggle img, #tips_mascot img{
         width:80px;
         height:80px;
     }
