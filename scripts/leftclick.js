@@ -220,12 +220,32 @@ Parchment generator : Léonard Allain-Launay / Mathieu Thoretton / Cosmina - htt
         e.preventDefault();
     });
 
+    //When zooming-in the parchment
     $(document).on('click', "#open_parchment", function(e){
         e.preventDefault();
-        $(this).parents('.window_content_center').html('<img id="parchment" src="assets/images/other/parchment.png">');
-        $("#parchment").css({"width":"100%", "object-fit":"contain"});
+        let temp_self=$(this).parents('.window_content_center').html();
+        $(this).parents('.window_content_center').css({
+            "display":"flex",
+            "flex-direction": "column",
+            "align-items": "center",
+            "justify-content": "center"
+        });
+        if(language=='fr') $(this).parents('.window_content_center').html(
+            '<img id="parchment" src="assets/images/other/parchment.png">\
+            <p lang="fr" class="distorted" id="back_self">Retour</p>');
+        else $(this).parents('.window_content_center').html(
+            '<img id="parchment" src="assets/images/other/parchment.png">\
+            <p lang="en" class="distorted" id="back_self">Back</p>');
+        $(document).on('mouseenter', "#back_self", function(){
+            $(this).css({"cursor" : "pointer", "text-decoration" : "underline"});
+            $(document).on('mouseleave', "#back_self", function(){
+                $(this).css({"cursor" : "initial", "text-decoration" : "none"});
+            });
+        });
+        $("#parchment").css({"width":"90%", "object-fit":"contain"});
         $(this).parents('.window_content_center').css({"width":"100%"});
         $("#window_self.window.drag.window_anim div.window_menu ul.window_menu_bar div.window_menu_right li button.window_maximize").trigger('click');
         $("#window_self.window.drag.window_anim.fullscreen div.window_content.window_content_infos").css({"padding":"0"});
+        $(document).on('click', '#back_self', function(){ $(this).parents('.window_content_center').html(temp_self); });
     });
 });

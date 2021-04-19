@@ -62,4 +62,8 @@
   cursor: pointer;
   text-decoration: underline;
 }
+
+#user details #download_resume:hover {
+  text-decoration: underline;
+}
 /*# sourceMappingURL=user.css.map */

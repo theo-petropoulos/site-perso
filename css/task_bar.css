@@ -1,6 +1,6 @@
 footer#task_bar {
   width: 100%;
-  height: calc(2vh + 20px);
+  height: calc(3% + 15px);
   background: #0d1103;
   display: -webkit-box;
   display: -ms-flexbox;

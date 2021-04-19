@@ -71,6 +71,7 @@ $(function(){
         $(article).toggleClass('invisible');
     });
 
+    //Close postcard
     $("#close_corporations").on('click ', function(){
         $(this).parents('.animation').remove();
     });
@@ -134,7 +135,7 @@ $(function(){
         }
     });
 
-    //Hovering area
+    //Hovering an area
     $("area").on('mouseenter', function(e){
         switch($(e.target).attr('id')){
             case 'hamburger':

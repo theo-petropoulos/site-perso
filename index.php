@@ -27,33 +27,9 @@
                 <div id="screen_flicker" class="invisible"></div>
                 <div id="screen_distorsion" class="invisible"></div>
 
-                <section id="folder_section" class="invisible">
-                    <div class="folder drag rclick" id="folder_images" style="top:100px; left:100px">
-                        <img src="<?=$addr;?>assets/images/icons/folder_green.png" alt="folder_image" title="folder_min">
-                        <p class="distorted" lang="fr">Fonds d'écran</p>
-                        <p class="distorted" lang="en">Wallpapers</p>
-                    </div>
-                    <div class="folder drag rclick" id="folder_projects" style="left:100px">
-                        <img src="<?=$addr;?>assets/images/icons/folder_green.png" alt="folder_image" title="folder_min">
-                        <p class="distorted" lang="fr">Projets</p>
-                        <p class="distorted" lang="en">Projects</p>
-                    </div>
-                    <div class="folder drag rclick" id="folder_bin" style="left:0px">
-                        <img src="<?=$addr;?>assets/images/icons/bin_green.png" alt="recycle_bin_image" title="folder_min">
-                        <p class="distorted" lang="fr">Corbeille</p>
-                        <p class="distorted" lang="en">Recycle bin</p>
-                    </div>
-                    <div class="folder drag rclick" id="folder_infos" style="left:0px;top:100px">
-                        <img src="<?=$addr;?>assets/images/icons/infos_green.png" alt="personal_informations_images" title="infos_min">
-                        <p class="distorted" lang="fr">Informations personnelles</p>
-                        <p class="distorted" lang="en">Personal informations</p>
-                    </div>
-                    <div class="folder drag rclick" id="folder_credits" style="left:0px;top:200px">
-                        <img src="<?=$addr;?>assets/images/icons/txt_green.png" alt="textfile_images" title="text_min">
-                        <p class="distorted" lang="fr">Crédits.txt</p>
-                        <p class="distorted" lang="en">Credits.txt</p>
-                    </div>
-                </section>
+                <!-- FOLDERS SECTION -->
+                <?php require 'requires/folders.php';?>
+                <!-- END FOLDERS SECTION -->
 
                 <!-- WARNING MESSAGE -->
                 <section id="warning_message">
@@ -64,21 +40,7 @@
                 <!-- END WARNING MESSAGE -->
                 
                 <!-- USER'S LOG -->
-                <section id="user" class="invisible">
-                    <div class="distorted" lang="fr">Utilisateur : <h1 style="display:inline" class="str user1 invisible" lang="fr">Petropoulos Théo</h1></div>
-                    <div class="distorted" lang="en">User : <h1 style="display:inline" class="str user1 invisible" lang="en">Petropoulos Theo</h1></div>
-                    <div class="distorted" lang="fr">Statut : <h2 style="display:inline" class="str user2 invisible" lang="fr">Développeur web</h2></div>
-                    <div class="distorted" lang="en">Status : <h2 style="display:inline" class="str user2 invisible" lang="en">Web developer</h2></div>
-                    <p class="distorted" lang="fr">Adresse : <span class="str user3 invisible" lang="fr">176.173.216.180</span></p>
-                    <p class="distorted" lang="en">Adress : <span class="str user3 invisible" lang="en">176.173.216.180</span></p>
-                    <details>
-                        <summary><p class="distorted"><span class="str user4 invisible"><i class="far fa-envelope"></i> Contact</span></p></summary>
-                        <p class="distorted"><i class="fas fa-phone"></i> 06.49.93.18.58</p>
-                        <p class="distorted"><i class="fas fa-at"></i> <a id="amail" href="mailto:mpetropoulos.theo@gmail.com">mpetropoulos.theo@gmail.com</a></p>
-                        <p class="distorted" lang="fr" id="copy_mail">Copier l'adresse mail</p>
-                        <p class="distorted" lang="en" id="copy_mail">Copy mail adress</p>
-                    </details>
-                </section>
+                <?php require 'requires/user.php';?>
                 <!-- END USER'S LOG -->
 
                 <!-- TIPS MASCOT -->
