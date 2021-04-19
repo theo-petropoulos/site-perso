@@ -4,7 +4,9 @@ $(function(){
     const audioclick= new Audio('assets/audio/sounds/click.mp3');
     const audiodbclick= new Audio('assets/audio/sounds/dbclick.mp3');
     window.loctimer='';
+    //Used for mascots' lines
     window.punchcount=0;
+    window.tipscount=0;
     window.punch= new Audio('assets/audio/sounds/punch.mp3');
     //Init * color
     $("*").not('.example, textarea').css("color", "rgb(173, 255, 47)");
@@ -150,8 +152,61 @@ $(function(){
 	shadowFrom= true;
     $('area').data('maphilight', animlight).trigger('alwaysOn.maphilight');
 
+    //Show tips when hovering mascot
+    $(document).on("mouseover", "#tips_mascot", function(){
+        const tips_quotes_fr=[
+            "Psssst ! Votre écran fait des siennes ? Mettez lui un petit coup.", "S'il vous demande, je ne vous ai rien dit.", 
+            "Saviez-vous que vous pouvez changer votre fond d'écran ?", "Vous pouvez également changer la police et la couleur du texte"
+        ];
+        const tips_quotes_en=[
+            "Psssst ! Is your screen misbehaving ? Give it a little slap.", "If he asks, I never told you anything.", 
+            "Did you know : You can change your wallpaper.", "You also can change the font and its color."
+        ];
+        let temp_image=$("#tips_mascot img").attr('src');
+
+        if(tipscount==0) $("#tips_mascot img").attr('src', 'assets/images/other/clip-e_point.gif');
+        else if(tipscount==1) $("#tips_mascot img").attr('src', 'assets/images/other/clip-e_thumb.gif');
+        else if(tipscount==2) $("#tips_mascot img").attr('src', 'assets/images/other/clip-e_wp.gif');
+        else if(tipscount==3) $("#tips_mascot img").attr('src', 'assets/images/other/clip-e_font.gif');
+
+        if($("#clipe_speaks").length<1){
+            if(tips_quotes_fr[tipscount]!=undefined){
+                if(language=='fr')$("#tips_mascot").append("<p class='distorted' lang='fr' id='clipe_speaks'>" + tips_quotes_fr[tipscount] + "</p>");
+                else $("#tips_mascot").append("<p class='distorted' lang='en' id='clipe_speaks'>" + tips_quotes_en[tipscount] + "</p>");
+            }
+            else{
+                if(language=='fr') $("#tips_mascot").append("<p lang='fr' id='clipe_speaks'>C'est tout pour moi.</p>");
+                else $("#tips_mascot").append("<p lang='en' id='clipe_speaks'>That's all folks.</p>");
+            }
+            $("#clipe_speaks").css({
+                "position":"absolute",
+                "bottom":"100%",
+                "right":"0",
+                "transform":"translate(115%,50%)",
+                "min-width":"175px",
+                "max-width":"250px",
+                "z-index":"7",
+                "background": "rgba(0,0,0,0.9)",
+                "padding":"10%",
+                "padding-bottom":"40%",
+                "border-radius":"5px",
+                "clip-path": "polygon(0% 0%, 100% 0%, 100% 82%, 71% 82%, 0 100%, 17% 82%, 0 82%)"
+            });
+        }
+        $(document).on("mouseleave", "#tips_mascot", function(){
+            $("#clipe_speaks").remove();
+            $("#tips_mascot img").attr('src', temp_image);
+        });
+    });
+
+    $(document).on("click", "#tips_mascot", function(){
+        tipscount++;
+        $(this).trigger('mouseleave');
+        $(this).trigger('mouseenter');
+    });
+
     //Show text when hovering mascot
-    $(document).on("mouseover", "#screen_toggle", function(e){
+    $(document).on("mouseover", "#screen_toggle", function(){
         const mascot_quotes_fr=[
             "Je ne suis pas un punching ball.", "Je passe l'éponge sur ce coup.", "Ah d'accord on en est là.", "Vous n'en avez pas marre ?", 
             "BRAVO ! Très mature, vraiment.", "Ben bien sûr, toujours plus.", "Bon, il serait peut-être temps d'arrêter non ?", 
@@ -208,8 +263,8 @@ $(function(){
                 "clip-path": "polygon(0% 0%, 100% 0%, 100% 82%, 71% 82%, 0 100%, 17% 82%, 0 82%)"
             });
         }
-    });
-    $(document).on("mouseleave", "#screen_toggle", function(e){
-        $("#hape_speaks").remove();
+        $(document).on("mouseleave", "#screen_toggle", function(){
+            $("#hape_speaks").remove();
+        });
     });
 });
