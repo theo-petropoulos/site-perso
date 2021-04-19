@@ -181,8 +181,8 @@ $(function(){
             $("#clipe_speaks").css({
                 "position":"absolute",
                 "bottom":"100%",
-                "right":"0",
-                "transform":"translate(115%,50%)",
+                "left":"0",
+                "transform":"translate(-115%,50%)",
                 "min-width":"175px",
                 "max-width":"250px",
                 "z-index":"7",
@@ -190,7 +190,7 @@ $(function(){
                 "padding":"10%",
                 "padding-bottom":"40%",
                 "border-radius":"5px",
-                "clip-path": "polygon(0% 0%, 100% 0%, 100% 82%, 71% 82%, 0 100%, 17% 82%, 0 82%)"
+                "clip-path": "polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 100% 100%, 50% 75%, 0% 75%)"
             });
         }
         $(document).on("mouseleave", "#tips_mascot", function(){
@@ -200,6 +200,7 @@ $(function(){
     });
 
     $(document).on("click", "#tips_mascot", function(){
+        if(tipscount>=4) tipscount=1;
         tipscount++;
         $(this).trigger('mouseleave');
         $(this).trigger('mouseenter');
