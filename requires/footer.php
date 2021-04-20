@@ -39,6 +39,10 @@
                                     <p class="example color_example" id="color_white" style="color:rgba(255,255,255,0.9)" lang="fr">Blanc</p>
                                     <p class="example color_example" id="color_white" style="color:rgba(255,255,255,0.9)" lang="en">White</p>
                                 </li>
+                                <li>
+                                    <p class="example color_example" id="color_white" style="color:rgba(120,120,120,1)" lang="fr">Gris</p>
+                                    <p class="example color_example" id="color_white" style="color:rgba(120,120,120,1)" lang="en">Grey</p>
+                                </li>
                             </ul>
                         </li>
                         <li id="settings_font">
@@ -56,6 +60,9 @@
                                 </li>
                                 <li>
                                     <p class="example font_example" style="font-family:'Gupter'" id="gupter">Gupter</p>
+                                </li>
+                                <li>
+                                    <p class="example font_example" style="font-family:'Calibri'" id="calibri">Calibri</p>
                                 </li>
                             </ul>
                         </li>

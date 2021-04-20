@@ -241,7 +241,7 @@ Il est entièrement développé sous <b>PHP</b> et possède un accès à la base
                 <p class="distorted" lang="fr" id="window_self_text">
                     Petropoulos Théo, anciennement responsable opérationnel au restaurant McDonald's Bonneveine à Marseille. <br>
                     Actuellement en formation au sein de La Plateforme afin d'exercer le métier de développeur web.<br>
-                    Une vieux parchemin traine sur le bureau.</p>
+                    Un vieux parchemin traine sur le bureau.</p>
                 <p class="distorted" lang="en" id="window_self_text">
                     Petropoulos Theo, formerly manager at the Bonneveine's McDonald's in Marseilles.<br>
                     Currently studying at La Plateforme to work as a web developer.<br>
