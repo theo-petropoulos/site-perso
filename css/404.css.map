@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAA;EACL,MAAM,EAAC,KAAK;EACZ,KAAK,EAAC,KAAK;EACX,UAAU,EAAC,qCAAqC;EAChD,eAAe,EAAC,IAAI;EACpB,mBAAmB,EAAE,MAAM;CAC9B",
+    "sources": [
+        "404.scss"
+    ],
+    "names": [],
+    "file": "404.css"
+}

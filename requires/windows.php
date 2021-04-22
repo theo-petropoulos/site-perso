@@ -65,6 +65,10 @@
                     <img src="<?=$addr;?>assets/images/icons/at_green.png" alt="website_image">
                     <p>Memory</p>
                 </div>
+                <div class="window_min img rclick file project_min" id="clock">
+                    <img src="<?=$addr;?>assets/images/icons/at_green.png" alt="website_image">
+                    <p>Clock</p>
+                </div>
             </div>
             <aside class="window_articles">
                 <article id="article_vonharper" class="window_infos_article invisible">
@@ -102,6 +106,24 @@ Le site marquait le début de la <strong>programmation orientée objet</strong> 
 Il est entièrement développé sous <b>PHP</b> et possède un accès à la base de données de type <b>mysqli</b>.
                     <footer>
                         <a href="https://github.com/theo-petropoulos/memory" class="example">GitHub</a>
+                        <a href="https://theo-petropoulos.students-laplateforme.io/" class="example">Theo Petropoulos</a>
+                    </footer>
+                </article>
+                <article id="article_clock" class="window_infos_article invisible">
+                    <header>
+                        <h1><b>Ceci est une horloge</b></h1>
+                        <h3>C'est aussi un minuteur, un chronomètre et un réveil</h3>
+                        <h2>HTML / SCSS / jQuery</h2>
+                        <h4><a href="../thisisaclock/index.php" class="example" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt example"></i>  Visiter le site</a></h4>
+                    </header>
+<p>Le site <b><a id="a_vonharper" href="../thisisaclock/index.php" class="example" target="_blank" rel="noopener noreferrer">Ceci est une horloge</a></b>, est 
+un projet d'horloge multi-fonctionnelle en ligne. Un magicien ne révèle jamais ses tours mais un développeur si : <br>
+Ici, aucune 3D, seulement de simples sprites quelque peu pixellisées et un soupçon de remue-méninges.
+Le site utilise le plugin <a href="https://github.com/davidjbradshaw/image-map-resizer" rel="noopener noreferrer" class="example">Image-Map-Resizer</a> 
+pour adapter les éléments clickables à la taille de l'écran.</p>
+                    <footer>
+                        <a href="https://github.com/theo-petropoulos/oclock" class="example">GitHub</a>
                         <a href="https://theo-petropoulos.students-laplateforme.io/" class="example">Theo Petropoulos</a>
                     </footer>
                 </article>
