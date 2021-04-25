@@ -6,9 +6,172 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+
 <url>
   <loc>https://theo-petropoulos.students-laplateforme.io/</loc>
-  <lastmod>2021-04-09T09:58:57+00:00</lastmod>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/assets/images/other/CV.pdf</loc>
+  <lastmod>2021-04-19T13:56:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/index.php</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/thisisaclock/index.php</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/nouveautes.php</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/collection.php?collection=1</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/collection.php?collection=2</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/collection.php?collection=3</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/about.php</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/profil.php</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/panier.php</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/produit.php?produit=15&amp;collection=3</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/produit.php?produit=16&amp;collection=3</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/produit.php?produit=17&amp;collection=3</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/produit.php?produit=18&amp;collection=3</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/produit.php?produit=8&amp;collection=2</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/produit.php?produit=9&amp;collection=2</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/produit.php?produit=10&amp;collection=2</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/produit.php?produit=11&amp;collection=2</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/newsletter.php</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/contact.php</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/mentions.php</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/tracking.php</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/produit.php?produit=1&amp;collection=1</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/produit.php?produit=2&amp;collection=1</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/produit.php?produit=3&amp;collection=1</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/produit.php?produit=4&amp;collection=1</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/produit.php?produit=5&amp;collection=1</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/produit.php?produit=6&amp;collection=1</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/produit.php?produit=7&amp;collection=2</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/produit.php?produit=12&amp;collection=2</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/produit.php?produit=13&amp;collection=3</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://theo-petropoulos.students-laplateforme.io/boutique/pages/produit.php?produit=14&amp;collection=3</loc>
+  <lastmod>2021-04-25T19:28:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
 
 </urlset>
