@@ -112,14 +112,13 @@ Il est entièrement développé sous <b>PHP</b> et possède un accès à la base
                 <article id="article_clock" class="window_infos_article invisible">
                     <header>
                         <h1><b>Ceci est une horloge</b></h1>
-                        <h3>C'est aussi un minuteur, un chronomètre et un réveil</h3>
+                        <h3>Mais pas que.</h3>
                         <h2>HTML / SCSS / jQuery</h2>
                         <h4><a href="../thisisaclock/index.php" class="example" target="_blank" rel="noopener noreferrer">
                         <i class="fas fa-external-link-alt example"></i>  Visiter le site</a></h4>
                     </header>
 <p>Le site <b><a id="a_vonharper" href="../thisisaclock/index.php" class="example" target="_blank" rel="noopener noreferrer">Ceci est une horloge</a></b>, est 
-un projet d'horloge multi-fonctionnelle en ligne. Un magicien ne révèle jamais ses tours mais un développeur si : <br>
-Ici, aucune 3D, seulement de simples sprites quelque peu pixellisées et un soupçon de remue-méninges.
+un projet d'horloge multi-fonctionnelle en ligne.<br>
 Le site utilise le plugin <a href="https://github.com/davidjbradshaw/image-map-resizer" rel="noopener noreferrer" class="example">Image-Map-Resizer</a> 
 pour adapter les éléments clickables à la taille de l'écran.</p>
                     <footer>

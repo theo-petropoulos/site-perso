@@ -172,7 +172,7 @@ Parchment generator : Léonard Allain-Launay / Mathieu Thoretton / Cosmina - htt
                 area = document.getElementById('pcomputer_en');
                 typewriter = new Typewriter(area, {
                 loop: false,
-                delay: 45,
+                delay: 40,
                 });
 
                 typewriter
@@ -185,9 +185,9 @@ Parchment generator : Léonard Allain-Launay / Mathieu Thoretton / Cosmina - htt
                 .pauseFor(250)
                 .typeString('Graphics card 1 :.......MSI <strong class="str">Javascript</strong>X 3080 TI<br>')
                 .pauseFor(250)
-                .typeString('Graphics card 2 :.......MSI <strong class="str">Jquery</strong>X 3080 TI<br>')
+                .typeString('Graphics card 2 :.......MSI <strong class="str">jQuery</strong>X 3080 TI<br>')
                 .pauseFor(250)
-                .typeString('Random-access memory :..<strong class="str">AjaX</strong> Fury DDR4 2x16Go 3200MHz<br>')
+                .typeString('Random-access memory :..<strong class="str">Three.js</strong> Fury DDR4 2x16Go 3200MHz<br>')
                 .pauseFor(250)
                 .typeString('Storage 1 :.............<strong class="str">Wordpress</strong> Digital 1 To<br>')
                 .pauseFor(250)
