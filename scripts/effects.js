@@ -1,3 +1,6 @@
+//Init tittle for google search
+$("title").html("Petropoulos Théo - Web / Sec Developer");
+
 $(function(){
     const audiobuzz= new Audio('assets/audio/sounds/buzz.mp3');
     const audiobip= new Audio('assets/audio/sounds/bip.mp3');
@@ -22,8 +25,6 @@ $(function(){
     window.color='green';
     window.font='DotGothic16';
     window.background='';
-    //Init tittle for google search
-    $("title").html("Petropoulos Théo - Web developer");
     //Init title and set default language to fr
     $("title").html("No signal");
     $('[lang="en"]').toggleClass("out");
